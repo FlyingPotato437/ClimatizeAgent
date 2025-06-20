@@ -1,0 +1,97 @@
+**MY CRITICAL EVALUATION - TACTICAL REFINEMENTS:**
+
+**Technical Merit Assessment:**
+
+**ESSENTIAL (Must-Have for August):**
+1. **Idempotency Pattern** - Absolutely critical. Azure Functions can retry, and this will cause data corruption without idempotency checks. This is non-negotiable for any production system.
+
+**VALUABLE BUT RISKY (Timeline Impact):**
+2. **Granular Progress Tracking** - Great for UX but adds significant complexity to every function. Risk of over-engineering the MVP.
+3. **Complex Polling Strategy** - Sophisticated but may be overkill for initial implementation.
+
+**CONSTRAINT ANALYSIS:**
+
+**Timeline Reality Check:**
+- 6-7 weeks remaining with 4-person team
+- Each tactical refinement adds 2-3 days of development time
+- Risk of missing August deadline if we add too much complexity
+
+**Production vs MVP Trade-offs:**
+- Need to balance "good enough for August" vs "production-ready"
+- Some refinements can be added post-launch
+
+**RISK ASSESSMENT:**
+
+**Critical Risks:**
+1. **Without Idempotency**: Data corruption, duplicate processing, system instability
+2. **With Too Much Complexity**: Missing August deadline
+3. **Without Basic Error Handling**: System failures in production
+
+**BALANCED SYNTHESIS - TIERED APPROACH:**
+
+**TIER 1: ESSENTIAL FOR AUGUST (Non-negotiable)**
+1. **Idempotency in Queue Functions** - Simple check: "has this step been completed for this run_id?"
+2. **Basic State Management** - Simple status tracking (pending/processing/completed/failed)
+3. **DLQ Processing** - Essential for production reliability
+
+**TIER 2: VALUABLE FOR LAUNCH (If time permits)**
+1. **Enhanced Progress Tracking** - Add after core functionality works
+2. **Sophisticated Polling** - Start with simple 2-second polling, enhance later
+3. **Detailed Error Messages** - Add after basic error handling works
+
+**TIER 3: POST-LAUNCH IMPROVEMENTS**
+1. **Granular Sub-step Tracking** - v2 feature
+2. **Advanced Retry Logic** - Enhance after basic system proves stable
+3. **Performance Optimizations** - After system is functionally complete
+
+**REVISED IMPLEMENTATION PLAN:**
+
+**WEEK 1: FOUNDATION**
+- Replace `requests` with `httpx` 
+- Implement Mock adapters
+- Basic Azure Table Storage state (4 states only: pending/processing/completed/failed)
+- Simple idempotency: check if run_id + step_name already exists
+
+**WEEK 2-3: CORE FUNCTIONALITY**
+- Feasibility analysis engine (simple rules)
+- Frontend basic polling (2-second intervals, 5-minute timeout)
+- DLQ processor for failed workflows
+
+**WEEK 4-5: INTEGRATION & POLISH**
+- Real API integration when available
+- Enhanced error handling
+- Basic progress indicators
+
+**SIMPLIFIED STATE SCHEMA:**
+```
+PartitionKey: project_id
+RowKey: run_id
+Status: pending|processing|completed_viable|completed_non_viable|failed
+CurrentStep: helioscope_fetch|feasibility_analysis|document_generation
+LastUpdate: timestamp
+ErrorDetails: string
+Results: JSON (feasibility scores, documents, etc.)
+```
+
+**SIMPLIFIED IDEMPOTENCY:**
+```python
+def ensure_idempotent(run_id: str, step_name: str):
+    # Check if this step was already completed
+    state = get_state(run_id)
+    if f"{step_name}_completed" in state.get('completed_steps', []):
+        return False  # Skip execution
+    return True  # Proceed with execution
+```
+
+**CRITICAL DECISION:**
+Focus on delivering working core functionality by August rather than perfect engineering. The suggested tactical refinements are excellent engineering practices but risk scope creep that could jeopardize the deadline.
+
+**RECOMMENDATION:**
+- Implement Tier 1 features for August (essential for stability)
+- Plan Tier 2 features for immediate post-launch iteration
+- Defer Tier 3 to later versions
+
+This ensures we deliver a stable, working system by August while avoiding over-engineering that could delay delivery. The granular progress tracking and sophisticated polling can be added in the weeks following launch when the core system is proven to work.
+
+**FINAL VALIDATION:**
+Does this balance appropriately address production reliability while respecting the August constraint?

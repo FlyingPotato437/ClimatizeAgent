@@ -31,6 +31,7 @@ import {
 } from '@mui/icons-material';
 import axios from 'axios';
 import AuroraLoginForm from './AuroraLoginForm';
+import HelioscapeLoginForm from './HelioscapeLoginForm';
 
 interface Project {
   project_id: string;
@@ -65,6 +66,7 @@ const ProjectDashboard: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'table' | 'cards'>('cards');
   const [auroraDialogOpen, setAuroraDialogOpen] = useState(false);
+  const [helioscapeDialogOpen, setHelioscapeDialogOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -98,7 +100,16 @@ const ProjectDashboard: React.FC = () => {
   };
 
   const handleHeliSuccess = () => {
-    // Refresh projects after successful Helioscope connection
+    // Refresh projects after successful Aurora connection
+    fetchProjects();
+  };
+
+  const handleHelioscapeLogin = () => {
+    setHelioscapeDialogOpen(true);
+  };
+
+  const handleHelioscapeSuccess = () => {
+    // Refresh projects after successful Helioscope import
     fetchProjects();
   };
 
@@ -186,10 +197,10 @@ const ProjectDashboard: React.FC = () => {
           <Button
             variant="outlined"
             startIcon={<HeliIcon />}
-            onClick={handleHeliLogin}
+            onClick={handleHelioscapeLogin}
             sx={{ mr: 2 }}
           >
-            Connect Helioscope
+            Import Helioscope
           </Button>
           <Button
             variant="outlined"
@@ -371,11 +382,18 @@ const ProjectDashboard: React.FC = () => {
         </Grid>
       )}
 
-      {/* Helioscope Login Dialog */}
+      {/* Aurora Login Dialog */}
       <AuroraLoginForm
         open={auroraDialogOpen}
         onClose={() => setAuroraDialogOpen(false)}
         onSuccess={handleHeliSuccess}
+      />
+
+      {/* Helioscope Login Dialog */}
+      <HelioscapeLoginForm
+        open={helioscapeDialogOpen}
+        onClose={() => setHelioscapeDialogOpen(false)}
+        onSuccess={handleHelioscapeSuccess}
       />
     </Box>
   );

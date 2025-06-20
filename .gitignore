@@ -14,7 +14,7 @@ venv.bak/
 .env.development.local
 .env.test.local
 .env.production.local
-
+claude/
 # Azure Functions
 local.settings.json
 .azure/
