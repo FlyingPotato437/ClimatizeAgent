@@ -6,9 +6,43 @@ from typing import Dict, Any, Optional, List
 from azure.cosmos import CosmosClient, PartitionKey
 from azure.storage.blob import BlobServiceClient
 
-from .config import settings
+from core.config import settings
 
 logger = logging.getLogger(__name__)
+
+
+class MockDatabaseClient:
+    """Mock database client for development."""
+    
+    def __init__(self):
+        self._projects = {}
+        logger.info("Using mock database client for development")
+    
+    async def create_project(self, project_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Create a new project (mock)."""
+        project_id = project_data.get('project_id')
+        self._projects[project_id] = project_data
+        logger.info(f"Mock: Created project {project_id}")
+        return project_data
+    
+    async def get_project(self, project_id: str) -> Optional[Dict[str, Any]]:
+        """Get project by ID (mock)."""
+        return self._projects.get(project_id)
+    
+    async def update_project(self, project_id: str, updates: Dict[str, Any]) -> Dict[str, Any]:
+        """Update project (mock)."""
+        if project_id in self._projects:
+            self._projects[project_id].update(updates)
+            return self._projects[project_id]
+        raise ValueError(f"Project {project_id} not found")
+    
+    async def get_all_projects(self) -> List[Dict[str, Any]]:
+        """Get all projects (mock)."""
+        return list(self._projects.values())
+    
+    async def query_projects(self, query: str, parameters: Optional[List[Dict[str, Any]]] = None) -> List[Dict[str, Any]]:
+        """Execute custom query (mock)."""
+        return list(self._projects.values())
 
 
 class DatabaseClient:
@@ -108,6 +142,29 @@ class DatabaseClient:
         return result
 
 
+class MockStorageClient:
+    """Mock storage client for development."""
+    
+    def __init__(self):
+        self._documents = {}
+        logger.info("Using mock storage client for development")
+    
+    async def upload_document(self, project_id: str, filename: str, content: bytes) -> str:
+        """Upload document (mock)."""
+        blob_name = f"{project_id}/{filename}"
+        self._documents[blob_name] = content
+        logger.info(f"Mock: Uploaded document {blob_name}")
+        return blob_name
+    
+    def get_document_url(self, blob_name: str) -> str:
+        """Get document URL (mock)."""
+        return f"https://mock-storage.com/{blob_name}"
+    
+    async def download_document(self, blob_name: str) -> bytes:
+        """Download document (mock)."""
+        return self._documents.get(blob_name, b"Mock document content")
+
+
 class StorageClient:
     """Azure Blob Storage client for document management."""
     
@@ -168,17 +225,25 @@ _db_client = None
 _storage_client = None
 
 
-def get_db_client() -> DatabaseClient:
+def get_db_client():
     """Get database client singleton."""
     global _db_client
     if _db_client is None:
-        _db_client = DatabaseClient()
+        # Use mock client if no connection string is provided
+        if not settings.cosmos_db_connection_string:
+            _db_client = MockDatabaseClient()
+        else:
+            _db_client = DatabaseClient()
     return _db_client
 
 
-def get_storage_client() -> StorageClient:
+def get_storage_client():
     """Get storage client singleton."""
     global _storage_client
     if _storage_client is None:
-        _storage_client = StorageClient()
+        # Use mock client if no connection string is provided
+        if not settings.blob_storage_connection_string:
+            _storage_client = MockStorageClient()
+        else:
+            _storage_client = StorageClient()
     return _storage_client

@@ -3,46 +3,38 @@ Application configuration management.
 """
 import os
 from typing import Optional
-from pydantic import BaseSettings
 
 
-class Settings(BaseSettings):
+class Settings:
     """Application settings with environment variable support."""
     
-    # API Keys
-    openai_api_key: Optional[str] = None
-    shovels_api_key: Optional[str] = None
-    helioscope_api_key: Optional[str] = None
-    
-    # Database
-    cosmos_db_connection_string: Optional[str] = None
-    cosmos_db_name: str = "climatize"
-    cosmos_db_container: str = "projects"
-    
-    # Storage
-    blob_storage_connection_string: Optional[str] = None
-    blob_storage_container: str = "project-documents"
-    
-    # External APIs
-    helioscope_base_url: str = "https://api.helioscope.com/v1"
-    shovels_base_url: str = "https://api.shovels.ai"
-    
-    # Application
-    environment: str = "development"
-    log_level: str = "INFO"
-    
-    class Config:
-        env_file = ".env"
-        case_sensitive = False
+    def __init__(self):
+        # API Keys
+        self.openai_api_key: Optional[str] = os.getenv('OPENAI_API_KEY')
+        self.azure_openai_endpoint: Optional[str] = os.getenv('AZURE_OPENAI_ENDPOINT')
+        self.azure_openai_api_version: str = os.getenv('AZURE_OPENAI_API_VERSION', '2024-02-15-preview')
+        self.azure_openai_deployment: str = os.getenv('AZURE_OPENAI_DEPLOYMENT', 'gpt-4o')
+        self.shovels_api_key: Optional[str] = os.getenv('SHOVELS_API_KEY')
+        self.helioscope_api_key: Optional[str] = os.getenv('HELIOSCOPE_API_KEY')
         
-        # Map environment variables
-        fields = {
-            'openai_api_key': 'OPENAI_API_KEY',
-            'shovels_api_key': 'SHOVELS_API_KEY',
-            'helioscope_api_key': 'HELIOSCOPE_API_KEY',
-            'cosmos_db_connection_string': 'COSMOS_DB_CONNECTION_STRING',
-            'blob_storage_connection_string': 'BLOB_STORAGE_CONNECTION_STRING',
-        }
+        # Database
+        self.cosmos_db_connection_string: Optional[str] = os.getenv('COSMOS_DB_CONNECTION_STRING')
+        self.cosmos_db_name: str = os.getenv('COSMOS_DB_NAME', 'climatize')
+        self.cosmos_db_container: str = os.getenv('COSMOS_DB_CONTAINER', 'projects')
+        
+        # Storage
+        self.blob_storage_connection_string: Optional[str] = os.getenv('BLOB_STORAGE_CONNECTION_STRING')
+        self.blob_storage_container: str = os.getenv('BLOB_STORAGE_CONTAINER', 'project-documents')
+        self.table_storage_connection_string: Optional[str] = os.getenv('TABLE_STORAGE_CONNECTION_STRING')
+        
+        # External APIs
+        self.helioscope_base_url: str = os.getenv('HELIOSCOPE_BASE_URL', 'https://api.helioscope.com/v1')
+        self.shovels_base_url: str = os.getenv('SHOVELS_BASE_URL', 'https://api.shovels.ai')
+        
+        # Application
+        self.environment: str = os.getenv('ENVIRONMENT', 'development')
+        self.log_level: str = os.getenv('LOG_LEVEL', 'INFO')
+        self.use_mock_helioscope: bool = os.getenv('USE_MOCK_HELIOSCOPE', 'true').lower() == 'true'
 
 
 def get_settings() -> Settings:

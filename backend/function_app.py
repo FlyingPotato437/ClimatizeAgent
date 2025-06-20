@@ -15,7 +15,10 @@ from api.routes import (
     update_project,
     delete_project,
     download_project_package,
+    helioscope_project_intake_handler,
     helioscope_webhook_receiver,
+    generate_permitting_package_handler,
+    ultrathink_collaborative_analysis,
     health_check
 )
 
@@ -88,10 +91,25 @@ def download_package(req: func.HttpRequest) -> func.HttpResponse:
     """Download project package endpoint."""
     return download_project_package(req)
 
+@app.route(route="helioscope_project_intake", auth_level=func.AuthLevel.ANONYMOUS, methods=["POST"])
+def helioscope_project_intake(req: func.HttpRequest) -> func.HttpResponse:
+    """Helioscope project intake endpoint."""
+    return helioscope_project_intake_handler(req)
+
 @app.route(route="helioscope_webhook", auth_level=func.AuthLevel.ANONYMOUS, methods=["POST"])
 def helioscope_webhook(req: func.HttpRequest) -> func.HttpResponse:
     """Helioscope webhook receiver endpoint."""
     return helioscope_webhook_receiver(req)
+
+@app.route(route="generate_permitting_package", auth_level=func.AuthLevel.ANONYMOUS, methods=["POST"])
+def generate_permitting_package(req: func.HttpRequest) -> func.HttpResponse:
+    """Generate complete permitting package endpoint."""
+    return generate_permitting_package_handler(req)
+
+@app.route(route="ultrathink_analysis", auth_level=func.AuthLevel.ANONYMOUS, methods=["POST"])
+def ultrathink_analysis(req: func.HttpRequest) -> func.HttpResponse:
+    """Ultrathink multi-agent collaborative analysis endpoint."""
+    return ultrathink_collaborative_analysis(req)
 
 @app.route(route="health", auth_level=func.AuthLevel.ANONYMOUS, methods=["GET"])
 def health(req: func.HttpRequest) -> func.HttpResponse:

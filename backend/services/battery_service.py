@@ -3,8 +3,8 @@ Battery sizing and energy storage service.
 """
 import logging
 from typing import Dict, Any, List, Optional
-from ..core.database import get_db_client
-from ..models.project import BatterySpecs
+from core.database import get_db_client
+from models.project_simple import BatterySpecs
 
 logger = logging.getLogger(__name__)
 

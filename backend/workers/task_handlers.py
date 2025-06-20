@@ -9,9 +9,9 @@ import asyncio
 from typing import Dict, Any
 
 # Import services
-from ..services.project_service import ProjectService
-from ..services.helioscope_service import HelioscoperService
-from ..services.battery_service import BatteryService
+from services.project_service import ProjectService
+from services.helioscope_service import HelioscoperService
+from services.battery_service import BatteryService
 
 logger = logging.getLogger(__name__)
 

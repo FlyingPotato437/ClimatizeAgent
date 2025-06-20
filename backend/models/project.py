@@ -2,7 +2,7 @@
 Enhanced project data models with validation and business logic.
 """
 from typing import List, Optional, Dict, Any, Union
-from pydantic import BaseModel, Field, validator, root_validator
+from pydantic import BaseModel, Field
 import uuid
 from datetime import datetime
 from enum import Enum
@@ -40,13 +40,14 @@ class Address(BaseModel):
     street: str = Field(..., min_length=5, max_length=200)
     city: str = Field(..., min_length=2, max_length=100)
     state: str = Field(..., min_length=2, max_length=2)
-    zip_code: str = Field(..., regex=r'^\d{5}(-\d{4})?$')
+    zip_code: str = Field(..., pattern=r'^\d{5}(-\d{4})?$')
     lat: Optional[float] = Field(None, ge=-90, le=90)
     lon: Optional[float] = Field(None, ge=-180, le=180)
     parcel_id: Optional[str] = None
     county: Optional[str] = None
     
-    @validator('state')
+    @field_validator('state')
+    @classmethod
     def validate_state(cls, v):
         """Validate US state codes."""
         valid_states = {

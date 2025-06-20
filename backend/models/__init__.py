@@ -1,12 +1,11 @@
 """
 Data models for the Climatize AI platform.
 """
-from .project import (
+from .project_simple import (
     UnifiedProjectModel,
     Address,
     SystemSpecs,
     Financials,
-    BillOfMaterialItem,
     RoofType,
     FeasibilityPackage,
     ProductionMetrics,
@@ -14,7 +13,7 @@ from .project import (
     InterconnectionScore,
     PermitMatrix,
     ProForma,
-    SiteControlDocument
+    ProjectStatus
 )
 
 __all__ = [
@@ -22,7 +21,6 @@ __all__ = [
     'Address', 
     'SystemSpecs',
     'Financials',
-    'BillOfMaterialItem',
     'RoofType',
     'FeasibilityPackage',
     'ProductionMetrics',
@@ -30,5 +28,5 @@ __all__ = [
     'InterconnectionScore',
     'PermitMatrix',
     'ProForma',
-    'SiteControlDocument'
+    'ProjectStatus'
 ]

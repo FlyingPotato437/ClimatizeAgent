@@ -6,12 +6,14 @@ from typing import Dict, Any, List, Optional
 from datetime import datetime
 import asyncio
 
-from ..models.project import UnifiedProjectModel, ProjectStatus
-from ..core.database import get_db_client, get_storage_client
+from models.project_simple import UnifiedProjectModel, ProjectStatus
+from core.database import get_db_client, get_storage_client
 from .ai_service import AIService
 from .scoring_service import ScoringService
 from .permit_service import PermitService
 from .financial_service import FinancialService
+from .feasibility_analysis_service import get_feasibility_engine
+from .workflow_state_service import get_workflow_state_service
 
 logger = logging.getLogger(__name__)
 
@@ -28,6 +30,8 @@ class ProjectService:
         self.scoring_service = ScoringService()
         self.permit_service = PermitService()
         self.financial_service = FinancialService()
+        self.feasibility_engine = get_feasibility_engine()
+        self.workflow_state = get_workflow_state_service()
     
     async def create_project_from_minimal_input(
         self, 
@@ -456,3 +460,440 @@ class ProjectService:
             return (completed - created).total_seconds()
         
         return None
+    
+    async def trigger_permit_matrix_generation(self, project_id: str) -> Dict[str, Any]:
+        """Trigger permit matrix generation for a project."""
+        try:
+            logger.info(f"Triggering permit matrix generation for project {project_id}")
+            
+            project = await self.db.get_project(project_id)
+            if not project:
+                raise ValueError(f"Project {project_id} not found")
+            
+            # Use permit service to generate matrix
+            permit_matrix = await self.permit_service.generate_permit_matrix(project)
+            
+            # Update project with permit matrix
+            project['permit_matrix'] = permit_matrix
+            project['milestones']['permitting'] = 'Matrix Generated'
+            project['updated_date'] = datetime.now()
+            
+            await self.db.update_project(project_id, project)
+            
+            logger.info(f"Permit matrix generated for project {project_id}")
+            return permit_matrix
+            
+        except Exception as e:
+            logger.error(f"Error generating permit matrix for {project_id}: {str(e)}")
+            raise
+    
+    async def trigger_site_control_generation(self, project_id: str) -> Dict[str, Any]:
+        """Trigger site control document (LOI) generation for a project."""
+        try:
+            logger.info(f"Triggering site control generation for project {project_id}")
+            
+            project = await self.db.get_project(project_id)
+            if not project:
+                raise ValueError(f"Project {project_id} not found")
+            
+            # Generate LOI using AI service
+            loi_document = await self.ai_service.generate_letter_of_intent(project)
+            
+            # Store document in blob storage
+            document_url = await self.storage.upload_document(
+                f"projects/{project_id}/loi.pdf",
+                loi_document
+            )
+            
+            # Update project with site control document
+            project['project_documents']['site_control'] = {
+                'document_type': 'LOI',
+                'status': 'Draft',
+                'generated_date': datetime.now(),
+                'document_url': document_url
+            }
+            project['milestones']['site_control'] = 'LOI Drafted'
+            project['updated_date'] = datetime.now()
+            
+            await self.db.update_project(project_id, project)
+            
+            logger.info(f"Site control document generated for project {project_id}")
+            return {'document_url': document_url, 'status': 'completed'}
+            
+        except Exception as e:
+            logger.error(f"Error generating site control for {project_id}: {str(e)}")
+            raise
+    
+    async def trigger_capex_modeling(self, project_id: str) -> Dict[str, Any]:
+        """Trigger CAPEX modeling and financial analysis for a project."""
+        try:
+            logger.info(f"Triggering CAPEX modeling for project {project_id}")
+            
+            project = await self.db.get_project(project_id)
+            if not project:
+                raise ValueError(f"Project {project_id} not found")
+            
+            # Generate financial analysis
+            financial_analysis = await self.financial_service.calculate_capex_and_returns(project)
+            
+            # Update project with financial data
+            project['financials'].update(financial_analysis)
+            project['milestones']['financing'] = 'Package Prepared'
+            project['updated_date'] = datetime.now()
+            
+            await self.db.update_project(project_id, project)
+            
+            logger.info(f"CAPEX modeling completed for project {project_id}")
+            return financial_analysis
+            
+        except Exception as e:
+            logger.error(f"Error in CAPEX modeling for {project_id}: {str(e)}")
+            raise
+    
+    async def process_helioscope_feasibility(self, project_id: str, run_id: str) -> Dict[str, Any]:
+        """
+        Process feasibility analysis specifically for Helioscope-sourced projects.
+        This is the enhanced workflow mentioned in the Aurora Solar meeting.
+        
+        Core value: Reduces project failure rates from 70-80% to ~30% through proper feasibility analysis.
+        """
+        try:
+            logger.info(f"Processing Helioscope feasibility for project {project_id}, run {run_id}")
+            
+            # Mark feasibility_analysis as processing with idempotency check
+            if not self.workflow_state.mark_step_processing_with_idempotency(project_id, run_id, "feasibility_analysis"):
+                logger.info(f"Feasibility analysis already processed for run {run_id}, skipping")
+                existing_state = self.workflow_state.get_workflow_state(project_id, run_id)
+                if existing_state and "feasibility_analysis" in existing_state.get("Steps", {}):
+                    return existing_state["Steps"]["feasibility_analysis"].get("output", {})
+                raise ValueError("Feasibility analysis already in progress or failed")
+            
+            project = await self.db.get_project(project_id)
+            if not project:
+                self.workflow_state.update_step_status(
+                    project_id, run_id, "feasibility_analysis", "Failed", 
+                    error_details=f"Project {project_id} not found"
+                )
+                raise ValueError(f"Project {project_id} not found")
+            
+            if project.get('data_source') != 'Helioscope':
+                logger.warning(f"Project {project_id} is not from Helioscope, but processing anyway")
+            
+            # CORE FEASIBILITY ANALYSIS - This is the key business value
+            logger.info(f"Running core feasibility analysis for project {project_id}")
+            feasibility_analysis = self.feasibility_engine.analyze_project(project)
+            
+            # Check if project is viable before continuing with expensive operations
+            if not feasibility_analysis["is_viable"]:
+                logger.info(f"Project {project_id} failed feasibility analysis: {feasibility_analysis['viability_reason']}")
+                
+                # Mark feasibility as completed with non-viable result
+                self.workflow_state.update_step_status(
+                    project_id, run_id, "feasibility_analysis", "Completed", 
+                    output={
+                        "feasibility_analysis": feasibility_analysis,
+                        "workflow_status": "completed_non_viable"
+                    }
+                )
+                
+                # Update project status
+                project['feasibility_analysis'] = feasibility_analysis
+                project['project_status'] = 'not_viable'
+                project['updated_date'] = datetime.now()
+                await self.db.update_project(project_id, project)
+                
+                return {
+                    'project_id': project_id,
+                    'feasibility_analysis': feasibility_analysis,
+                    'workflow_status': 'completed_non_viable',
+                    'message': 'Project failed feasibility analysis - workflow stopped'
+                }
+            
+            # Project passed feasibility - continue with full workflow
+            logger.info(f"Project {project_id} passed feasibility analysis - continuing with full workflow")
+            
+            # Execute the complete workflow in sequence
+            # 1. Permit matrix analysis
+            permit_matrix = await self.trigger_permit_matrix_generation(project_id)
+            
+            # 2. Site control document generation (LOI)
+            site_control = await self.trigger_site_control_generation(project_id)
+            
+            # 3. CAPEX modeling and financial analysis
+            financial_analysis = await self.trigger_capex_modeling(project_id)
+            
+            # 4. Calculate overall project score
+            fundability_score = await self.scoring_service.calculate_fundability_score(project)
+            
+            # 5. Update final project status
+            project = await self.db.get_project(project_id)  # Refresh project data
+            project['feasibility_analysis'] = feasibility_analysis
+            project['fundability_score'] = fundability_score
+            project['readiness_score'] = self._calculate_readiness_score(project)
+            project['next_steps'] = self._generate_next_steps(project)
+            project['project_status'] = 'viable'
+            project['updated_date'] = datetime.now()
+            
+            await self.db.update_project(project_id, project)
+            
+            # Compile complete feasibility package
+            feasibility_package = {
+                'project_id': project_id,
+                'feasibility_analysis': feasibility_analysis,
+                'permit_matrix': permit_matrix,
+                'site_control': site_control,
+                'financial_analysis': financial_analysis,
+                'fundability_score': fundability_score,
+                'readiness_score': project['readiness_score'],
+                'next_steps': project['next_steps'],
+                'workflow_status': 'completed_viable'
+            }
+            
+            # Mark feasibility analysis as completed
+            self.workflow_state.update_step_status(
+                project_id, run_id, "feasibility_analysis", "Completed", 
+                output=feasibility_package
+            )
+            
+            logger.info(f"Helioscope feasibility analysis completed for project {project_id}, run {run_id}")
+            return feasibility_package
+            
+        except Exception as e:
+            logger.error(f"Error in Helioscope feasibility processing for {project_id}, run {run_id}: {str(e)}")
+            
+            # Mark step as failed
+            self.workflow_state.update_step_status(
+                project_id, run_id, "feasibility_analysis", "Failed", 
+                error_details=str(e)
+            )
+            
+            raise
+    
+    def _calculate_readiness_score(self, project: Dict[str, Any]) -> int:
+        """Calculate project readiness score based on milestone completion."""
+        total_milestones = 6
+        completed_milestones = 0
+        
+        milestones = project.get('milestones', {})
+        if milestones.get('site_control') not in ['Not Started']:
+            completed_milestones += 1
+        if milestones.get('permitting') not in ['Not Started']:
+            completed_milestones += 1
+        if milestones.get('interconnection') not in ['Not Started']:
+            completed_milestones += 1
+        if milestones.get('engineering') not in ['Not Started']:
+            completed_milestones += 1
+        if milestones.get('offtake') not in ['Not Started']:
+            completed_milestones += 1
+        if milestones.get('financing') not in ['Not Started']:
+            completed_milestones += 1
+        
+        return int((completed_milestones / total_milestones) * 100)
+    
+    def _generate_next_steps(self, project: Dict[str, Any]) -> List[str]:
+        """Generate next steps based on current project status."""
+        next_steps = []
+        milestones = project.get('milestones', {})
+        
+        if milestones.get('site_control') == 'Not Started':
+            next_steps.append("Complete site control agreements (LOI or lease)")
+        elif milestones.get('site_control') == 'LOI Drafted':
+            next_steps.append("Send LOI to landowner for signature")
+        
+        if milestones.get('permitting') == 'Not Started':
+            next_steps.append("Begin permit application process")
+        elif milestones.get('permitting') == 'Matrix Generated':
+            next_steps.append("Submit permit applications to relevant authorities")
+        
+        if milestones.get('interconnection') == 'Not Started':
+            next_steps.append("Submit interconnection application to utility")
+        
+        if milestones.get('financing') == 'Not Started':
+            next_steps.append("Prepare financing package for investors")
+        
+        if not next_steps:
+            next_steps.append("Project is ready for construction phase")
+        
+        return next_steps
+    
+    async def generate_complete_permitting_package(self, project_id: str) -> Dict[str, Any]:
+        """
+        Generate complete permitting package including all deliverables mentioned in the Aurora meeting:
+        - Single line diagrams
+        - Interconnection applications  
+        - Land use reports
+        - Site control documents
+        - CAPEX modeling
+        """
+        try:
+            logger.info(f"Generating complete permitting package for project {project_id}")
+            
+            project = await self.db.get_project(project_id)
+            if not project:
+                raise ValueError(f"Project {project_id} not found")
+            
+            package_documents = {}
+            
+            # 1. Single Line Diagram
+            if project.get('data_source') == 'Helioscope' and project.get('project_documents', {}).get('one_line_diagram'):
+                package_documents['single_line_diagram'] = project['project_documents']['one_line_diagram']
+            else:
+                # Generate single line diagram from system specs
+                single_line_diagram = await self._generate_single_line_diagram(project)
+                package_documents['single_line_diagram'] = single_line_diagram
+            
+            # 2. Interconnection Application
+            interconnection_app = await self._generate_interconnection_application(project)
+            package_documents['interconnection_application'] = interconnection_app
+            
+            # 3. Land Use Report
+            land_use_report = await self._generate_land_use_report(project)
+            package_documents['land_use_report'] = land_use_report
+            
+            # 4. Site Control Documents (LOI/Lease)
+            if not project.get('project_documents', {}).get('site_control'):
+                site_control = await self.trigger_site_control_generation(project_id)
+                package_documents['site_control'] = site_control
+            else:
+                package_documents['site_control'] = project['project_documents']['site_control']
+            
+            # 5. CAPEX Model and Financial Package
+            if not project.get('financials', {}).get('pro_forma'):
+                financial_package = await self.trigger_capex_modeling(project_id)
+                package_documents['financial_package'] = financial_package
+            else:
+                package_documents['financial_package'] = project['financials']
+            
+            # 6. System Layout and DXF Files (if from Helioscope)
+            if project.get('data_source') == 'Helioscope':
+                dxf_files = project.get('project_documents', {}).get('dxf_files')
+                if dxf_files:
+                    package_documents['system_layout_dxf'] = dxf_files
+                
+                site_images = project.get('project_documents', {}).get('pv_layout_pdf_url')
+                if site_images:
+                    package_documents['pv_layout'] = site_images
+            
+            # Create comprehensive package zip
+            package_url = await self._create_package_zip(project_id, package_documents)
+            
+            # Update project with complete package
+            project['project_documents']['full_package_zip_url'] = package_url
+            project['milestones']['permitting'] = 'Applications Drafted'
+            project['updated_date'] = datetime.now()
+            
+            await self.db.update_project(project_id, project)
+            
+            result = {
+                'project_id': project_id,
+                'package_url': package_url,
+                'documents_included': list(package_documents.keys()),
+                'status': 'completed',
+                'generated_date': datetime.now()
+            }
+            
+            logger.info(f"Complete permitting package generated for project {project_id}")
+            return result
+            
+        except Exception as e:
+            logger.error(f"Error generating permitting package for {project_id}: {str(e)}")
+            raise
+    
+    async def _generate_single_line_diagram(self, project: Dict[str, Any]) -> Dict[str, Any]:
+        """Generate single line electrical diagram."""
+        try:
+            system_specs = project.get('system_specs', {})
+            
+            # Use AI service to generate diagram content
+            diagram_content = await self.ai_service.generate_single_line_diagram(
+                project_name=project.get('project_name'),
+                system_size_kw=system_specs.get('system_size_dc_kw'),
+                inverter_type=system_specs.get('inverter_type'),
+                module_count=system_specs.get('module_count'),
+                address=project.get('address')
+            )
+            
+            # Store diagram
+            diagram_url = await self.storage.upload_document(
+                f"projects/{project['project_id']}/single_line_diagram.pdf",
+                diagram_content
+            )
+            
+            return {
+                'document_type': 'Single Line Diagram',
+                'document_url': diagram_url,
+                'generated_date': datetime.now(),
+                'status': 'Draft'
+            }
+            
+        except Exception as e:
+            logger.error(f"Error generating single line diagram: {str(e)}")
+            raise
+    
+    async def _generate_interconnection_application(self, project: Dict[str, Any]) -> Dict[str, Any]:
+        """Generate utility interconnection application."""
+        try:
+            # Use AI service to generate interconnection application
+            app_content = await self.ai_service.generate_interconnection_application(project)
+            
+            # Store application
+            app_url = await self.storage.upload_document(
+                f"projects/{project['project_id']}/interconnection_application.pdf",
+                app_content
+            )
+            
+            # Update milestone
+            project['milestones']['interconnection'] = 'Application Drafted'
+            
+            return {
+                'document_type': 'Interconnection Application',
+                'document_url': app_url,
+                'generated_date': datetime.now(),
+                'status': 'Draft',
+                'utility_name': project.get('interconnection_score', {}).get('utility_name', 'TBD')
+            }
+            
+        except Exception as e:
+            logger.error(f"Error generating interconnection application: {str(e)}")
+            raise
+    
+    async def _generate_land_use_report(self, project: Dict[str, Any]) -> Dict[str, Any]:
+        """Generate land use and environmental impact report."""
+        try:
+            # Use AI service to generate land use report
+            report_content = await self.ai_service.generate_land_use_report(project)
+            
+            # Store report
+            report_url = await self.storage.upload_document(
+                f"projects/{project['project_id']}/land_use_report.pdf",
+                report_content
+            )
+            
+            return {
+                'document_type': 'Land Use Report',
+                'document_url': report_url,
+                'generated_date': datetime.now(),
+                'status': 'Draft'
+            }
+            
+        except Exception as e:
+            logger.error(f"Error generating land use report: {str(e)}")
+            raise
+    
+    async def _create_package_zip(self, project_id: str, documents: Dict[str, Any]) -> str:
+        """Create a comprehensive ZIP package of all project documents."""
+        try:
+            # Create zip archive with all documents
+            zip_content = await self.storage.create_document_package(project_id, documents)
+            
+            # Upload zip to storage
+            zip_url = await self.storage.upload_document(
+                f"projects/{project_id}/complete_package.zip",
+                zip_content
+            )
+            
+            return zip_url
+            
+        except Exception as e:
+            logger.error(f"Error creating package zip for {project_id}: {str(e)}")
+            raise
