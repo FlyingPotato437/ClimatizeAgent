@@ -23,3 +23,4 @@ langgraph==0.2.14
 # Additional dependencies for agent collaboration
 redis==5.0.4
 celery==5.3.6
+-e /Users/radhamunver/Downloads/permit-ml-generator
