@@ -255,17 +255,17 @@ def create_research_agent(openai_api_key: str = None) -> LangChainResearchAgent:
     return LangChainResearchAgent(openai_api_key=openai_api_key)
 
 # Test function
-def test_permit_agent():
+def test_research_agent():
     """Test the LangChain permit agent"""
     
     # Create ML Agent
-    permit_agent_ml = create_research_agent()
+    research_agent_ml = create_research_agent()
     
     # Test 1: Simplified analysis with just address and system size (requires OpenAI API key)
     print("\n" + "="*60)
     print("SIMPLIFIED SOLAR PROJECT ANALYSIS")
     print("="*60)
-    simple_result = permit_agent_ml.analyze_solar_project(
+    simple_result = research_agent_ml.analyze_solar_project(
         project_address="123 Main St, San Jose, Santa Clara County, CA 95110",
         system_size_ac=8.5
     )
@@ -281,7 +281,7 @@ def test_permit_agent():
     print("\n" + "="*60)
     print("DEVELOPMENT MEMO GENERATION")
     print("="*60)
-    memo_result = permit_agent_ml.generate_development_memo(
+    memo_result = research_agent_ml.generate_development_memo(
         project_address="123 Main St, San Jose, Santa Clara County, CA 95110",
         system_size_ac=8.5
     )
@@ -293,11 +293,11 @@ def test_permit_agent():
     else:
         print("Error:", memo_result["error"])
     
-    # Test 3: Complete Permit Workflow (requires OpenAI API key)
+    # Test 3: Complete Solar Project Reseach Workflow (requires OpenAI API key)
     print("\n" + "="*60)
-    print("COMPLETE PERMIT WORKFLOW")
+    print("COMPLETE SOLAR PROJECT RESEARCH WORKFLOW")
     print("="*60)
-    workflow_result = permit_agent_ml.create_permit_workflow(
+    workflow_result = research_agent_ml.create_permit_workflow(
         project_address="123 Main St, San Jose, Santa Clara County, CA 95110",
         system_size_ac=8.5
     )
@@ -318,19 +318,19 @@ def test_permit_agent():
         print("Error:", workflow_result["error"])
 
 def save_results_to_files(project_address: str, system_size_ac: float, openai_api_key: str = None):
-    """Save permit analysis results to formatted text files"""
+    """Save research analysis results to formatted text files"""
     
-    permit_agent = create_permit_agent(openai_api_key)
+    research_agent = create_research_agent(openai_api_key)
     
     # Create output directory
-    output_dir = Path("./output")
+    output_dir = Path("./research_output")
     output_dir.mkdir(exist_ok=True)
     
     # Generate results
-    print("Generating permit analysis...")
+    print("Generating research analysis...")
     
     # 1. Simple Analysis
-    simple_result = permit_agent.analyze_solar_project(project_address, system_size_ac)
+    simple_result = research_agent.analyze_solar_project(project_address, system_size_ac)
     if simple_result["status"] == "success":
         with open(output_dir / "simple_analysis.txt", "w") as f:
             f.write("SOLAR PROJECT PERMIT ANALYSIS\n")
@@ -340,20 +340,20 @@ def save_results_to_files(project_address: str, system_size_ac: float, openai_ap
             f.write("ANALYSIS:\n")
             f.write("-" * 20 + "\n")
             f.write(simple_result["analysis"])
-        print("✓ Simple analysis saved to output/simple_analysis.txt")
+        print("✓ Simple analysis saved to research_output/simple_permit_analysis.txt")
     
     # 2. Development Memo
-    memo_result = permit_agent.generate_development_memo(project_address, system_size_ac)
+    memo_result = research_agent.generate_development_memo(project_address, system_size_ac)
     if memo_result["status"] == "success":
         with open(output_dir / "development_memo.txt", "w") as f:
             f.write(memo_result["development_memo"])
-        print("✓ Development memo saved to output/development_memo.txt")
+        print("✓ Development memo saved to research_output/development_memo.txt")
     
     # 3. Complete Workflow
-    workflow_result = permit_agent.create_permit_workflow(project_address, system_size_ac)
+    workflow_result = research_agent.create_permit_workflow(project_address, system_size_ac)
     if workflow_result["status"] == "success":
         with open(output_dir / "complete_workflow.txt", "w") as f:
-            f.write("COMPLETE PERMIT WORKFLOW\n")
+            f.write("COMPLETE SOLAR PROJECT RESEARCH WORKFLOW\n")
             f.write("=" * 50 + "\n\n")
             f.write(f"Project Address: {project_address}\n")
             f.write(f"System Size: {system_size_ac} MWac\n\n")
@@ -364,17 +364,17 @@ def save_results_to_files(project_address: str, system_size_ac: float, openai_ap
             f.write("PERMIT ANALYSIS:\n")
             f.write("-" * 20 + "\n")
             f.write(workflow_result["workflow"]["permit_analysis"])
-        print("✓ Complete workflow saved to output/complete_workflow.txt")
+        print("✓ Complete workflow saved to research_output/complete_workflow.txt")
     
     print(f"\nAll results saved to {output_dir.absolute()}")
 
 if __name__ == "__main__":
     # Run both pretty print and save to files
-    print("Running permit agent analysis...")
+    print("Running research agent analysis...")
     print("This will display results in terminal AND save to files.\n")
     
     # Create agent once
-    permit_agent = create_permit_agent()
+    research_agent = create_research_agent()
     project_address = "123 Main St, San Jose, Santa Clara County, CA 95110"
     system_size_ac = 8.5
     
@@ -382,7 +382,7 @@ if __name__ == "__main__":
     print("="*60)
     print("SIMPLIFIED SOLAR PROJECT ANALYSIS")
     print("="*60)
-    simple_result = permit_agent.analyze_solar_project(project_address, system_size_ac)
+    simple_result = research_agent.analyze_solar_project(project_address, system_size_ac)
     print("Status:", simple_result["status"])
     if simple_result["status"] == "success":
         print("\nANALYSIS:")
@@ -394,7 +394,7 @@ if __name__ == "__main__":
     print("\n" + "="*60)
     print("DEVELOPMENT MEMO GENERATION")
     print("="*60)
-    memo_result = permit_agent.generate_development_memo(project_address, system_size_ac)
+    memo_result = research_agent.generate_development_memo(project_address, system_size_ac)
     print("Status:", memo_result["status"])
     if memo_result["status"] == "success":
         print("\nDEVELOPMENT MEMO:")
@@ -404,9 +404,9 @@ if __name__ == "__main__":
         print("Error:", memo_result["error"])
     
     print("\n" + "="*60)
-    print("COMPLETE PERMIT WORKFLOW")
+    print("COMPLETE RESEARCH WORKFLOW")
     print("="*60)
-    workflow_result = permit_agent.create_permit_workflow(project_address, system_size_ac)
+    workflow_result = research_agent.create_permit_workflow(project_address, system_size_ac)
     print("Status:", workflow_result["status"])
     if workflow_result["status"] == "success":
         print("\nWORKFLOW SUMMARY:")
@@ -414,12 +414,8 @@ if __name__ == "__main__":
         summary = workflow_result["workflow"]["workflow_summary"]
         print(f"Project Address: {summary['project_address']}")
         print(f"System Size: {summary['system_size_ac']} MWac")
-        print(f"Applicable Permits: {len(summary['applicable_permits'])} found")
         print(f"Next Steps: {summary['next_steps']}")
-        
-        print("\nPERMIT ANALYSIS:")
-        print("-" * 40)
-        print(workflow_result["workflow"]["permit_analysis"])
+
     else:
         print("Error:", workflow_result["error"])
     
@@ -434,7 +430,7 @@ if __name__ == "__main__":
     
     # Save results using the data we already have
     if simple_result["status"] == "success":
-        with open(output_dir / "simple_analysis.txt", "w") as f:
+        with open(output_dir / "simple_permit_analysis.txt", "w") as f:
             f.write("SOLAR PROJECT PERMIT ANALYSIS\n")
             f.write("=" * 50 + "\n\n")
             f.write(f"Project Address: {project_address}\n")
@@ -442,7 +438,7 @@ if __name__ == "__main__":
             f.write("ANALYSIS:\n")
             f.write("-" * 20 + "\n")
             f.write(simple_result["analysis"])
-        print("✓ Simple analysis saved to research_output/simple_analysis.txt")
+        print("✓ Simple analysis saved to research_output/simple_permit_analysis.txt")
     
     if memo_result["status"] == "success":
         with open(output_dir / "development_memo.txt", "w") as f:

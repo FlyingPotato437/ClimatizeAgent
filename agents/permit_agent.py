@@ -415,7 +415,7 @@ def save_results_to_files(project_address: str, system_size_ac: float, openai_ap
     # 1. Simple Analysis
     simple_result = permit_agent.analyze_solar_project(project_address, system_size_ac)
     if simple_result["status"] == "success":
-        with open(output_dir / "simple_analysis.txt", "w") as f:
+        with open(output_dir / "simple_permit_analysis.txt", "w") as f:
             f.write("SOLAR PROJECT PERMIT ANALYSIS\n")
             f.write("=" * 50 + "\n\n")
             f.write(f"Project Address: {project_address}\n")
@@ -423,7 +423,7 @@ def save_results_to_files(project_address: str, system_size_ac: float, openai_ap
             f.write("ANALYSIS:\n")
             f.write("-" * 20 + "\n")
             f.write(simple_result["analysis"])
-        print("✓ Simple analysis saved to permit_output/simple_analysis.txt")
+        print("✓ Simple analysis saved to permit_output/simple_permit_analysis.txt")
     
     # 2. Development Memo
     memo_result = permit_agent.generate_development_memo(project_address, system_size_ac)

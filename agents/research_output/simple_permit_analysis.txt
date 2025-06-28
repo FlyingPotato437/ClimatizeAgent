@@ -1,0 +1,54 @@
+SOLAR PROJECT PERMIT ANALYSIS
+==================================================
+
+Project Address: 123 Main St, San Jose, Santa Clara County, CA 95110
+System Size: 8.5 MWac
+
+ANALYSIS:
+--------------------
+For an 8.5 MWac solar project at 123 Main St, San Jose, Santa Clara County, CA 95110, you will need the following permits and approvals:
+
+1. Conditional Use Permit (Santa Clara County)
+   - Cost: $10,000–$30,000
+   - Timeline: 6–12 months
+
+2. FAA Permit (Form 7460-1, if near airports)
+   - Cost: $0
+   - Timeline: 1–2 months
+
+3. Nationwide Permit (Section 404, US Army Corps of Engineers, if wetlands impacted)
+   - Cost: $5,000–$20,000
+   - Timeline: 6–12 months
+
+4. Wetlands Permit (Section 401, USACE/EPA, if applicable)
+   - Cost: $5,000–$20,000
+   - Timeline: 6–12 months
+
+5. Wildlife Permit (US Fish & Wildlife, if sensitive species present)
+   - Cost: $5,000–$15,000
+   - Timeline: 6–12 months
+
+6. CEQA Environmental Review (California Environmental Quality Act)
+   - Cost: $20,000–$100,000+
+   - Timeline: 12–18 months
+
+7. Building/Electrical Permits (City of San Jose)
+   - Cost: $10,000–$30,000
+   - Timeline: 3–6 months
+
+8. Interconnection Studies and Agreement (PG&E)
+   - Timeline: 12–24 months (can run in parallel with other permitting)
+
+Estimated Overall Timeline:
+- Permitting (including CEQA): 12–18 months
+- Interconnection: 12–24 months (parallel)
+- Total development timeline (including site control, diligence, engineering, and construction): 24–36 months
+
+Recommendations:
+- Begin environmental and interconnection studies as early as possible, as these are the most time-consuming.
+- Engage with Santa Clara County and City of San Jose planning departments early to clarify zoning and permitting requirements.
+- Conduct a detailed site and title review to confirm land use compatibility.
+- Review environmental constraints (wetlands, species, floodplains) to determine if federal permits are needed.
+- Prepare a decommissioning plan as required by county ordinance.
+
+All costs and timelines are estimates and should be confirmed with the relevant agencies. Early diligence and stakeholder engagement are critical to avoid delays.
