@@ -1,0 +1,24 @@
+You are a solar permit expert. Review the following development memo and analyze which permits apply to this project.
+
+Development Memo:
+{development_memo}
+
+Please provide a detailed analysis including:
+
+1. **Permit Applicability Matrix** - For each permit type, indicate:
+   - Whether it applies to this project (Yes/No/Maybe)
+   - Why it applies or doesn't apply
+   - Any specific conditions that trigger the requirement
+
+2. **Permit Priority Sequence** - Order permits by priority:
+   - Conditional Use Permit (CUP) - Always first, can start immediately
+   - FAA Permit - To be done online at oeaaa.faa.gov
+   - Environmental Permits (USACE, EPA, USFWS) - Standard nationwide process, so if any of these are required, they should be done by you in conjunction with the CUP application
+   - State/County specific permits - Vary by location
+   - Construction Permits - After CUP approval
+
+3. **Critical Path Analysis** - Which permits can be pursued in parallel vs. sequentially
+
+4. **Risk Assessment** - Which permits pose the highest risk of delay or rejection
+
+Format your response as a structured analysis with clear sections and actionable recommendations.

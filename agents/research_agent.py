@@ -7,7 +7,7 @@ from pathlib import Path
 import json
 from typing import Dict, Any, List
 
-class PermitAnalysisOutputParser(BaseOutputParser):
+class ResearchAnalysisOutputParser(BaseOutputParser):
     """Custom parser for permit analysis results"""
     
     def parse(self, text: str) -> Dict[str, Any]:
@@ -18,8 +18,8 @@ class PermitAnalysisOutputParser(BaseOutputParser):
             # Fallback to structured text parsing
             return {"analysis": text, "status": "parsed_as_text"}
 
-class LangChainPermitAgent:
-    """LangChain-powered permit agent with ML automation"""
+class LangChainResearchAgent:
+    """LangChain-powered research agent with ML automation"""
     
     def __init__(self, openai_api_key: str = None):
         # Initialize LangChain LLM only if API key is provided
@@ -44,44 +44,13 @@ class LangChainPermitAgent:
         
         tools = [
             Tool(
-                name="predict_required_permits",
-                description="Use ML to predict what permits will be required for a solar project",
-                func=self._predict_required_permits_tool
-            ),
-            Tool(
-                name="generate_permit_forms",
-                description="Generate permit application forms based on project specifications",
-                func=self._generate_permit_forms_tool
-            ),
-            Tool(
                 name="generate_development_memo",
                 description="Generate a comprehensive solar project development memo. Input should be project details including address and system size (e.g., '8.5 MWac solar project at 123 Main St, San Jose, CA' or JSON with address, system_size_ac, and description fields).",
                 func=self._generate_development_memo_tool
             ),
-            Tool(
-                name="review_and_analyze_permits",
-                description="Review permit matrix and analyze which permits apply to the project",
-                func=self._review_permits_tool
-            ),
         ]
         
         return tools
-    
-    #TODO: Implement this
-    def _predict_required_permits_tool(self, project_features: str) -> str:
-        """Tool for ML permit prediction"""
-        try:
-            return "Need to implement predict_permit_requirements_tool"
-        except Exception as e:
-            return f"Error predicting permits: {str(e)}"
-    
-    #TODO: Implement this
-    def _generate_permit_forms_tool(self, project_data: str) -> str:
-        """Tool for generating permit forms"""
-        try:
-            return "Need to implement generate_permit_forms_tool"
-        except Exception as e:
-            return f"Error generating forms: {str(e)}"
     
     def _generate_development_memo_tool(self, project_data: str) -> str:
         """Tool for generating development memo"""
@@ -119,14 +88,6 @@ class LangChainPermitAgent:
             return json.dumps(result, indent=2)
         except Exception as e:
             return f"Error generating development memo: {str(e)}"
-    
-    def _review_permits_tool(self, development_memo: str) -> str:
-        """Tool for reviewing and analyzing permits"""
-        try:
-            result = self.review_and_analyze_permits(development_memo)
-            return json.dumps(result, indent=2)
-        except Exception as e:
-            return f"Error reviewing permits: {str(e)}"
     
     def _create_agent(self):
         """Create the LangChain REACT agent"""
@@ -186,7 +147,7 @@ class LangChainPermitAgent:
             if not self.llm:
                 return {
                     "status": "error",
-                    "error": "OpenAI API key required for development memo generation. Use quick_permit_analysis() for ML-only analysis.",
+                    "error": "OpenAI API key required for development memo generation.",
                     "analysis": "Please provide an OpenAI API key to use the development memo generation capabilities."
                 }
             
@@ -228,38 +189,6 @@ class LangChainPermitAgent:
         
         return prompt
     
-    def review_and_analyze_permits(self, development_memo: str) -> Dict[str, Any]:
-        """Review the development memo and analyze which permits apply"""
-        try:
-            # Check if agent is available (requires OpenAI API key)
-            if not self.llm:
-                return {
-                    "status": "error",
-                    "error": "OpenAI API key required for permit review.",
-                    "analysis": "Please provide an OpenAI API key to use the permit review capabilities."
-                }
-            
-            # Read the review prompt template
-            review_prompt_template = Path("./prompts/review_permit_mx.txt").read_text()
-            
-            # Create the full prompt with the development memo
-            full_prompt = f"{review_prompt_template}\n\nDevelopment Memo to Review:\n{development_memo}"
-            
-            # Use the LLM directly instead of the agent to avoid recursion
-            result = self.llm.invoke(full_prompt)
-            
-            return {
-                "status": "success",
-                "permit_analysis": result.content,
-                "intermediate_steps": []
-            }
-            
-        except Exception as e:
-            return {
-                "status": "error",
-                "error": str(e)
-            }
-    
     def create_permit_workflow(self, project_address: str, system_size_ac: float, project_description: str = "") -> Dict[str, Any]:
         """Create a complete permit workflow including memo, review, and agency contacts"""
         try:
@@ -269,25 +198,13 @@ class LangChainPermitAgent:
             if memo_result["status"] != "success":
                 return memo_result
             
-            # Step 2: Review and analyze permits
-            review_result = self.review_and_analyze_permits(memo_result["development_memo"])
-            
-            if review_result["status"] != "success":
-                return review_result
-            
-            # Step 3: Extract applicable permits (simplified - in production, parse the review result)
-            applicable_permits = []
-
-            
             return {
                 "status": "success",
                 "workflow": {
                     "development_memo": memo_result["development_memo"],
-                    "permit_analysis": review_result["permit_analysis"],
                     "workflow_summary": {
                         "project_address": project_address,
                         "system_size_ac": system_size_ac,
-                        "applicable_permits": applicable_permits,
                         "next_steps": [
                             "nothing for now [to-do!]"
                         ]
@@ -333,16 +250,16 @@ class LangChainPermitAgent:
             }
 
 # Usage example
-def create_permit_agent(openai_api_key: str = None) -> LangChainPermitAgent:
+def create_research_agent(openai_api_key: str = None) -> LangChainResearchAgent:
     """Factory function to create a permit agent"""
-    return LangChainPermitAgent(openai_api_key=openai_api_key)
+    return LangChainResearchAgent(openai_api_key=openai_api_key)
 
 # Test function
 def test_permit_agent():
     """Test the LangChain permit agent"""
     
     # Create ML Agent
-    permit_agent_ml = create_permit_agent()
+    permit_agent_ml = create_research_agent()
     
     # Test 1: Simplified analysis with just address and system size (requires OpenAI API key)
     print("\n" + "="*60)
@@ -406,7 +323,7 @@ def save_results_to_files(project_address: str, system_size_ac: float, openai_ap
     permit_agent = create_permit_agent(openai_api_key)
     
     # Create output directory
-    output_dir = Path("./permit_output")
+    output_dir = Path("./output")
     output_dir.mkdir(exist_ok=True)
     
     # Generate results
@@ -423,14 +340,14 @@ def save_results_to_files(project_address: str, system_size_ac: float, openai_ap
             f.write("ANALYSIS:\n")
             f.write("-" * 20 + "\n")
             f.write(simple_result["analysis"])
-        print("✓ Simple analysis saved to permit_output/simple_analysis.txt")
+        print("✓ Simple analysis saved to output/simple_analysis.txt")
     
     # 2. Development Memo
     memo_result = permit_agent.generate_development_memo(project_address, system_size_ac)
     if memo_result["status"] == "success":
         with open(output_dir / "development_memo.txt", "w") as f:
             f.write(memo_result["development_memo"])
-        print("✓ Development memo saved to permit_output/development_memo.txt")
+        print("✓ Development memo saved to output/development_memo.txt")
     
     # 3. Complete Workflow
     workflow_result = permit_agent.create_permit_workflow(project_address, system_size_ac)
@@ -447,7 +364,7 @@ def save_results_to_files(project_address: str, system_size_ac: float, openai_ap
             f.write("PERMIT ANALYSIS:\n")
             f.write("-" * 20 + "\n")
             f.write(workflow_result["workflow"]["permit_analysis"])
-        print("✓ Complete workflow saved to permit_output/complete_workflow.txt")
+        print("✓ Complete workflow saved to output/complete_workflow.txt")
     
     print(f"\nAll results saved to {output_dir.absolute()}")
 
@@ -512,7 +429,7 @@ if __name__ == "__main__":
     print("="*60)
     
     # Create output directory
-    output_dir = Path("./permit_output")
+    output_dir = Path("./research_output")
     output_dir.mkdir(exist_ok=True)
     
     # Save results using the data we already have
@@ -525,16 +442,16 @@ if __name__ == "__main__":
             f.write("ANALYSIS:\n")
             f.write("-" * 20 + "\n")
             f.write(simple_result["analysis"])
-        print("✓ Simple analysis saved to permit_output/simple_analysis.txt")
+        print("✓ Simple analysis saved to research_output/simple_analysis.txt")
     
     if memo_result["status"] == "success":
         with open(output_dir / "development_memo.txt", "w") as f:
             f.write(memo_result["development_memo"])
-        print("✓ Development memo saved to permit_output/development_memo.txt")
+        print("✓ Development memo saved to research_output/development_memo.txt")
     
     if workflow_result["status"] == "success":
         with open(output_dir / "complete_workflow.txt", "w") as f:
-            f.write("COMPLETE PERMIT WORKFLOW\n")
+            f.write("COMPLETE RESEARCH WORKFLOW\n")
             f.write("=" * 50 + "\n\n")
             f.write(f"Project Address: {project_address}\n")
             f.write(f"System Size: {system_size_ac} MWac\n\n")
@@ -542,9 +459,6 @@ if __name__ == "__main__":
             f.write("-" * 20 + "\n")
             f.write(workflow_result["workflow"]["development_memo"])
             f.write("\n\n" + "=" * 50 + "\n\n")
-            f.write("PERMIT ANALYSIS:\n")
-            f.write("-" * 20 + "\n")
-            f.write(workflow_result["workflow"]["permit_analysis"])
-        print("✓ Complete workflow saved to permit_output/complete_workflow.txt")
+        print("✓ Complete workflow saved to research_output/complete_workflow.txt")
     
     print(f"\nAll results saved to {output_dir.absolute()}")

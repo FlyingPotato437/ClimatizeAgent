@@ -1,0 +1,53 @@
+SOLAR PROJECT PERMIT ANALYSIS
+==================================================
+
+Project Address: 123 Main St, San Jose, Santa Clara County, CA 95110
+System Size: 8.5 MWac
+
+ANALYSIS:
+--------------------
+For an 8.5 MWac ground-mounted solar project at 123 Main St, San Jose, Santa Clara County, CA 95110, you will typically need the following permits and approvals:
+
+1. Conditional Use Permit (Santa Clara County Planning Dept.)
+   - Required for all large-scale solar projects.
+   - Estimated timeline: 6–12 months.
+
+2. CEQA Environmental Review (California Environmental Quality Act)
+   - Required for projects of this scale.
+   - Estimated timeline: 6–18 months (often runs in parallel with other permits).
+
+3. Building and Electrical Permits (City of San Jose)
+   - Standard construction and electrical permits.
+   - Estimated timeline: 2–3 months.
+
+4. Interconnection Agreement (PG&E and/or CAISO)
+   - Required for grid connection.
+   - Estimated timeline: 12–18 months (studies and approvals, often parallel to permitting).
+
+5. FAA Permit (Form 7460-1)
+   - Only if the project is near an airport.
+   - Estimated timeline: 1–2 months.
+
+6. Wetlands/Waters Permit (US Army Corps of Engineers/EPA)
+   - Only if wetlands or waters of the US are impacted.
+   - Estimated timeline: 3–6 months.
+
+7. Wildlife Permit (US Fish & Wildlife Service)
+   - Only if endangered species or critical habitat are present.
+   - Estimated timeline: 3–6 months.
+
+Estimated Overall Timeline:
+- Permitting and CEQA: 12–18 months (can overlap with interconnection studies)
+- Interconnection: 12–18 months (parallel)
+- Construction: 6–9 months (after permits/interconnection)
+- Total project timeline (development to commissioning): 24–36 months
+
+Recommendations:
+- Begin site control, environmental studies, and agency engagement as early as possible.
+- Confirm zoning and parcel details with the County and City.
+- Initiate interconnection pre-application with PG&E/CAISO in parallel with permitting.
+- Conduct environmental due diligence to determine if wetlands or wildlife permits are needed.
+- Prepare a decommissioning plan for permit applications.
+- Engage with local agencies early to clarify requirements and streamline review.
+
+All costs and timelines are estimates and should be confirmed with the relevant agencies. Early and parallel processing of permits and interconnection is critical to minimizing project delays.
