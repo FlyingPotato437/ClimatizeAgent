@@ -450,6 +450,7 @@ class LangChainPermitAgent:
             r'```csv\s*\n(.*?)\n```',  # ```csv ... ```
             r'```\s*\n(.*?)\n```',     # ``` ... ``` (generic code block)
             r'CSV Data:\s*\n(.*?)(?=\n\n|\n[A-Z]|$)',  # CSV Data: ... followed by new section
+            r'CSV:\s*\n(.*?)(?=\n\n|\n[A-Z]|$)',  # CSV: ... followed by new section
         ]
         
         for pattern in csv_patterns:
@@ -460,7 +461,300 @@ class LangChainPermitAgent:
                 if ',' in csv_content and '\n' in csv_content:
                     return csv_content
         
+        # If no CSV block found, try to extract table data and convert to CSV
+        # Look for markdown table and convert it
+        table_pattern = r'\|.*\|.*\|\n\|[\s\-:|]+\|\n(.*?)(?=\n\n|\n[A-Z]|$)'
+        table_match = re.search(table_pattern, response_content, re.DOTALL)
+        if table_match:
+            table_content = table_match.group(1).strip()
+            # Convert markdown table to CSV
+            csv_lines = []
+            for line in table_content.split('\n'):
+                if line.strip() and '|' in line:
+                    # Remove leading/trailing | and split by |
+                    cells = [cell.strip() for cell in line.strip('|').split('|')]
+                    csv_lines.append(','.join(f'"{cell}"' for cell in cells))
+            
+            if csv_lines:
+                return '\n'.join(csv_lines)
+        
         return ""
+    
+    def validate_permit_urls(self, permit_matrix_content: str) -> Dict[str, Any]:
+        """
+        Validate all URLs in the permit matrix by actually attempting to access them.
+        This catches hallucinated URLs and ensures only real, accessible sources are included.
+        """
+        import re
+        import requests
+        from urllib.parse import urlparse
+        
+        try:
+            # Extract URLs from the permit matrix
+            url_pattern = r'https?://[^\s|\)]+'
+            urls = re.findall(url_pattern, permit_matrix_content)
+            
+            validation_results = {
+                "total_urls_found": len(urls),
+                "valid_urls": [],
+                "invalid_urls": [],
+                "validation_errors": []
+            }
+            
+            for url in urls:
+                try:
+                    # Clean the URL
+                    clean_url = url.strip().rstrip('.,;:!?')
+                    
+                    # Skip common non-downloadable URLs
+                    if any(skip in clean_url.lower() for skip in ['wikipedia', 'google', 'example.com', 'placeholder']):
+                        validation_results["invalid_urls"].append({
+                            "url": clean_url,
+                            "reason": "Generic/non-agency URL"
+                        })
+                        continue
+                    
+                    # Test the URL
+                    headers = {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+                    }
+                    response = requests.get(clean_url, timeout=10, headers=headers, allow_redirects=True)
+                    
+                    if response.status_code == 200:
+                        # Check for "Page not found" or similar error messages in the content
+                        content_lower = response.text.lower()
+                        page_not_found_indicators = [
+                            'page not found', '404', 'not found', 'error 404', 
+                            'page does not exist', 'file not found', 'document not found',
+                            'the requested page could not be found', 'page unavailable'
+                        ]
+                        
+                        is_page_not_found = any(indicator in content_lower for indicator in page_not_found_indicators)
+                        
+                        if is_page_not_found:
+                            validation_results["invalid_urls"].append({
+                                "url": clean_url,
+                                "reason": "Page not found (404 content detected)"
+                            })
+                            continue
+                        
+                        # Look for download links on the page
+                        download_links = self._find_download_links(response.text, clean_url)
+                        
+                        # Check if the URL itself is directly downloadable
+                        content_type = response.headers.get('content-type', '').lower()
+                        is_directly_downloadable = any(ext in clean_url.lower() for ext in ['.pdf', '.doc', '.docx', '.xls', '.xlsx']) or \
+                                                 'application/' in content_type
+                        
+                        validation_results["valid_urls"].append({
+                            "url": clean_url,
+                            "status_code": response.status_code,
+                            "content_type": content_type,
+                            "is_directly_downloadable": is_directly_downloadable,
+                            "download_links_found": len(download_links),
+                            "download_links": download_links,
+                            "content_length": len(response.text)
+                        })
+                    else:
+                        validation_results["invalid_urls"].append({
+                            "url": clean_url,
+                            "reason": f"HTTP {response.status_code}"
+                        })
+                        
+                except requests.exceptions.RequestException as e:
+                    validation_results["invalid_urls"].append({
+                        "url": clean_url if 'clean_url' in locals() else url,
+                        "reason": f"Connection error: {str(e)}"
+                    })
+                except Exception as e:
+                    validation_results["validation_errors"].append({
+                        "url": clean_url if 'clean_url' in locals() else url,
+                        "error": str(e)
+                    })
+            
+            # Calculate validation summary
+            validation_results["summary"] = {
+                "valid_count": len(validation_results["valid_urls"]),
+                "invalid_count": len(validation_results["invalid_urls"]),
+                "error_count": len(validation_results["validation_errors"]),
+                "success_rate": len(validation_results["valid_urls"]) / max(len(urls), 1) * 100
+            }
+            
+            return validation_results
+            
+        except Exception as e:
+            return {
+                "status": "error",
+                "error": f"URL validation failed: {str(e)}"
+            }
+    
+    def _find_download_links(self, html_content: str, base_url: str) -> List[Dict[str, str]]:
+        """
+        Find download links on a webpage that might contain permit forms.
+        """
+        import re
+        from urllib.parse import urljoin
+        
+        download_links = []
+        
+        # Common patterns for download links
+        download_patterns = [
+            r'<a[^>]*href=["\']([^"\']*\.(?:pdf|doc|docx|xls|xlsx))["\'][^>]*>([^<]*)</a>',
+            r'<a[^>]*href=["\']([^"\']*download[^"\']*)["\'][^>]*>([^<]*)</a>',
+            r'<a[^>]*href=["\']([^"\']*form[^"\']*)["\'][^>]*>([^<]*)</a>',
+            r'<a[^>]*href=["\']([^"\']*permit[^"\']*)["\'][^>]*>([^<]*)</a>',
+            r'<a[^>]*href=["\']([^"\']*application[^"\']*)["\'][^>]*>([^<]*)</a>',
+        ]
+        
+        for pattern in download_patterns:
+            matches = re.findall(pattern, html_content, re.IGNORECASE)
+            for match in matches:
+                href, text = match
+                if href:
+                    # Make relative URLs absolute
+                    full_url = urljoin(base_url, href)
+                    
+                    # Clean up the link text
+                    clean_text = re.sub(r'<[^>]*>', '', text).strip()
+                    
+                    download_links.append({
+                        "url": full_url,
+                        "text": clean_text,
+                        "type": "download_link"
+                    })
+        
+        return download_links
+    
+    def _download_file(self, url: str, output_path: Path, filename_prefix: str) -> Dict[str, Any]:
+        """
+        Download a file from a URL and save it with a descriptive filename.
+        """
+        import requests
+        from urllib.parse import urlparse
+        
+        try:
+            # Download the file
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            }
+            response = requests.get(url, timeout=30, headers=headers)
+            response.raise_for_status()
+            
+            # Determine file extension from URL or content-type
+            parsed_url = urlparse(url)
+            url_path = parsed_url.path.lower()
+            
+            # Try to get extension from URL first
+            if any(ext in url_path for ext in ['.pdf', '.doc', '.docx', '.xls', '.xlsx']):
+                for ext in ['.pdf', '.doc', '.docx', '.xls', '.xlsx']:
+                    if ext in url_path:
+                        file_extension = ext
+                        break
+            else:
+                # Try to get from content-type
+                content_type = response.headers.get('content-type', '').lower()
+                if 'pdf' in content_type:
+                    file_extension = '.pdf'
+                elif 'word' in content_type or 'document' in content_type:
+                    file_extension = '.docx'
+                elif 'excel' in content_type or 'spreadsheet' in content_type:
+                    file_extension = '.xlsx'
+                else:
+                    file_extension = '.pdf'  # Default to PDF
+            
+            # Create filename
+            safe_prefix = "".join(c for c in filename_prefix if c.isalnum() or c in (' ', '-', '_')).rstrip()
+            filename = f"{safe_prefix}{file_extension}"
+            filepath = output_path / filename
+            
+            # Save the file
+            with open(filepath, 'wb') as f:
+                f.write(response.content)
+            
+            return {
+                "url": url,
+                "filepath": str(filepath),
+                "file_size": len(response.content),
+                "content_type": response.headers.get('content-type', ''),
+                "status": "success"
+            }
+            
+        except Exception as e:
+            return None
+    
+    def download_validated_forms(self, permit_matrix_content: str, output_dir: str = "./downloads/permits") -> Dict[str, Any]:
+        """
+        Download permit forms from validated URLs in the permit matrix.
+        Only attempts downloads from URLs that passed validation.
+        """
+        import re
+        import requests
+        from pathlib import Path
+        from urllib.parse import urlparse
+        
+        try:
+            # First validate URLs
+            validation_results = self.validate_permit_urls(permit_matrix_content)
+            
+            if validation_results.get("status") == "error":
+                return validation_results
+            
+            # Create output directory
+            output_path = Path(output_dir)
+            output_path.mkdir(parents=True, exist_ok=True)
+            
+            download_results = {
+                "validation_summary": validation_results["summary"],
+                "downloads": [],
+                "errors": []
+            }
+            
+            # Download from valid URLs and their download links
+            for valid_url_info in validation_results["valid_urls"]:
+                page_url = valid_url_info["url"]
+                
+                # First, try to download from the page URL if it's directly downloadable
+                if valid_url_info.get("is_directly_downloadable"):
+                    try:
+                        download_result = self._download_file(page_url, output_path, "page_direct")
+                        if download_result:
+                            download_results["downloads"].append(download_result)
+                    except Exception as e:
+                        download_results["errors"].append({
+                            "url": page_url,
+                            "error": f"Direct download failed: {str(e)}"
+                        })
+                
+                # Then, try to download from any download links found on the page
+                download_links = valid_url_info.get("download_links", [])
+                for link_info in download_links:
+                    download_url = link_info["url"]
+                    link_text = link_info["text"]
+                    
+                    try:
+                        # Create a descriptive filename based on the link text
+                        safe_text = "".join(c for c in link_text if c.isalnum() or c in (' ', '-', '_')).rstrip()
+                        filename_prefix = safe_text[:30] if safe_text else "download"
+                        
+                        download_result = self._download_file(download_url, output_path, filename_prefix)
+                        if download_result:
+                            download_result["source_page"] = page_url
+                            download_result["link_text"] = link_text
+                            download_results["downloads"].append(download_result)
+                    except Exception as e:
+                        download_results["errors"].append({
+                            "url": download_url,
+                            "source_page": page_url,
+                            "error": f"Download link failed: {str(e)}"
+                        })
+            
+            return download_results
+            
+        except Exception as e:
+            return {
+                "status": "error",
+                "error": f"Download process failed: {str(e)}"
+            }
 
     @staticmethod
     def combine_project_and_design_json(project_json_path: str, design_json_path: str) -> dict:
@@ -546,8 +840,8 @@ def save_results_to_files(openai_api_key: str = None):
         print(f"✗ Error saving files: {save_result.get('error', 'Unknown error')}")
 
 if __name__ == "__main__":
-    print("Running permit agent analysis...")
-    print("This will display the permit matrix in the terminal AND save it to both Markdown and CSV files.\n")
+    print("Running permit agent analysis with URL VALIDATION...")
+    print("This will generate a permit matrix and validate all URLs to catch hallucinations.\n")
 
     # Create agent
     permit_agent = create_permit_agent()
@@ -575,3 +869,40 @@ if __name__ == "__main__":
             print("ℹ No CSV data found in response")
     else:
         print(f"\n✗ Error saving files: {save_result.get('error', 'Unknown error')}")
+
+    print("\n" + "="*60)
+    print("URL VALIDATION - CATCHING HALLUCINATIONS")
+    print("="*60)
+    # Validate all URLs in the permit matrix
+    validation_result = permit_agent.validate_permit_urls(permit_matrix)
+    print("\nURL VALIDATION RESULTS:\n" + "-" * 40)
+    print(json.dumps(validation_result, indent=2))
+
+    print("\n" + "="*60)
+    print("DOWNLOADING VALIDATED FORMS")
+    print("="*60)
+    # Download forms from validated URLs
+    download_result = permit_agent.download_validated_forms(permit_matrix)
+    print("\nDOWNLOAD RESULTS:\n" + "-" * 40)
+    print(json.dumps(download_result, indent=2))
+
+    # Summary
+    print("\n" + "="*60)
+    print("SUMMARY")
+    print("="*60)
+    if validation_result.get("summary"):
+        summary = validation_result["summary"]
+        print(f"Total URLs found: {validation_result.get('total_urls_found', 0)}")
+        print(f"Valid URLs: {summary.get('valid_count', 0)}")
+        print(f"Invalid URLs: {summary.get('invalid_count', 0)}")
+        print(f"Success rate: {summary.get('success_rate', 0):.1f}%")
+        
+        if summary.get('success_rate', 0) < 50:
+            print("⚠️  WARNING: Low success rate indicates potential hallucinations!")
+        else:
+            print("✓ Good success rate - likely real permit sources")
+    
+    if download_result.get("downloads"):
+        print(f"\nSuccessfully downloaded {len(download_result['downloads'])} permit forms")
+        for download in download_result["downloads"]:
+            print(f"  ✓ {download['filepath']}")

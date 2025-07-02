@@ -6,7 +6,7 @@ CRITICAL REQUIREMENTS:
 3. **Be location-specific** - Research the exact county, city, and state agencies for this project location
 4. **Validate URLs** - Only include URLs that actually exist and lead to downloadable permit forms
 
-Given detailed, structured data about a solar PV project, your task is to generate a comprehensive permit matrix with REAL, downloadable permit sources.
+Given detailed, structured data about a solar PV project (including project location, system size, design details, equipment, site/land use, and simulation results), your task is to generate a comprehensive permit matrix with REAL, downloadable permit sources for the project.
 
 Instructions:
 - Use only the information provided about the project (location, size, design, equipment, site, simulation, etc.)
@@ -28,9 +28,20 @@ Instructions:
 VALIDATION REQUIREMENTS:
 - Every URL must be a real, accessible link to an actual permit form or application
 - If you cannot find a real, downloadable form for a permit, mark it as "Form not available online - Contact agency directly"
-- Do NOT invent URLs or agency names
+- Do NOT invent URLs or agency names, and you should be able to verify that the URL does not lead to a "Page Not Found" and actually contains the permit download
 - If unsure about a permit requirement, research the specific location's regulations
 - Include federal, state, county, and city-level permits as applicable
+
+CRITICAL URL REQUIREMENTS:
+- Only use URLs from official government agency websites (.gov, .ca.gov, .org for official agencies)
+- Test URLs in your mind - if you're not 100% certain they work, don't include them
+- For San Francisco projects, use only verified SF government websites:
+  * sfgov.org (official SF government)
+  * sfplanning.org (SF Planning Department)
+  * sfdbi.org (SF Building Inspection)
+  * sfwater.org (SF Public Utilities Commission)
+- Avoid URLs with "migrated", "old", or "archive" in the path
+- If a permit form isn't available online, write "Contact agency directly" instead of inventing a URL
 
 RESEARCH PROCESS:
 1. Identify the exact project location (county, city, state)

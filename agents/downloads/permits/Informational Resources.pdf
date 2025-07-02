@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html  lang="en-US">
+<head id="Head"><!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CMRV390FF9"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CMRV390FF9');
+</script>
+
+
+<script defer src="https://alert.cdt.ca.gov"></script><title>
+	Lake and Streambed Alteration Program
+</title><meta id="MetaDescription" name="description" content="The Department of Fish and Wildlife manages California&#39;s diverse fish, wildlife, and plant resources, and the habitats upon which they depend, for their ecological values and for their use and enjoyment by the public." /><meta id="MetaKeywords" name="keywords" content="Section 1602, 1600" /><meta id="MetaRobots" name="robots" content="INDEX, FOLLOW" /><link href="/Portals/0-System/dnn-css-variables.css?cdv=1357" type="text/css" rel="stylesheet"/><link href="/Resources/Shared/stylesheets/dnndefault/10.0.0/default.css?cdv=1357" type="text/css" rel="stylesheet"/><link href="/Portals/_default/skins/cagov_cdfw/skin.css?cdv=1357" type="text/css" rel="stylesheet"/><link href="/Portals/0/portal.css?cdv=1357" type="text/css" rel="stylesheet"/><link href="/desktopModules/LiveAccordion/Themes/CaGov/CaGov.css?cdv=1357" type="text/css" rel="stylesheet"/><link href="/DesktopModules/LiveSlider/Resources/LayerSlider/css/layerslider.css?cdv=1357" type="text/css" rel="stylesheet"/><link href="/DesktopModules/LiveAccordion/Resources/Tabs/Style.css?cdv=1357" type="text/css" rel="stylesheet"/><link href="/Portals/_default/skins/cagov_cdfw/css/MegaMenu.css?cdv=1357" type="text/css" rel="stylesheet"/><script src="/Resources/libraries/jQuery/03_07_01/jquery.js?cdv=1357" type="text/javascript"></script><script src="/Resources/libraries/jQuery-Migrate/03_04_01/jquery-migrate.js?cdv=1357" type="text/javascript"></script><script src="/Resources/libraries/jQuery-UI/01_13_03/jquery-ui.min.js?cdv=1357" type="text/javascript"></script><script src="/Resources/libraries/HoverIntent/01_10_01/jquery.hoverIntent.min.js?cdv=1357" type="text/javascript"></script><link rel='icon' href='/Portals/0/favicon.ico?ver=gqwSuIoj45RzklORQaFi_w%3d%3d' type='image/x-icon' />
+
+          <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '[TRACKING_ID]', 'auto', {'legacyCookieDomain': '[DOMAIN_NAME]'});
+  
+            ga('send', 'pageview');	
+          </script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="cleartype" content="on" /></head>
+<body id="Body">
+
+    <form method="post" action="/Conservation/Environmental-Review/LSA/Apply" id="Form" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="LiveAccordionWrapper62207_ActivatedIndex" id="LiveAccordionWrapper62207_ActivatedIndex" value="-1" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="2FB36jBQgWZWEilFGj5o/nrjsl8Nu4kMtBnVakTiIf3zMXrk3UPtDnwUT6Hv+8XJiWiiQIKZ3lddh59sJZXZ1JHNtaNL9S1ut8MfRmHDS5kWKgnTAMN127IEuh/YvoiaC75Aw7tCURO/Y94iTtoxEW+8nJgYbLQS6OICLsYtkrO3f78MhZDOlb2cAthgqi0Lza1/NCrl4Os35OnUM6T3B6Mw1vUjbG7XCrwUEftVd/kOXMmWyId6k+0lZ8eTeMMLr6SWSILoKVkbo9URy0LShxPduTYOp/c+pCpHd3D1lssZfAHTCNWxL63ubbKpd02QUS8Ii9H/kvPSl2B8jz6s/uPuUn5IZTWJauV2OAxDsqB66DuYMVtCCmZGxJT3tvxU0zkvQN+t7qXzeR45dRHFY9rbhogpJeYIumpm6P5lzC6wAGCP5wasJ6lHFvJBC7HDcylQeLRNRKDxNtxgLLxlxeTk7VX6x0HlG9sjzv5/1SJlHocEXkox/haZRlzf8ixHR3MnQWJlS1JxUOyQNKCmB192yrm8gBsAyJP3ZbC0b9VIOVsbT98yffnJYuEmZffEZUBi3jx82QIPom56Wqt9gIZqlGyNvLQNZwklZ/UbWXLEW6qO+qDG7VAtVjsV8uEeCz7jtHC3sxP0BdcoU0MWDgpzz5FXEHiIikkSrBs3awRwEcRa2I130f1PZM4aJuqYrv+ILiNXqbML9AFe6J5a4fnGzJxLHgEDLwYGNZXBYj8zwHR75i0q0w2Lrx6h4nX0q/k/nCAmkIaIOgvCAEg5qehIBCPzAx4c5QayzjZFSQlUO7CpEu0o+aw9dSzHJLtNz+C6L0bDTjCEDAcZqyWnEXWq7X5VN9CXhTmMPKk+Rhg0I7yyU+CqI++4+P3xndSrUDh4/wQVodx4P0nVKnOIJ26cnBuQAclet5jUq9dsQOqIJMN20aXAUIbqj2Q=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form'];
+if (!theForm) {
+    theForm = document.Form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV0IjdRv6oF0BCrG6ffmSbPUcG-nSn7uMcvmJiJ5tVkK05qYYss1&amp;t=638627955619783110" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function SelectPane62207(Selector) { if(typeof Selector != 'undefined') { var SelectedHashIndex = jQuery('a[name*=' + Selector + ']').parent().index() / 2; jQuery('#LiveAccordionWrapper62207').accordion({ active: SelectedHashIndex}); } else { LALaunchLink = window.location.hash.indexOf(62207); if (LALaunchLink > -1) { var LALaunchSelector  = window.location.hash.replace('#', '').replace('/', '').replace('LiveAccordionContent', ''); var SelectedHashIndex = jQuery('a[name*=la-' + LALaunchSelector + ']').parent().index() / 2; if(SelectedHashIndex > -1 && SelectedHashIndex != jQuery('#LiveAccordionWrapper62207').accordion('option', 'active')) jQuery('#LiveAccordionWrapper62207').accordion({active: SelectedHashIndex}); }}}; jQuery(document).ready(function(){ jQuery(window).bind('hashchange', function (){ if(window.location.hash == '') jQuery('#LiveAccordionWrapper62207').accordion({active: 0}); else { if (window.lahashchanging) { window.lahashchanging = false; return; } SelectPane62207(); }}); });//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=NJmAwtEo3IqlDH8IBfU5rB9-pC_2xsRBbcPortjeDFAPj6m5K51wXwxLJmT3n3xAENKfkoogxVPFRScnTl2QDU5vWHADiWRnFPe2AMTqMYPAgwDbfu8xwJQmxKkipwtza3HJUQ2&amp;t=2a9d95e3" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=dwY9oWetJoL8FbnVx7l5opV6puu1aPcJhoeZEcecnTMvfVv-zRIK51J-HDHFwSFbS9n42-q7q9iE2hNlw6ZPgEO-CWWFV_G6WG-00ttOcylylELmTP8wwWTa2HBzTM3CAgnw1hnwzkbTCTq20&amp;t=2a9d95e3" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="3UzNGxX6K71YfWK0oqA+7cokJ85dime9m01Vrk65FkAxsSNG+Q4KMW/9JoCKG+fbKSV6dbpmtPV9gtK0IFd9x2+8qEANOKZI+0nfsooMEFfcSY8F" />
+</div><script src="/js/dnn.modalpopup.js?cdv=1357" type="text/javascript"></script><script src="/WebResource.axd?d=MZmjywClmE9GsPb3mm1AW24o_MXX1cBIFdHMMX9O9F4La1kI1HFo--5ps_T0FftXu_WDnjh0Bxeaqw01GybTYk_sbkFWUiX1juUc6pAHu2Gdj6wUiDpUkmuyiLUoJVRsQtfLQau3j83g7QwtFOl3YKN9y3vXW2mpO-EyOZ2IC-VIy6IN0&amp;t=638173306000000000&amp;cdv=1357" type="text/javascript"></script><script src="/js/dnncore.js?cdv=1357" type="text/javascript"></script><script src="/DesktopModules/LiveAccordion/Resources/JS/scrollTo.min.js?cdv=1357" type="text/javascript"></script><script src="/WebResource.axd?d=wL4KpjWgthY3bN-StKcEx2jAwm7MBedqTEWg-BjTtkKF_sOr_-LqqftarZAtzJjRItlA42QM18g07KFGZwabbCxubPuUrXUlENiKs0yycLd-HDi2t07LK65kONRpMH_igQIrf9Vf2eqJgeE3ByyPb5XWtANeXGKGjYDFNqNsNlaqjvsXsUwcHhACXRMWWDZ5u54FbA2&amp;t=638173306000000000&amp;cdv=1357" type="text/javascript"></script><script src="/Portals/_default/skins/cagov_cdfw/menus/MegaMenu/MegaMenu.js?cdv=1357" type="text/javascript"></script><script src="/WebResource.axd?d=CON4WpTji6EgHHGXIEZJsuVAmPBCKJPdJZvO0b6HlWpGp1WVN8xlhPZqwwEC0kThks38V9E8S1L8vM1kr2HeJjc1wYP_aCJJivZjqItaqehvqMRQPRZhz6zFsmgBMhhwQrGrpyyJdXW1h0lttssaa_MkGr-Gubccob-cPwLngpzyuUevrCyuFVqT7pGlyA38QBG8SSaqdMg5W8oL0&amp;t=638173306000000000&amp;cdv=1357" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', [], [], [], 600, '');
+//]]>
+</script>
+
+        
+        
+        <!-- head content, for all pages -->
+
+
+
+
+<!--[if IE]>
+
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="/Portals/_default/skins/cagov_cdfw/js/libs/html5shiv.min.js"></script>
+<script src="/Portals/_default/skins/cagov_cdfw/js/libs/respond.min.js"></script>
+<![endif]-->
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script src="/Portals/_default/skins/cagov_cdfw/js/libs/selectivizr-min.js"></script>
+<![endif]-->
+<script src="/Portals/_default/skins/cagov_cdfw/js/search.js"></script>
+<script src="/Portals/_default/skins/cagov_cdfw/js/libs/modernizr-3.6.0.min.js"></script>
+<script src="/Portals/_default/skins/cagov_cdfw/js/common.js" type="text/javascript"></script>
+<!-- Google Analytics 4 Optimized Snippet -->
+<script>
+  function loadGA4() {
+    if (window._ga4HasLoaded) return;
+    window._ga4HasLoaded = true;
+    const script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-CMRV390FF9';
+    script.async = true;
+    script.onload = function () {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      try {
+        gtag('js', new Date());
+        gtag('config', 'G-CMRV390FF9');
+      } catch (e) {
+        console.warn('Google Analytics tracking failed to initialize:', e);
+      }
+    };
+    script.onerror = function () {
+      console.warn('Google Analytics script blocked or failed to load.');
+    };
+    document.head.appendChild(script);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const consentButton = document.getElementById('accept-cookies');
+    if (consentButton) {
+      consentButton.addEventListener('click', function () {
+        loadGA4();
+      });
+    } else {
+      loadGA4(); // fallback
+    }
+  });
+</script>
+
+<!-- CA.gov Oceanside Skins | 1 Column MegaMenu Theme | 01.00.00 -->
+<div class="siteWrapper CAgovskins primary">
+  <header role="banner" id="header" class="global-header fixed">
+    <div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
+    <div id="dnn_AlertPane" class="myPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-55483 DnnVersionableControl"><a name="55483"></a>
+<!-- CA.gov Oceanside Containers | Full No Title No Pad Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="TitleWidth">
+	<div id="dnn_ctr55483_ContentPane" class="TitleContentpane"><!-- Start_Module_55483 --><div id="dnn_ctr55483_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr55483_HtmlModule_lblContent" class="Normal">
+	<div class="alert-banner bg-standout" role="alert">
+<div class="container p-b-sm text-center"><span class="ca-gov-icon-warning-triangle h3 color-highlight"></span>&nbsp; See the <strong><a href="/Closures" rel="color: #FDB81E;" style="color: #FDB81E;">Emergency Closures</a></strong> page before visiting a CDFW office, facility or property.</div>
+</div>
+
+</div>
+
+</div><!-- End_Module_55483 --></div>
+	<div class="clearfix"></div>
+</div>
+
+
+
+
+</div></div>
+    
+    <!-- Location Bar --> 
+    <div class="location-settings section section-standout collapse collapsed " id="locationSettings">
+    <div class="container p-y">
+        <button type="button" class="close" data-toggle="collapse" data-target="#locationSettings" aria-expanded="false" aria-controls="locationSettings" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <div class="form-group form-inline">
+            <label for="locationZipCode">Saving your location allows us to provide you with more relevant information.</label>
+            <input type="input" class="form-control" id="locationZipCode" placeholder="Zip Code">
+            <button type="button" class="btn btn-primary">Set Location</button>
+        </div>
+    </div>
+</div>
+ 
+    
+    <!-- Include Utility Header --> 
+    <div class="utility-header">
+    <div class="container">
+        <div class="group">
+            <div class="half">
+                 
+                <ul class="utility-links social-media-links">
+                    <li><div class="header-cagov-logo"><a href="https://www.ca.gov/" target="_blank"><img src="/Portals/_default/skins/cagov_cdfw/images/Ca-Gov-Logo-Gold.svg" alt="CA.gov" /></a></div></li>
+					<!--
+					<li><a href="/"><span class="ca-gov-icon-home" aria-hidden="true"></span><span class="sr-only">Home</span></a></li>
+                    <li><a class="ca-gov-icon-facebook" title="Share via Facebook"><span class="sr-only">Facebook</span></a></li>
+                    <li><a class="ca-gov-icon-twitter" title="Share via Twitter"><span class="sr-only">Twitter</span></a></li>
+                    <li><a class="ca-gov-icon-google-plus" title="Share via Google+"><span class="sr-only">Google+</span></a></li>
+                    <li><a class="ca-gov-icon-email" title="Share via email"><span class="sr-only">Email</span></a></li>
+					-->
+                </ul>
+            </div>
+            <div class="half settings-links p-t-sm">
+                <ul class="utility-links">
+					<li><a href="/Systems">Login</a></li>
+					<li><a href="#about">About CDFW</a></li>
+					<li><a href="/Contact">Contact</a></li>
+ 					<li class="hidden-xs">
+						<div class="searchMain">
+							<div class="innerSearch">
+								<script type="text/javascript">
+									var cx = '003744124407919529812:v2-t3gqht48';// Step 7: Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
+									var gcse = document.createElement('script');
+									gcse.type = 'text/javascript';
+									gcse.async = true;
+									gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+									var s = document.getElementsByTagName('script');
+									s[s.length - 1].parentNode.insertBefore(gcse, s[s.length - 1]);
+								</script>
+								<gcse:searchbox-only resultsUrl="/Search-Results" enableAutoComplete="true"></gcse:searchbox-only>
+							</div>
+						</div>
+					</li>
+ 					<li class="hidden-sm hidden-md hidden-lg"><a class="btn btn-xs btn-primary toggleSearch" data-toggle="collapse" href="#searchBar" aria-expanded="false" aria-controls="searchBar" title="Search"><span class="ca-gov-icon-search" aria-hidden="true"></span><span style="display: none;">Search</span></a></li>
+ 					<li><a class="btn btn-xs btn-primary" data-toggle="collapse" href="#languageBar" aria-expanded="false" aria-controls="languageBar" title="Google Translate"><span class="ca-gov-icon-globe" aria-hidden="true"></span><span style="display: none;">Google Translate</span></a></li>
+					<!--
+					<li><button class="btn btn-xs btn-primary" data-toggle="collapse" href="#siteSettings" aria-expanded="false" aria-controls="siteSettings" title="Settings"><span class="ca-gov-icon-gear" aria-hidden="true"></span>Settings</button></li>
+					-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+    
+    <!-- Search Bar --> 
+    <div class="search-settings section section-default collapse collapsed" role="alert" id="searchBar">
+    <div class="container p-y">
+        <button type="button" class="close" data-toggle="collapse" data-target="#searchBar" aria-expanded="false" aria-controls="searchBar" aria-label="Close"><span class="ca-gov-icon-close-mark" aria-hidden="true"></span></button>
+		<div class="searchMain">
+			<div class="innerSearch">
+				<gcse:searchbox-only resultsUrl="/Search-Results" enableAutoComplete="true"></gcse:searchbox-only>
+			</div>
+		</div>
+    </div>
+</div> 
+    
+    <!-- Language Bar --> 
+    <div class="language-settings section section-default collapse collapsed" role="alert" id="languageBar">
+    <div class="container p-y">
+        <button type="button" class="close" data-toggle="collapse" data-target="#languageBar" aria-expanded="false" aria-controls="searchBar" aria-label="Close"><span class="ca-gov-icon-close-mark" aria-hidden="true"></span></button>
+		<div id="google_translate_element"></div>
+    </div>
+</div> 
+    
+    <!-- Include Branding --> 
+    <!-- header branding -->
+<div class="branding">
+	<div class="header-organization-banner"><a id="dnn_dnnLOGO_hypLogo" title="CDFW" aria-label="CDFW" href="https://wildlife.ca.gov/"><img id="dnn_dnnLOGO_imgLogo" src="/Portals/0/header_organization.png?ver=E4t0WhK-Ogetxsvm7fGHQA%3d%3d" alt="CDFW" /></a></div>
+</div> 
+    
+    <!-- Include Mobile Controls --> 
+    <!-- mobile navigation controls -->
+<div class="mobile-controls">
+    <span class="mobile-control-group mobile-header-icons">
+        <!-- Add more mobile controls here. These will be on the right side of the mobile page header section -->
+    </span>
+    <div class="mobile-control-group main-nav-icons pull-right">
+        <a class="mobile-control toggle-menu pull-right" role="button" aria-expanded="false" aria-controls="navigation">
+			<span class="ca-gov-icon-menu hidden-print" aria-hidden="true"></span><span class="sr-only">Menu</span>
+		</a>
+    </div>
+</div>
+    
+    <div class="navigation-search"> 
+      <!-- Include Navigation --> 
+      <!-- MegaMenu-->
+<div id="navigation">
+	<ul class="rootMenu noIcons">
+		<li class="item first home-link">
+            <a href="/"><span id="nav_home_container" class="ca-gov-icon-home" aria-hidden="true"></span>Home</a>
+        </li>
+		
+	<li class="item first haschild">
+		
+			<a href="https://wildlife.ca.gov/"><span aria-hidden="true"></span>Home</a>
+		
+	</li>
+
+	<li class="item haschild">
+		
+			<a href="https://wildlife.ca.gov/Fishing"><span aria-hidden="true"></span>Fishing</a>
+		
+	</li>
+
+	<li class="item haschild">
+		
+			<a href="https://wildlife.ca.gov/Hunting"><span aria-hidden="true"></span>Hunting</a>
+		
+	</li>
+
+	<li class="item haschild">
+		
+			<a href="https://wildlife.ca.gov/Licensing"><span aria-hidden="true"></span>Licensing</a>
+		
+	</li>
+
+	<li class="item haschild">
+		
+			<a href="https://wildlife.ca.gov/Conservation"><span aria-hidden="true"></span>Conservation</a>
+		
+	</li>
+
+	<li class="item last haschild">
+		
+			<a href="https://wildlife.ca.gov/Learning"><span aria-hidden="true"></span>Learning</a>
+		
+	</li>
+
+	</ul>
+</div>
+<div class="megaSubWrap">
+	
+	<div class="megaSub"></div>
+
+	<div class="megaSub"></div>
+
+	<div class="megaSub"></div>
+
+	<div class="megaSub"></div>
+
+	<div class="megaSub"></div>
+
+	<div class="megaSub"></div>
+
+</div>
+
+
+      <div id="head-search" class="search-container"></div>
+    </div>
+    <div class="header-decoration"></div>
+  </header>
+  <div id="main-content" class="main-content">
+    <div id="dnn_FullTopPane" class="myPane"><div class="DnnModule DnnModule-LiveSlider DnnModule-53717"><a name="53717"></a>
+<!-- CA.gov Oceanside Containers | Full No Title No Pad Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="TitleWidth container-full-no-title">
+	<div id="dnn_ctr53717_ContentPane" class="TitleContentpane"><!-- Start_Module_53717 --><div id="dnn_ctr53717_ModuleContent" class="DNNModuleContent ModLiveSliderC">
+	<div id="LiveSlider53717" style="width: 1170px; height: 300px;" ><div class="ls-slide" data-ls="transition2d: 5; "><img src="/Portals/0/Images/HabCon-ERP/LSA/stream_2.jpg?ver=2018-06-19-135736-590" class="ls-bg" alt="mountain stream" /></div><div class="ls-slide" data-ls="transition2d: 5; "><img src="/Portals/0/Images/HabCon-ERP/LSA/Fish_swimming.jpg?ver=2018-06-19-135656-603" class="ls-bg" alt="Fish Swimming" /></div><div class="ls-slide" data-ls="transition2d: 5; "><img src="/Portals/0/Images/HabCon-ERP/LSA/Fish_close_up.jpg?ver=2018-06-19-140032-483" class="ls-bg" alt="fish close up" /></div><div class="ls-slide" data-ls="transition2d: 5; "><img src="/Portals/0/Images/HabCon-ERP/LSA/stream_1.jpg?ver=2018-06-19-135911-560" class="ls-bg" alt="Stream" /></div><div class="ls-slide" data-ls="transition2d: 5; "><img src="/Portals/0/Images/HabCon-ERP/LSA/Frog.jpg?ver=2018-06-19-135022-537" class="ls-bg" alt="Foothill yellow-legged frog" /></div><div class="ls-slide" data-ls="transition2d: 5; "><img src="/Portals/0/Images/HabCon-ERP/LSA/desert_stream.jpg?ver=2018-06-19-140145-577" class="ls-bg" alt="Desert wash" /></div><div class="ls-slide" data-ls="transition2d: 5; "><img src="/Portals/0/Images/HabCon-ERP/LSA/reeds.jpg?ver=2018-06-19-140301-077" class="ls-bg" alt="lake" /></div></div><script type="text/javascript">$('#LiveSlider53717').layerSlider({autoStart: false,pauseOnHover: false,randomSlideshow: true,skin: 'fullwidthdark',skinsPath: '/DesktopModules/LiveSlider/Themes/',navStartStop: false,navButtons: false,hoverPrevNext: false,showCircleTimer: false,thumbnailNavigation: 'disabled'});</script>
+</div><!-- End_Module_53717 --></div>
+	<div class="clearfix"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div>
+    <div class="sectionMain section">
+      <div class="container">
+        <main class="main-primary">
+          <div class="breadcrumbMain"><a href="/" class="breadcrumbHome">Home</a>
+            <span id="dnn_dnnBREADCRUMB_lblBreadCrumb" itemprop="breadcrumb" itemscope="" itemtype="https://schema.org/breadcrumb"><span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://wildlife.ca.gov/Conservation" class="breadcrumb" itemprop="item"><span itemprop="name">Conservation</span></a><meta itemprop="position" content="1" /></span><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://wildlife.ca.gov/Conservation/Environmental-Review" class="breadcrumb" itemprop="item"><span itemprop="name">Environmental Review</span></a><meta itemprop="position" content="2" /></span><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://wildlife.ca.gov/Conservation/Environmental-Review/LSA" class="breadcrumb" itemprop="item"><span itemprop="name">LSA</span></a><meta itemprop="position" content="3" /></span></span></span>
+          </div>
+          <article>
+            <div class="group">
+              <div class="quarter">
+                <div id="dnn_LeftThreePane" class="myPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-54846 DnnVersionableControl"><a name="54846"></a>
+<!-- CA.gov Oceanside Containers | No Title Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="container-wrap container-no-title">
+	<div class="TitleWidth padThis">
+	  <div id="dnn_ctr54846_ContentPane" class="TitleContentpane"><!-- Start_Module_54846 --><link href="/Portals/0/CSS/nav-buttons-with-img.css" media="all" type="text/css" rel="stylesheet"/>
+
+<style type="text/css">
+.nav_img_btn_txt {
+	font-weight: bold;
+}
+.nav_img_btn img {
+	max-width: 64px !important;
+}
+.nav_img_btn_cont {
+	margin: 6px 0;
+}
+</style><div id="dnn_ctr54846_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr54846_HtmlModule_lblContent" class="Normal">
+	<nav aria-labelledby="accordion-side-nav">
+<div class="sr-only" id="accordion-side-nav">Accordion side navigation
+</div>
+<a class="sidenav landing" href="/Conservation/Environmental-Review/LSA">Lake and Streambed Alteration Program</a>
+<a class="sidenav" href="/Conservation/LSA/Agreement-Types">Notification and Agreement Types</a>
+<a class="sidenav" href="/Conservation/LSA/Q-and-A">Questions and Answers</a>
+<a class="sidenav" href="/Conservation/LSA/Laws-Regulations">Laws and Regulations</a>
+<a class="sidenav" href="/Conservation/Cannabis">Cannabis Cultivation</a>
+<a class="sidenav" href="/Conservation/LSA/Contact">Contact Us</a>
+</nav>
+<p><a class="link-grid " href="https://epims.wildlife.ca.gov/index.do">EPIMS - Permitting Portal</a>
+</p>
+</div>
+
+</div><!-- End_Module_54846 --></div>
+	  <div class="clearfix"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div>
+              </div>
+              <div class="three-quarters">
+                <h1 class="pageHead m-t-0">
+                  Lake and Streambed Alteration Program
+                  
+                </h1>
+                <div id="dnn_ContentPane" class="myPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-62550 DnnVersionableControl"><a name="62550"></a>
+<!-- CA.gov Oceanside Containers | No Title Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="container-wrap container-no-title">
+	<div class="TitleWidth padThis">
+	  <div id="dnn_ctr62550_ContentPane" class="TitleContentpane"><!-- Start_Module_62550 --><div id="dnn_ctr62550_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr62550_HtmlModule_lblContent" class="Normal">
+	<div class="bg-s1 m-b-md p-a-md">
+<h2 class="h3 m-t-0" id="emergency-notice"><span class="text-danger"><span class="ca-gov-icon-warning-triangle"></span>Notice: Emergency Actions for Streams and Rivers</h2>
+
+<p><strong>Notice regarding Executive Order N-13-25</strong>.</p>
+
+<p>Executive Order N-13-25 issued on January 20, 2025, suspended certain statutory and regulatory requirements to expeditiously complete cleanup and repair projects related to the 2025 fire events in Los Angeles and Ventura counties. This suspension applies to specific emergency projects as outlined in the Executive Order for 90 days.</p>
+
+<p>On January 7, 2025, Governor Newsom declared a State of Emergency in Los Angeles and Ventura counties due to fire and windstorm conditions that have now caused multiple fires, including the Palisades, Eaton, Hurst, Lidia, Sunset, and Woodley Fires. On January 20, 2025, the Governor issued Executive Order EO N-13-25 which suspended, for 90 days, certain statutory and regulatory requirements to expeditiously complete cleanup and repair projects related to the fires, and to mitigate risks prior to the start of the rainy season. This suspension includes Fish and Game Code section 1600 et seq.</p>
+
+<p>This suspension applies to emergency-response activities by federal, state, or local agencies, or individuals or entities performing work at those agencies&rsquo; direction, necessary to prevent, contain, or otherwise reduce the impacts of flooding, landslides, mudslides, debris flows, or similar hazards within, or originating from, the areas burned by 2025 fires in Los Angeles County.</p>
+
+<ul>
+ <li><a href="https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=228127&amp;inline" target="_blank">Southern California Fires Emergency Work Fact Sheet to Keep People and Wildlife Safe (PDF)</a></li>
+ <li><a href="https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=228128&amp;inline" target="_blank">Best Management Practices - Debris Removal in and Around Waterways to Keep People and Wildlife Safe (PDF)</a></li>
+</ul>
+</div>
+
+</div>
+
+</div><!-- End_Module_62550 --></div>
+	  <div class="clearfix"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-55226 DnnVersionableControl"><a name="55226"></a>
+<!-- CA.gov Oceanside Containers | No Title Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="container-wrap container-no-title">
+	<div class="TitleWidth padThis">
+	  <div id="dnn_ctr55226_ContentPane" class="TitleContentpane"><!-- Start_Module_55226 --><div id="dnn_ctr55226_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr55226_HtmlModule_lblContent" class="Normal">
+	<!-- Page Nav -->
+
+<nav aria-labelledby="page-navigation-label" class="page-navigation" role="navigation">
+<div id="page-navigation-label" class="label nav-menu">On this page
+</div>
+<ul class="columns-2">
+	<li><a href="#overview">Overview</a></li>
+	<li><a href="#notify-online">Notify Online</a></li>
+	<li><a href="#notify-pdf">Notify by PDF</a></li>
+	<li><a href="#fees">Fees</a></li>
+	<li><a href="#cannabis">Cannabis</a></li>
+	<li><a href="#resources">Resources</a></li>
+	<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<!-- Main Content -->
+<h2 class="accent-underline" id="overview">Overview</h2>
+<p><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FGC&sectionNum=1602." target="_blank"><strong>Fish and Game Code section 1602</strong></a> requires any person, state or local governmental agency, or public utility to notify CDFW prior to beginning any activity that may do one or more of the following:
+</p>
+<ul>
+	<li>Divert or obstruct the natural flow of any river, stream, or lake; </li>
+	<li>Change the bed, channel, or bank of any river, stream, or lake; </li>
+	<li>Use material from any river, stream, or lake; or </li>
+	<li>Deposit or dispose of material into any river, stream, or lake.</li>
+</ul>
+<p>Please note that "any river, stream, or lake" includes those that are dry for periods of time as well as those that flow year round. If you are not certain a particular activity requires notification, CDFW recommends you notify.
+</p>
+<p><strong>CDFW requires a Lake or Streambed Alteration (LSA) Agreement when a project activity may substantially adversely affect fish and wildlife resources.</strong>
+</p>
+<h2 class="accent-underline" id="notify-online">Notify Online</h2>
+<p>Online notification through the <a href="https://epims.wildlife.ca.gov/index.do">Environmental Permit Information Management System (EPIMS)</a> is currently available for the following:
+</p>
+<ul>
+	<li><a href="/Conservation/LSA/Agreement-Types#55230748-standard-agreement"><strong>Standard Agreement (Cannabis and non-Cannabis)</strong></a>
+	<ul>
+		<li>Notifications for Standard Agreements must use the <a href="/Conservation/Environmental-Review/EPIMS#55502820-permitting-portal">EPIMS Permitting Portal</a>.</li>
+	</ul>
+	</li>
+	<li><a href="/Conservation/LSA/Agreement-Types#55230750-general-agreement"><strong>General Agreement for Cannabis Cultivation</strong></a>
+	<ul>
+		<li>Notifications requesting a General Agreement for Activities Related to Cannabis Cultivation must use the online submittal process.</li>
+	</ul>
+	</li>
+	<li><a href="/Conservation/Cannabis/Permitting#53542628-self-certification"><strong>Self-Certification for Cannabis Cultivation</strong></a>
+	<ul>
+		<li>If you believe your Cannabis Cultivation project will not substantially modify any river, stream, or lake, you must complete the online self-certification.</li>
+	</ul>
+	</li>
+	<li><a href="/Conservation/LSA/Agreement-Types#55230889-emergency-work"><strong>Notification for Emergency Work</strong></a>
+	<ul>
+		<li>Notifications for emergency work pursuant to Fish and Game Code section 1610 must use the <a href="/Conservation/Environmental-Review/EPIMS#55502820-permitting-portal">EPIMS Permitting Portal</a>.</li>
+	</ul>
+	</li>
+	<li><a href="/Conservation/Environmental-Review/LSA/Agreement-Types#55230749-gravel-sand-or-rock-extraction-agreement"><strong>Gravel, Sand, or Rock Extraction Agreement</strong></a>
+	<ul>
+		<li>Notifications requesting a Gravel, Sand, or Rock Agreement (non-Cannabis) must use the <a href="/Conservation/Environmental-Review/EPIMS#55502820-permitting-portal">EPIMS Permitting Portal</a>.</li>
+	</ul>
+	</li>
+	<li><a href="/Conservation/Environmental-Review/LSA/Agreement-Types#55230751-routine-maintenance-agreement"><strong>Routine Maintenance Agreement (Cannabis and non-Cannabis)</strong></a>
+	<ul>
+		<li>Notifications requesting a Routine Maintenance Agreement must use the <a href="https://wildlife.ca.gov/Conservation/Environmental-Review/EPIMS#55502820-permitting-portal">EPIMS Permitting Portal</a>.</li>
+	</ul>
+	</li>
+	<li><a href="/Conservation/Environmental-Review/LSA/Agreement-Types#55230753-master-agreement"><strong>Master Agreement</strong></a>
+	<ul>
+		<li>Notifications for Master Agreements must use the <a href="/Conservation/Environmental-Review/EPIMS#55502820-permitting-portal">EPIMS Permitting Portal</a>.</li>
+	</ul>
+	</li>
+	<li><a href="/Conservation/Environmental-Review/LSA/Agreement-Types#55230752-timber-harvesting-agreement"><strong>Timber Harvesting Agreement</strong></a>
+	<ul>
+		<li>Notifications requesting Timber Harvest Agreement must use the <a href="/Conservation/Environmental-Review/EPIMS#55502820-permitting-portal">EPIMS Permitting Portal</a>.</li>
+	</ul>
+	</li>
+</ul>
+<p>Visit the <a href="/Conservation/Environmental-Review/EPIMS"><strong>EPIMS</strong></a> page for more information on submitting a notification through the <a href="/Conservation/Environmental-Review/EPIMS#55502820-permitting-portal">EPIMS Permitting Portal</a> or if you need to contact our <a href="/Conservation/Environmental-Review/EPIMS-Contact">EPIMS Help Desk.</a>
+</p>
+<p><span class="textBoldRed">Please Note</span> - Only Permits submitted through EPIMS may request Amendments or Extension through Permitting Portal. Any paper Agreements may request Amendments or Extension through EPIMS Document Repository.
+</p>
+<h2 class="accent-underline" id="notify-pdf">Notify by PDF</h2>
+<p>EPIMS Document Repositories allow submission of the following paper forms (i.e., PDF) when complete:
+</p>
+<ul>
+	<li>Amendment and extension requests for pre-EPIMS LSA agreements
+	<ul>
+		<li><a href="https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=3759&inline" target="_blank">Request to Amend an LSA Agreement (PDF)</a></li>
+		<li><a href="https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=3782&inline" target="_blank">Request to Extend an LSA Agreement (PDF)</a></li>
+	</ul>
+	</li>
+	<li>California Endangered Species Act (CESA) Incidental Take Permit (ITP) applications</li>
+	<li>Amendment and extension requests for ITPs</li>
+	<li>CESA Consistency Determination (CD) requests</li>
+	<li>Habitat Restoration and Enhancement Act (HREA) documents</li>
+	<li>Statutory Exemption for Restoration Projects (SERP) Concurrence requests</li>
+</ul>
+<p>Applicants may also include supplemental documents (i.e., plans, diagrams, maps, photos, studies) and a copy of their <a href="https://www.licenses.wildlife.ca.gov/InternetSales" target="_blank"><strong>Online License Sales and Services</strong></a> receipt if paid online.
+</p>
+<p>Document Repositories available in EPIMS when submitting paper forms:
+</p>
+<ul>
+	<li>Document Repository - LSA Amendments and Extensions and CESA ITPs</li>
+	<li>Document Repository - HREA, CESA CDs, SERP and WJTCA ITPs</li>
+</ul>
+<p>Send the appropriate fee(s) to the <a href="/Conservation/Environmental-Review/LSA/Contact">CDFW Regional Office</a> that serves the county where the project is located.
+</p>
+<h2 class="accent-underline m-b-0" id="fees">Fees</h2>
+</div>
+
+</div><!-- End_Module_55226 --></div>
+	  <div class="clearfix"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-60079 DnnVersionableControl"><a name="60079"></a>
+<!-- CA.gov Oceanside Containers | No Title Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="container-wrap container-no-title">
+	<div class="TitleWidth padThis">
+	  <div id="dnn_ctr60079_ContentPane" class="TitleContentpane"><!-- Start_Module_60079 --><div id="dnn_ctr60079_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr60079_HtmlModule_lblContent" class="Normal">
+	<p>CDFW is <strong>not</strong> required to determine whether an LSA notification is complete or otherwise begin processing the notification until the correct <a href="/Conservation/LSA/Contact">CDFW regional office</a> has received the notification and correct notification fee.
+</p>
+<ul>
+	<li><a href="https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=227162&inline" target="_blank">2025 LSA Fee Schedule (PDF)</a></li>
+	<li><a href="https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=227553&inline" target="_blank">2025 LSA Fee Regulatory Text (PDF)</a></li>
+</ul>
+<p>Pay by Credit Card
+</p>
+<ul>
+	<li><a href="https://www.licenses.wildlife.ca.gov/InternetSales" target="_blank">Online License Sales and Services</a></li>
+</ul>
+<p>Pay by Check/Money Order
+</p>
+<ul>
+	<li>Please complete the <a href="https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=166179&inline" target="_blank">Check or Money Order form (PDF)</a>, and mail the form along with the payment to your <a href="/Conservation/Environmental-Review/LSA/Contact">Regional office</a> a couple of days before you submit your notification for a timely submission of both.</li>
+</ul>
+<p>NOTE: If paying the LSA fee online, the credit card transaction will include a 5% handling fee that is not refundable.
+</p>
+<h2 class="accent-underline" id="cannabis">Cannabis</h2>
+<p>Cannabis cultivators applying for an <a href="https://aca6.accela.com/calcannabis/Welcome.aspx/" target="_blank">Annual License</a> from the <a href="https://cannabis.ca.gov/" target="_blank">Department of Cannabis Control</a> must have an LSA Agreement or written verification that one is not needed.
+</p>
+<ul>
+	<li>Learn about <a href="/Conservation/Cannabis">CDFW's Cannabis Program</a></li>
+	<li><a href="/Conservation/Cannabis/Permitting">Cannabis Cultivation Permitting</a></li>
+</ul>
+</div>
+
+</div><!-- End_Module_60079 --></div>
+	  <div class="clearfix"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><div class="DnnModule DnnModule-LiveAccordion DnnModule-62207"><a name="62207"></a>
+<!-- CA.gov Oceanside Containers | No Title Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="container-wrap container-no-title">
+	<div class="TitleWidth padThis">
+	  <div id="dnn_ctr62207_ContentPane" class="TitleContentpane"><!-- Start_Module_62207 --><h2 class="accent-underline m-t-0" id="resources">Resources</h2><div id="dnn_ctr62207_ModuleContent" class="DNNModuleContent ModLiveAccordionC">
+	<div id="AWLiveAccordionWrapper62207" class="liveacccagov">
+		<div id="LiveAccordionWrapper62207">
+			<h3>
+				<a name="la-622074577-technical-resources" href="#la-622074577-technical-resources" class="LA-ui-accordion-header">Technical Resources</a>
+			</h3><div id="la-622074577-technical-resources">
+				<ul>
+  <li><a href="/Data/CNDDB">California Natural Diversity Database</a> A program that inventories the status and locations of rare plants and animals in California.</li>
+  <li><a href="/Grants/FRGP/Guidance">California Salmonid Stream Habitat Restoration Manual</a> This manual describes the CDFW approach to restoration of fishery resources and standardizes the descriptive terminology and technical methods.</li>
+  <li><a href="/Data/BIOS">BIOS Viewer</a> BIOS is a system designed to enable the management, visualization, and analysis of biogeographic data collected by CDFW and its Partner Organizations.</li>
+  <li><a href="https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=155327&inline" target="_blank">Using Google Earth to Map your Property (PDF)</a> Helpful resource and tips to assist in the development of quality PDF maps in Google Earth.</li>
+</ul>
+			</div><h3>
+				<a name="la-622074578-informational-resources" href="#la-622074578-informational-resources" class="LA-ui-accordion-header">Informational Resources</a>
+			</h3><div id="la-622074578-informational-resources">
+				<ul>
+  <li><a href="https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=80994&inline" target="_blank">Lake and Streambed Alteration Rack Card (PDF)</a> Information card to assist the public in understanding what the LSA Program is, when to notify for a project, and what to expect in an Agreement.</li>
+  <li><a href="https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=156697&inline" target="_blank">Common Causes for Delayed Issuance of a Lake or Streambed Alteration Agreement (PDF)</a> Informational handout to assist the public avoid the common reasons why a final LSA Agreement is delayed.</li>
+  <li><a href="https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=184631&inline" target="_blank">Wildfire Reduction Tree or Vegetation Removal Flyer (PDF)</a> Informational flyer to assist property owners in obtaining the necessary permits to remove trees or vegetation to reduce the risk of wildfire.</li>
+  <li><a href="https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=184630&inline" target="_blank">Salvage Logging or Vegetation Management Flyer (PDF)</a> Outreach flyer to assist landowners when conducting salvage logging or vegetation management operations in or near a waterbody.</li>
+</ul>
+			</div>
+		</div>
+	</div>
+</div><!-- End_Module_62207 --></div>
+	  <div class="clearfix"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><div class="DnnModule DnnModule-DNN_HTML DnnModule-7820 DnnVersionableControl"><a name="7820"></a>
+<!-- CA.gov Oceanside Containers | No Title Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="container-wrap container-no-title">
+	<div class="TitleWidth padThis">
+	  <div id="dnn_ctr7820_ContentPane" class="TitleContentpane"><!-- Start_Module_7820 --><div id="dnn_ctr7820_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr7820_HtmlModule_lblContent" class="Normal">
+	<h2 class="accent-underline" id="contact">Contact</h2>
+<p>For project and site-specific LSA questions, <a href="/Conservation/LSA/Contact"><strong>contact the CDFW Region</strong></a> where the project is located.
+</p>
+<p>For general LSA questions, <a href="mailto:LSA@wildlife.ca.gov">email the LSA Program Headquarters</a>.
+</p>
+</div>
+
+</div><!-- End_Module_7820 --></div>
+	  <div class="clearfix"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div>
+                <div class="group">
+                  <div class="third">
+                    
+                  </div>
+                  <div class="two-thirds">
+                    
+                  </div>
+                </div>
+                <div class="group">
+                  <div class="two-thirds">
+                    
+                  </div>
+                  <div class="third">
+                    
+                  </div>
+                </div>
+                <div class="group">
+                  <div class="half">
+                    
+                  </div>
+                  <div class="half">
+                    
+                  </div>
+                </div>
+                <div class="group">
+                  <div class="third">
+                    
+                  </div>
+                  <div class="third">
+                    
+                  </div>
+                  <div class="third">
+                    
+                  </div>
+                </div>
+                <div>
+                  
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+    <div id="dnn_FullBottomPane" class="myPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-5997 DnnVersionableControl"><a name="5997"></a>
+<!-- CA.gov Oceanside Containers | Section Primary Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="section section-primary background-container">
+	<div class="container">
+		<div class="TitleWidth">
+		  <div id="dnn_ctr5997_ContentPane" class="TitleContentpane"><!-- Start_Module_5997 --><div id="dnn_ctr5997_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr5997_HtmlModule_lblContent" class="Normal">
+	<p style="text-align: center;" rel="text-align: center;"><span style="font-size: 1.1em;"><a href="/Explore/Organization/HCPB"><strong>Habitat Conservation Planning Branch</strong></a></span><br>
+	P.O. Box 944209, Sacramento, CA 94244-2090<br>
+	<a href="mailto:mailto:HCPB@wildlife.ca.gov">HCPB@wildlife.ca.gov</a>
+</p>
+</div>
+
+</div><!-- End_Module_5997 --></div>
+		  <div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div>
+    <div id="dnn_HiddenPane" class="myPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-54672 DnnVersionableControl"><a name="54672"></a>
+<!-- CA.gov Oceanside Containers | No Title No Pad Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="container-wrap">
+	<div class="TitleWidth padThis noBottomPad">
+	  <div id="dnn_ctr54672_ContentPane" class="TitleContentpane"><!-- Start_Module_54672 --><div id="dnn_ctr54672_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr54672_HtmlModule_lblContent" class="Normal">
+	<div class="menuInsert" data-index="1" data-icon="ca-gov-icon-home">
+</div>
+<div class="menuInsert" data-index="2" data-icon="cdfw-icon-fish">
+	<div class="sub-nav group" aria-expanded="false" aria-hidden="true">
+		<div class="full-width p-x-0">
+			<ul class="second-level-nav">
+				<li class="unit3 text-center"><a href="/Fishing" class="second-level-link"><span class="cdfw-icon-fish h1" aria-hidden="true"></span><br>
+				<strong>Fishing Directory</strong></a></li>
+				<li class="unit1"><a href="/Fishing/Ocean" class="second-level-link">Ocean Sport Fishing</a></li>
+				<li class="unit1"><a href="/Fishing/Inland" class="second-level-link">Inland Sport Fishing</a></li>
+				<li class="unit1"><a href="/Fishing/Commercial" class="second-level-link">Commercial Fishing</a></li>
+				<li class="unit1"><a href="/Licensing/Fishing" class="second-level-link">Licenses and Report Cards</a></li>
+				<li class="unit1"><a href="/Regulations" class="second-level-link">Regulations</a></li>
+				<li class="unit1"><a href="/Fishing/Records" class="second-level-link">Fishing & Diving Records</a></li>
+				<li class="unit1"><a href="/Fishing/Passport" class="second-level-link">Fishing Passport</a></li>
+				<li class="unit1"><a href="/Fishing/Hatcheries" class="second-level-link">Fish Hatcheries, Stocking</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="menuInsert" data-index="3" data-icon="cdfw-icon-deer">
+	<div class="sub-nav group" aria-expanded="false" aria-hidden="true">
+		<div class="full-width p-x-0">
+			<ul class="second-level-nav">
+				<li class="unit4 text-center"><a href="/Hunting" class="second-level-link"><span class="cdfw-icon-deer h1" aria-hidden="true"></span><br>
+				<strong>Hunting Directory</strong></a></li>
+				<li class="unit1"><a href="/Hunting/Deer" class="second-level-link">Deer</a></li>
+				<li class="unit1"><a href="/Hunting/Bear" class="second-level-link">Bear</a></li>
+				<li class="unit1"><a href="/Hunting/Upland-Game-Birds" class="second-level-link">Upland Game Birds</a></li>
+				<li class="unit1"><a href="/Hunting/Waterfowl" class="second-level-link">Waterfowl</a></li>
+				<li class="unit1"><a href="/Hunting/Elk" class="second-level-link">Elk</a></li>
+				<li class="unit1"><a href="/Hunting/Pronghorn" class="second-level-link">Pronghorn</a></li>
+				<li class="unit1"><a href="/Hunting//Wild-Pig" class="second-level-link">Wild Pig</a></li>
+				<li class="unit1"><a href="/Hunting/Small-Game" class="second-level-link">Small Mammals</a></li>
+				<li class="unit1"><a href="/Hunting/Bighorn-Sheep" class="second-level-link">Desert Bighorn Sheep</a></li>
+				<li class="unit1"><a href="/Hunter-Education" class="second-level-link">Hunter Education</a></li>
+				<li class="unit1"><a href="/Licensing/Hunting" class="second-level-link">Licenses & Tags</a></li>
+				<li class="unit1"><a href="/Regulations" class="second-level-link">Regulations</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="menuInsert" data-index="4" data-icon="ca-gov-icon-user-id">
+	<div class="sub-nav group" aria-expanded="false" aria-hidden="true">
+		<div class="full-width p-x-0">
+			<ul class="second-level-nav">
+				<li class="unit2 text-center"><a href="/Licensing" class="second-level-link"><span class="ca-gov-icon-user-id h1" aria-hidden="true"></span><br>
+				<strong>Licensing Information</strong></a></li>
+				<li class="unit1"><a href="/Licensing/Fishing" class="second-level-link">Fishing Licenses</a></li>
+				<li class="unit1"><a href="/Licensing/Hunting" class="second-level-link">Hunting Licenses</a></li>
+				<li class="unit1"><a href="https://www.ca.wildlifelicense.com/internetsales/" class="second-level-link">Purchase a License / Register for GO ID</a></li>
+				<li class="unit1"><a href="/Licensing/Agents" class="second-level-link">License Agent Support</a></li>
+				<li class="unit1"><a href="/Licensing/Directory" class="second-level-link">License & Permit Directory</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="menuInsert" data-index="5" data-icon="cdfw-icon-conservation">
+	<div class="sub-nav group" aria-expanded="false" aria-hidden="true">
+		<div class="full-width p-x-0">
+			<ul class="second-level-nav">
+				<li class="unit3 text-center"><a href="/Conservation" class="second-level-link"><span class="cdfw-icon-conservation h1" aria-hidden="true"></span><br>
+				<strong>Conservation Directory</strong></a></li>
+				<li class="unit1"><a href="/Conservation" class="second-level-link">Species Management / Data</a></li>
+				<li class="unit1"><a href="/Conservation/CESA" class="second-level-link">Threatened & Endangered Species</a></li>
+				<li class="unit1"><a href="/Conservation/Environmental-Review" class="second-level-link">Environmental Review</a></li>
+				<li class="unit1"><a href="/Lands" class="second-level-link">CDFW Lands</a></li>
+				<li class="unit1"><a href="/Grants" class="second-level-link">Grant Opportunities</a></li>
+				<li class="unit1"><a href="/Conservation/Planning" class="second-level-link">Landscape Conservation & Advance Mitigation Planning</a></li>
+				<li class="unit1"><a href="/Regions/Marine" class="second-level-link">Marine Resources</a></li>
+				<li class="unit1"><a href="/OSPR" class="second-level-link">Spill Response</a></li>
+				<li class="unit1"><a href="/Conservation/Watersheds" class="second-level-link">Water & Watersheds</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="menuInsert" data-index="6" data-icon="ca-gov-icon-book">
+	<div class="sub-nav group" aria-expanded="false" aria-hidden="true">
+		<div class="full-width p-x-0">
+			<ul class="second-level-nav">
+				<li class="unit2 text-center"><a href="/Learning" class="second-level-link"><span class="ca-gov-icon-book h1" aria-hidden="true"></span><br>
+				<strong>Learning Directory</strong></a></li>
+				<li class="unit1"><a href="/CAEP" class="second-level-link">Classroom Aquarium</a></li>
+				<li class="unit1"><a href="/Fishing-in-the-City" class="second-level-link">Fishing in the City</a></li>
+				<li class="unit1"><a href="/Hunter-Education" class="second-level-link">Hunter Education</a></li>
+				<li class="unit1"><a href="/Living-with-Wildlife" class="second-level-link">Living with Wildlife</a></li>
+				<li class="unit1"><a href="/Publications" class="second-level-link">Publications</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+</div><!-- End_Module_54672 --></div>
+	  <div class="clearfix"></div>
+	</div>
+</div>
+
+
+
+
+</div></div>
+  </div>
+  <div class="sectionMain section section-impact subFooter">
+    <div class="container">
+      <div class="group">
+        <div class="full-width">
+          <div id="dnn_SubFootPane" class="myPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-54673 DnnVersionableControl"><a name="54673"></a>
+<!-- CA.gov Oceanside Containers | No Title Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="container-wrap container-no-title">
+	<div class="TitleWidth padThis">
+	  <div id="dnn_ctr54673_ContentPane" class="TitleContentpane"><!-- Start_Module_54673 --><div id="dnn_ctr54673_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr54673_HtmlModule_lblContent" class="Normal">
+	<div class="group">
+	<div class="quarter">
+		<h2 class="h4" id="about">About CDFW</h2>
+		<ul class="list-understated">
+			<li><a href="/Budget">Budget</a></li>
+			<li><a href="/JEDI">Justice, Equity, Diversity, Inclusion</a></li>
+			<li><a href="/Enforcement">Law Enforcement</a></li>
+			<li><a href="/Organization">Organizational Structure</a></li>
+			<li><a href="/Strategic-Vision">Strategic Vision</a></li>
+			<li><a href="/Tribal-Affairs">Tribal Affairs</a> </li>
+		</ul>
+	</div>
+	<div class="quarter">
+		<h2 class="h4" id="opportunities">Opportunities</h2>
+		<ul class="list-understated">
+			<li><a href="/Employment">Employment</a></li>
+			<li><a href="/Grants">Grants</a> </li>
+			<li><a href="/Notices">Public Meetings and Notices</a> </li>
+			<li><a href="/Contractors">Vendors/Contractors</a></li>
+			<li><a href="/Volunteering">Volunteer</a> </li>
+		</ul>
+	</div>
+	<div class="quarter">
+		<h2 class="h4" id="get-in-touch">Get in Touch</h2>
+		<ul class="list-understated">
+			<li><a href="/Contact">Contact CDFW</a></li>
+			<li><a href="/News">News Room</a></li>
+			<li><a href="/General-Counsel/Public-Records-Requests">Public Records Act Requests</a></li>
+			<li><a href="/Regions">Regions</a></li>
+		</ul>
+	</div>
+	<div class="quarter">
+		<h2 class="h4" id="related-agencies">Related Agencies</h2>
+		<ul class="list-understated">
+			<li><a target="_blank" href="https://fgc.ca.gov/" rel="noopener">Fish and Game Commission<span class="sr-only">(opens in new tab)</span></a></li>
+			<li><a target="_blank" href="https://wcb.ca.gov/" rel="noopener">Wildlife Conservation Board<span class="sr-only">(opens in new tab)</span></a></li>
+		</ul>
+	</div>
+</div>
+</div>
+
+</div><!-- End_Module_54673 --></div>
+	  <div class="clearfix"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Global Footer -->
+<footer id="footer" class="global-footer">
+    <div class="container">
+        <div class="row">
+			<div class="three-quarters">
+				<div id="dnn_FooterLeftPane" class="myPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-54674 DnnVersionableControl"><a name="54674"></a>
+<!-- CA.gov Oceanside Containers | No Title No Pad Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="container-wrap">
+	<div class="TitleWidth padThis noBottomPad">
+	  <div id="dnn_ctr54674_ContentPane" class="TitleContentpane"><!-- Start_Module_54674 --><div id="dnn_ctr54674_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr54674_HtmlModule_lblContent" class="Normal">
+	<ul class="footer-links">
+	<li><a href="/Accessibility"><span class="ca-gov-icon-accessibility"></span> Accessibility</a></li>
+	<li><a href="/Civil-Rights">Civil Rights</a></li>
+	<li><a href="/Conditions-of-Use">Conditions of Use</a></li>
+	<li><a href="/Privacy-Policy">Privacy Policy</a></li>
+	<li><a href="/Site-Content">Site Map</a></li>
+	<li><a href="/Contact">Contact Us</a></li>
+</ul>
+</div>
+
+</div><!-- End_Module_54674 --></div>
+	  <div class="clearfix"></div>
+	</div>
+</div>
+
+
+
+
+</div></div>
+			</div>
+			<div class="quarter text-right">
+				<div id="dnn_FooterRightPane" class="myPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-54675 DnnVersionableControl"><a name="54675"></a>
+<!-- CA.gov Oceanside Containers | No Title No Pad Container | 01.00.00 -->
+<div class="clearfix"></div>
+<div class="container-wrap">
+	<div class="TitleWidth padThis noBottomPad">
+	  <div id="dnn_ctr54675_ContentPane" class="TitleContentpane"><!-- Start_Module_54675 --><div id="dnn_ctr54675_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr54675_HtmlModule_lblContent" class="Normal">
+	<ul class="socialsharer-container">
+	<li><a href="/Connect" title="Facebook"><span class="ca-gov-icon-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li>
+	<li><a href="/Connect" title="Instagram"><span class="ca-gov-icon-instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a></li>
+	<li><a href="/Connect" title="Twitter Feeds"><span class="ca-gov-icon-twitter" aria-hidden="true"></span><span class="sr-only">Twitter</span></a></li>
+	<li><a href="https://www.youtube.com/user/CaliforniaDFG" title="YouTube"><span class="ca-gov-icon-youtube" aria-hidden="true"></span><span class="sr-only">YouTube</span></a></li>
+	<li><a href="/Connect" title="Blog Sites"><span class="ca-gov-icon-megaphone" aria-hidden="true"></span><span class="sr-only">Blogs</span></a></li>
+</ul>
+</div>
+
+</div><!-- End_Module_54675 --></div>
+	  <div class="clearfix"></div>
+	</div>
+</div>
+
+
+
+
+</div></div>
+			</div>
+        </div>
+    </div>
+
+    <!-- Copyright Statement -->
+    <div class="copyright">
+        <div class="container">
+            <span id="dnn_dnnCOPYRIGHT_lblCopyright" class="noclass">© 2025 State of California</span>
+
+            
+
+        </div>
+    </div>
+</footer>
+
+<!-- Extra Decorative Content -->
+<div class="decoration-last">&nbsp;</div><!-- Load template core -->
+<script src="/Portals/_default/skins/cagov_cdfw/js/cagov.core.js"></script>
+
+
+<script>
+$(document).ready(function() {
+    // Backward compatability fix for removing wrapper on new "sections"
+    $('.main-primary > .section').closest('div.wrapper').removeClass('wrapper');
+});
+</script>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+	new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+ 
+</div>
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" />
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+function CallSelf(Selector) { var LTElement = jQuery('li[id*=' + Selector + ']').parent().closest('div[id^="lt-"]').attr("id"); var LAElement = jQuery('div[id*=' + Selector + ']').parent().closest('div[id^="la-"]').attr("id"); LTElementPane = jQuery('li[id*=' + Selector + ']').parent().closest('div[id^="la-"]').attr("id"); var LAElementTab = jQuery('div[id*=' + Selector + ']').parent().closest('div[id^="lt-"]').attr("id"); var obj = LTElement + ',' + LAElement + ',' + LTElementPane + ',' + LAElementTab; $.each(obj.split(','), function(key, value) { if (value != 'undefined') { jQuery('a[name=' + value + ']').click(); CallSelf(value); }}); };LatoggleClick = function(ModuleId, PaneId) { var wrapper=jQuery('#LiveAccordionWrapper' + ModuleId); if (wrapper.find('.ReviewComment'+ModuleId + PaneId ).is(":hidden")) { wrapper.find('.ReviewComment'+ModuleId + PaneId ).slideDown('slow'); wrapper.find('.toggle'+ModuleId + PaneId ).addClass('close');} else {wrapper.find('.ReviewComment'+ModuleId + PaneId ).slideUp('slow'); wrapper.find('.toggle'+ModuleId + PaneId ).removeClass('close');} };jQuery(function() {jQuery('#LiveAccordionWrapper62207').accordion({autoHeight:false,heightStyle:'content',create:function(event, ui) { var LALaunchLink = window.location.hash.indexOf('#62207', 0); var LAOldLaunchLink = window.location.hash.indexOf('#LiveAccordionContent', 0); if (LALaunchLink > -1) { LALaunchLink = 'la-' + window.location.hash.replace('#', ''); CallSelf(LALaunchLink); SelectPane62207(LALaunchLink); } else if(LAOldLaunchLink > -1) { LALaunchLink = 'la-' + window.location.hash.replace('#LiveAccordionContent', ''); CallSelf(LALaunchLink); SelectPane62207(LALaunchLink); } },change:function(event, ui) { laonChange = true; if (!false) { var newLink = ui.newHeader.find('.LA-ui-accordion-header').attr('href'); var oldLink = ui.oldHeader.find('.LA-ui-accordion-header').attr('href'); if(typeof newLink != 'undefined' && newLink.substr(0, 1)  == '#') { window.lahashchanging = true; window.location.hash = newLink.replace('la-', '').replace('/', ''); var paneElement = jQuery(ui.newHeader); var $window = jQuery(window); var myTop = paneElement.offset().top; var windowTop = $window.scrollTop(); var windowBottom = windowTop + $window.height(); if (myTop > windowTop && myTop < windowBottom) {} else jQuery.scrollTo(newLink, 1000, {axis: 'y'}, {offset: {top: -150}}); window.lahashchanging = false;  } else if(typeof oldLink != 'undefined') window.location.hash = oldLink.replace('la-', ''); }jQuery('#LiveAccordionWrapper62207_ActivatedIndex').val(jQuery(this).accordion('option','active')); },activate:function(event, ui) { laonChange = true; if (!false) { var newLink = ui.newHeader.find('.LA-ui-accordion-header').attr('href'); var oldLink = ui.oldHeader.find('.LA-ui-accordion-header').attr('href'); if(typeof newLink != 'undefined' && newLink.substr(0, 1)  == '#') { window.lahashchanging = true; window.location.hash = newLink.replace('la-', '').replace('/', ''); var paneElement = jQuery(ui.newHeader); var $window = jQuery(window); var myTop = paneElement.offset().top; var windowTop = $window.scrollTop(); var windowBottom = windowTop + $window.height(); if (myTop > windowTop && myTop < windowBottom) {} else jQuery.scrollTo(newLink, 1000, {axis: 'y'}, {offset: {top: -150}}); window.lahashchanging = false;  } else if(typeof oldLink != 'undefined') window.location.hash = oldLink.replace('la-', ''); }jQuery('#LiveAccordionWrapper62207_ActivatedIndex').val(jQuery(this).accordion('option','active')); },changestart:function(event, ui) { laonChange = false; },beforeActivate:function(event, ui) { laonChange = false; },active:false,collapsible:true,animated:'slide',animate:{easing:'swing',duration:300}});});//]]>
+</script>
+</form>
+    <!--CDF(Javascript|/js/dnncore.js?cdv=1357|DnnBodyProvider|100)--><!--CDF(Css|/Portals/0-System/dnn-css-variables.css?cdv=1357|DnnPageHeaderProvider|5)--><!--CDF(Javascript|/js/dnn.modalpopup.js?cdv=1357|DnnBodyProvider|50)--><!--CDF(Css|/Resources/Shared/stylesheets/dnndefault/10.0.0/default.css?cdv=1357|DnnPageHeaderProvider|5)--><!--CDF(Css|/Portals/_default/skins/cagov_cdfw/skin.css?cdv=1357|DnnPageHeaderProvider|15)--><!--CDF(Css|/desktopModules/LiveAccordion/Themes/CaGov/CaGov.css?cdv=1357|DnnPageHeaderProvider|100)--><!--CDF(Javascript|/DesktopModules/LiveAccordion/Resources/JS/scrollTo.min.js?cdv=1357|DnnBodyProvider|100)--><!--CDF(Css|/DesktopModules/LiveSlider/Resources/LayerSlider/css/layerslider.css?cdv=1357|DnnPageHeaderProvider|100)--><!--CDF(Javascript|/WebResource.axd?d=MZmjywClmE9GsPb3mm1AW24o_MXX1cBIFdHMMX9O9F4La1kI1HFo--5ps_T0FftXu_WDnjh0Bxeaqw01GybTYk_sbkFWUiX1juUc6pAHu2Gdj6wUiDpUkmuyiLUoJVRsQtfLQau3j83g7QwtFOl3YKN9y3vXW2mpO-EyOZ2IC-VIy6IN0&t=638173306000000000&cdv=1357|DnnBodyProvider|99)--><!--CDF(Javascript|/WebResource.axd?d=wL4KpjWgthY3bN-StKcEx2jAwm7MBedqTEWg-BjTtkKF_sOr_-LqqftarZAtzJjRItlA42QM18g07KFGZwabbCxubPuUrXUlENiKs0yycLd-HDi2t07LK65kONRpMH_igQIrf9Vf2eqJgeE3ByyPb5XWtANeXGKGjYDFNqNsNlaqjvsXsUwcHhACXRMWWDZ5u54FbA2&t=638173306000000000&cdv=1357|DnnBodyProvider|100)--><!--CDF(Javascript|/WebResource.axd?d=CON4WpTji6EgHHGXIEZJsuVAmPBCKJPdJZvO0b6HlWpGp1WVN8xlhPZqwwEC0kThks38V9E8S1L8vM1kr2HeJjc1wYP_aCJJivZjqItaqehvqMRQPRZhz6zFsmgBMhhwQrGrpyyJdXW1h0lttssaa_MkGr-Gubccob-cPwLngpzyuUevrCyuFVqT7pGlyA38QBG8SSaqdMg5W8oL0&t=638173306000000000&cdv=1357|DnnBodyProvider|101)--><!--CDF(Css|/Portals/0/portal.css?cdv=1357|DnnPageHeaderProvider|35)--><!--CDF(Css|/DesktopModules/LiveAccordion/Resources/Tabs/Style.css?cdv=1357|DnnPageHeaderProvider|100)--><!--CDF(Css|/Portals/_default/skins/cagov_cdfw/css/MegaMenu.css?cdv=1357|DnnPageHeaderProvider|100)--><!--CDF(Javascript|/Portals/_default/skins/cagov_cdfw/menus/MegaMenu/MegaMenu.js?cdv=1357|DnnBodyProvider|100)--><!--CDF(Javascript|/Resources/libraries/jQuery/03_07_01/jquery.js?cdv=1357|DnnPageHeaderProvider|5)--><!--CDF(Javascript|/Resources/libraries/HoverIntent/01_10_01/jquery.hoverIntent.min.js?cdv=1357|DnnPageHeaderProvider|55)--><!--CDF(Javascript|/Resources/libraries/jQuery-Migrate/03_04_01/jquery-migrate.js?cdv=1357|DnnPageHeaderProvider|6)--><!--CDF(Javascript|/Resources/libraries/jQuery-UI/01_13_03/jquery-ui.min.js?cdv=1357|DnnPageHeaderProvider|10)-->
+    
+</body>
+</html>
