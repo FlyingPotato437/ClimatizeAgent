@@ -29,9 +29,9 @@ class LangChainPermitAgent:
         
         if self.openai_api_key:
             self.llm = ChatOpenAI(
-                model="gpt-4.1",
+                model="gpt-4",
                 temperature=0.1,
-                openai_api_key=self.openai_api_key
+                api_key=self.openai_api_key
             )
             # Create tools for the agent
             self.tools = self._create_tools()
@@ -54,6 +54,11 @@ class LangChainPermitAgent:
                 func=self._generate_permit_forms_tool
             ),
             Tool(
+                name="generate_permit_matrix",
+                description="Generate a detailed permit matrix based on project specifications",
+                func=self._generate_permit_matrix_tool
+            ),
+            Tool(
                 name="generate_development_memo",
                 description="Generate a comprehensive solar project development memo. Input should be project details including address and system size (e.g., '8.5 MWac solar project at 123 Main St, San Jose, CA' or JSON with address, system_size_ac, and description fields).",
                 func=self._generate_development_memo_tool
@@ -66,6 +71,39 @@ class LangChainPermitAgent:
         ]
         
         return tools
+    
+    def _generate_permit_matrix_tool(self, project_data: str) -> str:
+        """Tool for generating a detailed permit matrix"""
+        try:
+            # Try to parse as JSON first
+            try:
+                data = json.loads(project_data)
+                formatted_project_data = json.dumps(data, indent=2)
+            except json.JSONDecodeError:
+                # If JSON parsing fails, treat as plain text
+                formatted_project_data = project_data.strip()
+            
+            # Load the permit matrix prompt template
+            prompt_template = Path("./prompts/permit_matrix_prompt.txt").read_text()
+            
+            # Insert the project data into the prompt
+            prompt = prompt_template.replace(
+                "{Insert structured project data here (location, size, design, equipment, site, simulation, etc.)}",
+                formatted_project_data
+            )
+            
+            # Call the LLM with the formatted prompt
+            if not self.llm:
+                return json.dumps({
+                    "status": "error",
+                    "error": "OpenAI API key required for permit matrix generation.",
+                    "analysis": "Please provide an OpenAI API key to use the permit matrix generation capabilities."
+                }, indent=2)
+            
+            result = self.llm.invoke(prompt)
+            return result.content  # This should be the Markdown table
+        except Exception as e:
+            return f"Error generating permit matrix: {str(e)}"
     
     #TODO: Implement this
     def _predict_required_permits_tool(self, project_features: str) -> str:
@@ -332,6 +370,116 @@ class LangChainPermitAgent:
                 "analysis": "Failed to complete analysis"
             }
 
+    def generate_permit_matrix(self, project_data: dict) -> str:
+        """
+        Core function to generate a permit matrix for a solar project using the LLM and the detailed prompt.
+        """
+        try:
+            # Load the permit matrix prompt template
+            prompt_template = Path("./prompts/permit_matrix_prompt.txt").read_text()
+            
+            # Format the project data as pretty JSON for the prompt
+            formatted_project_data = json.dumps(project_data, indent=2)
+            
+            # Insert the project data into the prompt
+            prompt = prompt_template.replace(
+                "{Insert structured project data here (location, size, design, equipment, site, simulation, etc.)}",
+                formatted_project_data
+            )
+            
+            # Call the LLM with the formatted prompt
+            if not self.llm:
+                return json.dumps({
+                    "status": "error",
+                    "error": "OpenAI API key required for permit matrix generation.",
+                    "analysis": "Please provide an OpenAI API key to use the permit matrix generation capabilities."
+                }, indent=2)
+            
+            result = self.llm.invoke(prompt)
+            return result.content  # This should be the Markdown table
+        except Exception as e:
+            return f"Error generating permit matrix: {str(e)}"
+
+    def save_permit_matrix_to_files(self, permit_matrix_content: str, output_dir: str = "./permit_output") -> Dict[str, str]:
+        """
+        Save permit matrix content to both Markdown and CSV files.
+        Attempts to extract CSV data from the LLM response if it contains CSV format.
+        """
+        try:
+            from pathlib import Path
+            import re
+            
+            output_path = Path(output_dir)
+            output_path.mkdir(exist_ok=True)
+            
+            # Save Markdown file
+            md_file_path = output_path / "permit_matrix.md"
+            with open(md_file_path, "w") as f:
+                f.write(permit_matrix_content)
+            
+            # Try to extract and save CSV data
+            csv_file_path = None
+            csv_content = self._extract_csv_from_response(permit_matrix_content)
+            
+            if csv_content:
+                csv_file_path = output_path / "permit_matrix.csv"
+                with open(csv_file_path, "w") as f:
+                    f.write(csv_content)
+            
+            return {
+                "markdown_file": str(md_file_path),
+                "csv_file": str(csv_file_path) if csv_file_path else None,
+                "status": "success"
+            }
+            
+        except Exception as e:
+            return {
+                "status": "error",
+                "error": str(e)
+            }
+
+    def _extract_csv_from_response(self, response_content: str) -> str:
+        """
+        Extract CSV data from the LLM response if it contains CSV format.
+        Looks for CSV blocks marked with ```csv or similar patterns.
+        """
+        import re
+        
+        # Look for CSV blocks in the response
+        csv_patterns = [
+            r'```csv\s*\n(.*?)\n```',  # ```csv ... ```
+            r'```\s*\n(.*?)\n```',     # ``` ... ``` (generic code block)
+            r'CSV Data:\s*\n(.*?)(?=\n\n|\n[A-Z]|$)',  # CSV Data: ... followed by new section
+        ]
+        
+        for pattern in csv_patterns:
+            match = re.search(pattern, response_content, re.DOTALL | re.IGNORECASE)
+            if match:
+                csv_content = match.group(1).strip()
+                # Basic validation - check if it looks like CSV
+                if ',' in csv_content and '\n' in csv_content:
+                    return csv_content
+        
+        return ""
+
+    @staticmethod
+    def combine_project_and_design_json(project_json_path: str, design_json_path: str) -> dict:
+        """
+        Helper method to combine two JSON files (project and design) into a single dictionary
+        with 'project' and 'design' as top-level keys.
+        """
+        import json
+        with open(project_json_path, 'r') as f:
+            project_data = json.load(f)
+        with open(design_json_path, 'r') as f:
+            design_data = json.load(f)
+        # Combine under top-level keys
+        combined = {
+            "project": project_data.get("project", project_data),
+            "design": design_data.get("design", design_data)
+        }
+        return combined
+
 # Usage example
 def create_permit_agent(openai_api_key: str = None) -> LangChainPermitAgent:
     """Factory function to create a permit agent"""
@@ -339,212 +487,91 @@ def create_permit_agent(openai_api_key: str = None) -> LangChainPermitAgent:
 
 # Test function
 def test_permit_agent():
-    """Test the LangChain permit agent"""
-    
+    """Test the LangChain permit agent for permit matrix generation only"""
+    import os
     # Create ML Agent
     permit_agent_ml = create_permit_agent()
-    
-    # Test 1: Simplified analysis with just address and system size (requires OpenAI API key)
-    print("\n" + "="*60)
-    print("SIMPLIFIED SOLAR PROJECT ANALYSIS")
-    print("="*60)
-    simple_result = permit_agent_ml.analyze_solar_project(
-        project_address="123 Main St, San Jose, Santa Clara County, CA 95110",
-        system_size_ac=8.5
-    )
-    print("Status:", simple_result["status"])
-    if simple_result["status"] == "success":
-        print("\nANALYSIS:")
-        print("-" * 40)
-        print(simple_result["analysis"])
-    else:
-        print("Error:", simple_result["error"])
-    
-    # Test 2: Development Memo Generation (requires OpenAI API key)
-    print("\n" + "="*60)
-    print("DEVELOPMENT MEMO GENERATION")
-    print("="*60)
-    memo_result = permit_agent_ml.generate_development_memo(
-        project_address="123 Main St, San Jose, Santa Clara County, CA 95110",
-        system_size_ac=8.5
-    )
-    print("Status:", memo_result["status"])
-    if memo_result["status"] == "success":
-        print("\nDEVELOPMENT MEMO:")
-        print("-" * 40)
-        print(memo_result["development_memo"])
-    else:
-        print("Error:", memo_result["error"])
-    
-    # Test 3: Complete Permit Workflow (requires OpenAI API key)
-    print("\n" + "="*60)
-    print("COMPLETE PERMIT WORKFLOW")
-    print("="*60)
-    workflow_result = permit_agent_ml.create_permit_workflow(
-        project_address="123 Main St, San Jose, Santa Clara County, CA 95110",
-        system_size_ac=8.5
-    )
-    print("Status:", workflow_result["status"])
-    if workflow_result["status"] == "success":
-        print("\nWORKFLOW SUMMARY:")
-        print("-" * 40)
-        summary = workflow_result["workflow"]["workflow_summary"]
-        print(f"Project Address: {summary['project_address']}")
-        print(f"System Size: {summary['system_size_ac']} MWac")
-        print(f"Applicable Permits: {len(summary['applicable_permits'])} found")
-        print(f"Next Steps: {summary['next_steps']}")
-        
-        print("\nPERMIT ANALYSIS:")
-        print("-" * 40)
-        print(workflow_result["workflow"]["permit_analysis"])
-    else:
-        print("Error:", workflow_result["error"])
 
-def save_results_to_files(project_address: str, system_size_ac: float, openai_api_key: str = None):
-    """Save permit analysis results to formatted text files"""
-    
+    # Combine example Aurora project and design JSONs
+    project_json_path = "./eg_json_inputs/aurora_proj.json"
+    design_json_path = "./eg_json_inputs/aurora_design.json"
+    combined_data = LangChainPermitAgent.combine_project_and_design_json(project_json_path, design_json_path)
+
+    print("\n" + "="*60)
+    print("PERMIT MATRIX GENERATION TEST")
+    print("="*60)
+    # Generate the permit matrix (core function, returns Markdown table)
+    permit_matrix = permit_agent_ml.generate_permit_matrix(combined_data)
+    print("\nPERMIT MATRIX:\n" + "-" * 40)
+    print(permit_matrix)
+
+    # Save the permit matrix to both Markdown and CSV files
+    save_result = permit_agent_ml.save_permit_matrix_to_files(permit_matrix)
+    if save_result["status"] == "success":
+        print(f"\u2713 Permit matrix saved to {save_result['markdown_file']}")
+        if save_result['csv_file']:
+            print(f"\u2713 CSV data saved to {save_result['csv_file']}")
+        else:
+            print("ℹ No CSV data found in response")
+    else:
+        print(f"✗ Error saving files: {save_result.get('error', 'Unknown error')}")
+
+def save_results_to_files(openai_api_key: str = None):
+    """
+    Save permit matrix results to both Markdown and CSV files.
+    Uses the example Aurora project and design JSONs in ./eg_json_inputs.
+    """
+    from pathlib import Path
+
     permit_agent = create_permit_agent(openai_api_key)
-    
-    # Create output directory
-    output_dir = Path("./permit_output")
-    output_dir.mkdir(exist_ok=True)
-    
-    # Generate results
-    print("Generating permit analysis...")
-    
-    # 1. Simple Analysis
-    simple_result = permit_agent.analyze_solar_project(project_address, system_size_ac)
-    if simple_result["status"] == "success":
-        with open(output_dir / "simple_permit_analysis.txt", "w") as f:
-            f.write("SOLAR PROJECT PERMIT ANALYSIS\n")
-            f.write("=" * 50 + "\n\n")
-            f.write(f"Project Address: {project_address}\n")
-            f.write(f"System Size: {system_size_ac} MWac\n\n")
-            f.write("ANALYSIS:\n")
-            f.write("-" * 20 + "\n")
-            f.write(simple_result["analysis"])
-        print("✓ Simple analysis saved to permit_output/simple_permit_analysis.txt")
-    
-    # 2. Development Memo
-    memo_result = permit_agent.generate_development_memo(project_address, system_size_ac)
-    if memo_result["status"] == "success":
-        with open(output_dir / "development_memo.txt", "w") as f:
-            f.write(memo_result["development_memo"])
-        print("✓ Development memo saved to permit_output/development_memo.txt")
-    
-    # 3. Complete Workflow
-    workflow_result = permit_agent.create_permit_workflow(project_address, system_size_ac)
-    if workflow_result["status"] == "success":
-        with open(output_dir / "complete_workflow.txt", "w") as f:
-            f.write("COMPLETE PERMIT WORKFLOW\n")
-            f.write("=" * 50 + "\n\n")
-            f.write(f"Project Address: {project_address}\n")
-            f.write(f"System Size: {system_size_ac} MWac\n\n")
-            f.write("DEVELOPMENT MEMO:\n")
-            f.write("-" * 20 + "\n")
-            f.write(workflow_result["workflow"]["development_memo"])
-            f.write("\n\n" + "=" * 50 + "\n\n")
-            f.write("PERMIT ANALYSIS:\n")
-            f.write("-" * 20 + "\n")
-            f.write(workflow_result["workflow"]["permit_analysis"])
-        print("✓ Complete workflow saved to permit_output/complete_workflow.txt")
-    
-    print(f"\nAll results saved to {output_dir.absolute()}")
+
+    # Combine example Aurora project and design JSONs
+    project_json_path = "./eg_json_inputs/aurora_proj.json"
+    design_json_path = "./eg_json_inputs/aurora_design.json"
+    combined_data = LangChainPermitAgent.combine_project_and_design_json(project_json_path, design_json_path)
+
+    # Generate the permit matrix
+    print("Generating permit matrix...")
+    permit_matrix = permit_agent.generate_permit_matrix(combined_data)
+
+    # Save the permit matrix to both Markdown and CSV files
+    save_result = permit_agent.save_permit_matrix_to_files(permit_matrix)
+    if save_result["status"] == "success":
+        print(f"✓ Permit matrix saved to {save_result['markdown_file']}")
+        if save_result['csv_file']:
+            print(f"✓ CSV data saved to {save_result['csv_file']}")
+        else:
+            print("ℹ No CSV data found in response")
+    else:
+        print(f"✗ Error saving files: {save_result.get('error', 'Unknown error')}")
 
 if __name__ == "__main__":
-    # Run both pretty print and save to files
     print("Running permit agent analysis...")
-    print("This will display results in terminal AND save to files.\n")
-    
-    # Create agent once
+    print("This will display the permit matrix in the terminal AND save it to both Markdown and CSV files.\n")
+
+    # Create agent
     permit_agent = create_permit_agent()
-    project_address = "123 Main St, San Jose, Santa Clara County, CA 95110"
-    system_size_ac = 8.5
-    
-    # Run analysis once and store results
+
+    # Combine example Aurora project and design JSONs
+    project_json_path = "./eg_json_inputs/aurora_proj.json"
+    design_json_path = "./eg_json_inputs/aurora_design.json"
+    combined_data = LangChainPermitAgent.combine_project_and_design_json(project_json_path, design_json_path)
+
     print("="*60)
-    print("SIMPLIFIED SOLAR PROJECT ANALYSIS")
+    print("PERMIT MATRIX GENERATION")
     print("="*60)
-    simple_result = permit_agent.analyze_solar_project(project_address, system_size_ac)
-    print("Status:", simple_result["status"])
-    if simple_result["status"] == "success":
-        print("\nANALYSIS:")
-        print("-" * 40)
-        print(simple_result["analysis"])
+    # Generate the permit matrix (core function, returns Markdown table)
+    permit_matrix = permit_agent.generate_permit_matrix(combined_data)
+    print("\nPERMIT MATRIX:\n" + "-" * 40)
+    print(permit_matrix)
+
+    # Save the permit matrix to both Markdown and CSV files
+    save_result = permit_agent.save_permit_matrix_to_files(permit_matrix)
+    if save_result["status"] == "success":
+        print(f"\n✓ Permit matrix saved to {save_result['markdown_file']}")
+        if save_result['csv_file']:
+            print(f"✓ CSV data saved to {save_result['csv_file']}")
+        else:
+            print("ℹ No CSV data found in response")
     else:
-        print("Error:", simple_result["error"])
-    
-    print("\n" + "="*60)
-    print("DEVELOPMENT MEMO GENERATION")
-    print("="*60)
-    memo_result = permit_agent.generate_development_memo(project_address, system_size_ac)
-    print("Status:", memo_result["status"])
-    if memo_result["status"] == "success":
-        print("\nDEVELOPMENT MEMO:")
-        print("-" * 40)
-        print(memo_result["development_memo"])
-    else:
-        print("Error:", memo_result["error"])
-    
-    print("\n" + "="*60)
-    print("COMPLETE PERMIT WORKFLOW")
-    print("="*60)
-    workflow_result = permit_agent.create_permit_workflow(project_address, system_size_ac)
-    print("Status:", workflow_result["status"])
-    if workflow_result["status"] == "success":
-        print("\nWORKFLOW SUMMARY:")
-        print("-" * 40)
-        summary = workflow_result["workflow"]["workflow_summary"]
-        print(f"Project Address: {summary['project_address']}")
-        print(f"System Size: {summary['system_size_ac']} MWac")
-        print(f"Applicable Permits: {len(summary['applicable_permits'])} found")
-        print(f"Next Steps: {summary['next_steps']}")
-        
-        print("\nPERMIT ANALYSIS:")
-        print("-" * 40)
-        print(workflow_result["workflow"]["permit_analysis"])
-    else:
-        print("Error:", workflow_result["error"])
-    
-    # Save results to files using the already-generated results
-    print("\n" + "="*60)
-    print("SAVING RESULTS TO FILES")
-    print("="*60)
-    
-    # Create output directory
-    output_dir = Path("./permit_output")
-    output_dir.mkdir(exist_ok=True)
-    
-    # Save results using the data we already have
-    if simple_result["status"] == "success":
-        with open(output_dir / "simple_analysis.txt", "w") as f:
-            f.write("SOLAR PROJECT PERMIT ANALYSIS\n")
-            f.write("=" * 50 + "\n\n")
-            f.write(f"Project Address: {project_address}\n")
-            f.write(f"System Size: {system_size_ac} MWac\n\n")
-            f.write("ANALYSIS:\n")
-            f.write("-" * 20 + "\n")
-            f.write(simple_result["analysis"])
-        print("✓ Simple analysis saved to permit_output/simple_analysis.txt")
-    
-    if memo_result["status"] == "success":
-        with open(output_dir / "development_memo.txt", "w") as f:
-            f.write(memo_result["development_memo"])
-        print("✓ Development memo saved to permit_output/development_memo.txt")
-    
-    if workflow_result["status"] == "success":
-        with open(output_dir / "complete_workflow.txt", "w") as f:
-            f.write("COMPLETE PERMIT WORKFLOW\n")
-            f.write("=" * 50 + "\n\n")
-            f.write(f"Project Address: {project_address}\n")
-            f.write(f"System Size: {system_size_ac} MWac\n\n")
-            f.write("DEVELOPMENT MEMO:\n")
-            f.write("-" * 20 + "\n")
-            f.write(workflow_result["workflow"]["development_memo"])
-            f.write("\n\n" + "=" * 50 + "\n\n")
-            f.write("PERMIT ANALYSIS:\n")
-            f.write("-" * 20 + "\n")
-            f.write(workflow_result["workflow"]["permit_analysis"])
-        print("✓ Complete workflow saved to permit_output/complete_workflow.txt")
-    
-    print(f"\nAll results saved to {output_dir.absolute()}")
+        print(f"\n✗ Error saving files: {save_result.get('error', 'Unknown error')}")

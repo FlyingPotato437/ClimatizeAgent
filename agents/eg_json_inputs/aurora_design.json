@@ -1,0 +1,121 @@
+{
+    "design": {
+      "design_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "design_request_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "external_provider_id": "YourId123",
+      "project_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "created_at": "2023-07-11 18:43:18 UTC",
+      "bill_of_materials": [
+        {
+          "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "component_type": "modules",
+          "sku": null,
+          "name": "Aurora Sample Solar Panel",
+          "manufacturer_name": "Aurora Sample Manufacturer",
+          "quantity": 1
+        }
+      ],
+      "system_size_ac": 5000,
+      "system_size_ptc": 6000,
+      "system_size_stc": 6500,
+      "arrays": [
+        {
+          "size": 6500,
+          "azimuth": 271.61,
+          "configuration": "string inverter",
+          "dc_optimizer": {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "name": "Aurora Sample DC Optimizer",
+            "count": 11
+          },
+          "microinverter": {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "name": "Aurora Sample Microinverter",
+            "count": 11,
+            "rated_power": 400
+          },
+          "module": {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "rating_stc": 300.25,
+            "name": "Aurora Sample Solar Panel",
+            "count": 11,
+            "orientation": "landscape"
+          },
+          "face": 1,
+          "ground_mounted": true,
+          "pitch": 20.25,
+          "strings": {
+            "count": 1
+          },
+          "string_inverter": {
+            "index": 1
+          },
+          "shading": {
+            "solar_access": {
+              "annual": 87.3,
+              "monthly": [
+                81.1,
+                82.2,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92
+              ]
+            },
+            "total_solar_resource_fraction": {
+              "annual": 87.3
+            }
+          }
+        }
+      ],
+      "string_inverters": [
+        {
+          "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "name": "Aurora Sample String Inverter",
+          "rated_power": 42000
+        }
+      ],
+      "storage_inverters": [
+        {
+          "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "name": "Aurora Sample Storage Inverter",
+          "rated_power": 5800
+        }
+      ],
+      "batteries": [
+        {
+          "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "name": "Aurora Sample Battery",
+          "has_integrated_inverter": true
+        }
+      ],
+      "energy_production": {
+        "up_to_date": true,
+        "annual": 2550.3,
+        "annual_offset": "87%",
+        "monthly": [
+          150.1,
+          150.2,
+          150,
+          200,
+          200,
+          200,
+          300,
+          300,
+          300,
+          200,
+          200,
+          200
+        ],
+        "hourly": null
+      },
+      "storage_selected_operating_mode": "backup",
+      "backup_enabled": true
+    }
+  }
