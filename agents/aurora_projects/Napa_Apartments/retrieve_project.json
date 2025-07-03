@@ -1,0 +1,35 @@
+{
+    "project": {
+      "id": "9fca4ae6-8c95-407d-aaba-774f3a7ec815",
+      "external_provider_id": null,
+      "created_from_lead_id": null,
+      "name": "Napa Apartments",
+      "customer_salutation": null,
+      "customer_first_name": "Kevin",
+      "customer_last_name": "Skiles",
+      "mailing_address": "2611 1st St, Napa, CA 94558, USA",
+      "customer_email": "",
+      "customer_phone": null,
+      "location": {
+        "latitude": 38.2991868,
+        "longitude": -122.3065329,
+        "property_address": "2611 1st St, Napa, CA 94558, USA",
+        "property_address_components": {
+          "street_address": "2611 1st Street",
+          "city": "Napa",
+          "region": "CA",
+          "postal_code": "94558",
+          "country": "United States"
+        }
+      },
+      "project_type": "commercial",
+      "owner_id": "dd2e1aa0-364f-4750-9fcf-0c04e9794b2c",
+      "team_id": null,
+      "status": null,
+      "ahj_id": "3e496d3b-cf4f-4a2e-89e4-d9cd3c93d2dd",
+      "preferred_solar_modules": [],
+      "partner_id": null,
+      "tags": [],
+      "created_at": "2024-02-20 15:56:26 UTC"
+    }
+  }

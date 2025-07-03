@@ -1,0 +1,64 @@
+{
+    "designs": [
+      {
+        "id": "2f40bae8-f118-4ebe-ae93-43354dcce9e2",
+        "external_provider_id": null,
+        "name": "Revised usage",
+        "created_at": "2023-07-21 20:05:03 UTC",
+        "system_size_stc": 30000,
+        "system_size_ptc": null,
+        "system_size_ac": 34600,
+        "milestone": null
+      },
+      {
+        "id": "65ab3c81-35fb-4dfe-9387-c3b81345ad97",
+        "external_provider_id": null,
+        "name": "Silfab 500 (SE) in landscape (copy)",
+        "created_at": "2023-07-18 21:15:25 UTC",
+        "system_size_stc": 0,
+        "system_size_ptc": 0,
+        "system_size_ac": 0,
+        "milestone": null
+      },
+      {
+        "id": "bffb56b8-1196-47e3-a4f5-36aa22dc9396",
+        "external_provider_id": null,
+        "name": "Silfab 500 (SE)",
+        "created_at": "2023-07-13 16:30:06 UTC",
+        "system_size_stc": 40000,
+        "system_size_ptc": null,
+        "system_size_ac": 51900,
+        "milestone": null
+      },
+      {
+        "id": "ce9ddae6-0f04-464f-ae8f-3298f7f05692",
+        "external_provider_id": null,
+        "name": "Silfab 500 (SE) in landscape",
+        "created_at": "2023-07-12 19:29:19 UTC",
+        "system_size_stc": 41000,
+        "system_size_ptc": null,
+        "system_size_ac": 34600,
+        "milestone": null
+      },
+      {
+        "id": "b4976256-0e23-4007-a019-458aafa37f82",
+        "external_provider_id": null,
+        "name": "Silfab 500",
+        "created_at": "2023-07-12 18:47:49 UTC",
+        "system_size_stc": 39000,
+        "system_size_ptc": null,
+        "system_size_ac": 50000,
+        "milestone": null
+      },
+      {
+        "id": "5a635f22-9dfd-4e52-8a0c-5fbe7e3cb550",
+        "external_provider_id": null,
+        "name": "prelim",
+        "created_at": "2023-07-07 15:27:57 UTC",
+        "system_size_stc": 40000,
+        "system_size_ptc": null,
+        "system_size_ac": 50000,
+        "milestone": null
+      }
+    ]
+  }

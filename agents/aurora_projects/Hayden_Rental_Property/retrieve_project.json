@@ -1,0 +1,35 @@
+{
+    "project": {
+      "id": "009b2f90-b920-42b3-839a-f218ad3d9edb",
+      "external_provider_id": null,
+      "created_from_lead_id": null,
+      "name": "Hayden Rental Property",
+      "customer_salutation": null,
+      "customer_first_name": "Frank",
+      "customer_last_name": "Hayden",
+      "mailing_address": "9665 Soquel Dr, Aptos, CA 95003, USA",
+      "customer_email": null,
+      "customer_phone": null,
+      "location": {
+        "latitude": 36.9732241,
+        "longitude": -121.8791417,
+        "property_address": "9665 Soquel Dr, Aptos, CA 95003, USA",
+        "property_address_components": {
+          "street_address": "9665 Soquel Drive",
+          "city": "Aptos",
+          "region": "CA",
+          "postal_code": "95003",
+          "country": "United States"
+        }
+      },
+      "project_type": "commercial",
+      "owner_id": "dd2e1aa0-364f-4750-9fcf-0c04e9794b2c",
+      "team_id": null,
+      "status": null,
+      "ahj_id": "45a0bacc-a1de-40d9-97e3-5ea0655b76d1",
+      "preferred_solar_modules": [],
+      "partner_id": null,
+      "tags": [],
+      "created_at": "2023-06-13 14:02:55 UTC"
+    }
+  }

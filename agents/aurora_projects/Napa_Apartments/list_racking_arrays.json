@@ -1,0 +1,163 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 3,
+        "columns": 6,
+        "array_layout": [
+          "PPPPPP",
+          "PPPPPP",
+          "PPPPPP"
+        ],
+        "module": {
+          "id": "433a0ef8-555a-4d69-a951-4e71a8b656db",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 410,
+          "name": "SIL-410 HC+",
+          "count": 18
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 9.5,
+        "azimuth": 196.22,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 3,
+        "columns": 6,
+        "array_layout": [
+          "PPPPPP",
+          "PPPPPP",
+          "PPPPPP"
+        ],
+        "module": {
+          "id": "433a0ef8-555a-4d69-a951-4e71a8b656db",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 410,
+          "name": "SIL-410 HC+",
+          "count": 18
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 9.5,
+        "azimuth": 196.22,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 3,
+        "columns": 6,
+        "array_layout": [
+          "PPPPPP",
+          "PPPPPP",
+          "PPPPPP"
+        ],
+        "module": {
+          "id": "433a0ef8-555a-4d69-a951-4e71a8b656db",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 410,
+          "name": "SIL-410 HC+",
+          "count": 18
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 9.5,
+        "azimuth": 196.22,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 3,
+        "columns": 6,
+        "array_layout": [
+          "PPPPPP",
+          "PPPPPP",
+          "PPPPPP"
+        ],
+        "module": {
+          "id": "433a0ef8-555a-4d69-a951-4e71a8b656db",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 410,
+          "name": "SIL-410 HC+",
+          "count": 18
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 9.5,
+        "azimuth": 196.22,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 2,
+        "columns": 5,
+        "array_layout": [
+          "PPPPP",
+          "PPPPP"
+        ],
+        "module": {
+          "id": "433a0ef8-555a-4d69-a951-4e71a8b656db",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 410,
+          "name": "SIL-410 HC+",
+          "count": 10
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 14,
+        "azimuth": 196.99,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 2,
+        "columns": 5,
+        "array_layout": [
+          "PPPPP",
+          "PPPPP"
+        ],
+        "module": {
+          "id": "433a0ef8-555a-4d69-a951-4e71a8b656db",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 410,
+          "name": "SIL-410 HC+",
+          "count": 10
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 14,
+        "azimuth": 196.99,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 3,
+        "columns": 12,
+        "array_layout": [
+          "PPPPPPPPPPPP",
+          "PPPPPPPPPPPP",
+          "PPPPPPPPPPPP"
+        ],
+        "module": {
+          "id": "433a0ef8-555a-4d69-a951-4e71a8b656db",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 410,
+          "name": "SIL-410 HC+",
+          "count": 36
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 14,
+        "azimuth": 197.3,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }

@@ -1,0 +1,35 @@
+{
+    "project": {
+      "id": "3c5ada5a-ca9f-492c-ace5-f2716f44ce29",
+      "external_provider_id": null,
+      "created_from_lead_id": null,
+      "name": "Paradox Hotel (McDonald, Tim)",
+      "customer_salutation": null,
+      "customer_first_name": "Tim",
+      "customer_last_name": "McDonald",
+      "mailing_address": "611 Ocean St, Santa Cruz, CA 95060, USA",
+      "customer_email": "tim.mcdonald@pyramidglobal.com",
+      "customer_phone": "+1 646 577 0620",
+      "location": {
+        "latitude": 36.9769073,
+        "longitude": -122.020596,
+        "property_address": "611 Ocean St, Santa Cruz, CA 95060, USA",
+        "property_address_components": {
+          "street_address": "611 Ocean St",
+          "city": "Santa Cruz",
+          "region": "CA",
+          "postal_code": "95060",
+          "country": "United States"
+        }
+      },
+      "project_type": "commercial",
+      "owner_id": "dd2e1aa0-364f-4750-9fcf-0c04e9794b2c",
+      "team_id": null,
+      "status": "Remote Assessment Completed",
+      "ahj_id": "70ee1ab6-8477-4d88-b177-177d97e6319b",
+      "preferred_solar_modules": [],
+      "partner_id": null,
+      "tags": [],
+      "created_at": "2024-09-27 13:01:39 UTC"
+    }
+  }

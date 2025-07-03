@@ -1,0 +1,35 @@
+{
+    "project": {
+      "id": "dfea112c-1f44-4380-8387-f395a11f320b",
+      "external_provider_id": null,
+      "created_from_lead_id": null,
+      "name": "Arcangeli Grocery Company",
+      "customer_salutation": null,
+      "customer_first_name": "Mike",
+      "customer_last_name": "Benedetti",
+      "mailing_address": "287 Stage Rd, Pescadero, CA 94060, USA",
+      "customer_email": null,
+      "customer_phone": "(831) 331-1765",
+      "location": {
+        "latitude": 37.25338929999999,
+        "longitude": -122.3834292,
+        "property_address": "287 Stage Rd, Pescadero, CA 94060, USA",
+        "property_address_components": {
+          "street_address": "287 Stage Road",
+          "city": "Pescadero",
+          "region": "CA",
+          "postal_code": "94060",
+          "country": "United States"
+        }
+      },
+      "project_type": "commercial",
+      "owner_id": "dd2e1aa0-364f-4750-9fcf-0c04e9794b2c",
+      "team_id": null,
+      "status": null,
+      "ahj_id": "77df9703-0733-4db0-9ab6-7a73c808d151",
+      "preferred_solar_modules": [],
+      "partner_id": null,
+      "tags": [],
+      "created_at": "2023-03-28 02:14:12 UTC"
+    }
+  }

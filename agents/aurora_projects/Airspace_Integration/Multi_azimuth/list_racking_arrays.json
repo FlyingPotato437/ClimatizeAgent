@@ -1,0 +1,76 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 4,
+        "columns": 3,
+        "array_layout": [
+          "LLL",
+          "LLL",
+          "LLL",
+          "LLL"
+        ],
+        "module": {
+          "id": "0b3bc462-70ee-4431-b9ce-0c54d0f6fd63",
+          "manufacturer": "Qcells",
+          "rating_stc": 410,
+          "name": "Q.TRON BLK M-G2+ 410W",
+          "count": 12
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 243.94,
+        "pitch": 30,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 4,
+        "columns": 3,
+        "array_layout": [
+          "LLL",
+          "LLL",
+          "LLL",
+          "LLL"
+        ],
+        "module": {
+          "id": "0b3bc462-70ee-4431-b9ce-0c54d0f6fd63",
+          "manufacturer": "Qcells",
+          "rating_stc": 410,
+          "name": "Q.TRON BLK M-G2+ 410W",
+          "count": 12
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 243.94,
+        "pitch": 30,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 4,
+        "columns": 4,
+        "array_layout": [
+          "LLLL",
+          "LLLL",
+          "LLLL",
+          "LLLL"
+        ],
+        "module": {
+          "id": "0b3bc462-70ee-4431-b9ce-0c54d0f6fd63",
+          "manufacturer": "Qcells",
+          "rating_stc": 410,
+          "name": "Q.TRON BLK M-G2+ 410W",
+          "count": 16
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 155.95,
+        "pitch": 30,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }

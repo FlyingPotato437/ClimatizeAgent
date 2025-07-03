@@ -1,0 +1,35 @@
+{
+    "project": {
+      "id": "f55bf227-71dc-4591-8951-7e481ea3df03",
+      "external_provider_id": null,
+      "created_from_lead_id": null,
+      "name": "UCSC - Pie Ranch",
+      "customer_salutation": null,
+      "customer_first_name": "",
+      "customer_last_name": "",
+      "mailing_address": "3100 Cabrillo Hwy, Pescadero, CA 94060, USA",
+      "customer_email": null,
+      "customer_phone": null,
+      "location": {
+        "latitude": 36.6556937,
+        "longitude": -121.7354058,
+        "property_address": "Kearny St, East Garrison, CA 93933, USA",
+        "property_address_components": {
+          "street_address": "Kearny Street",
+          "city": "Monterey County",
+          "region": "CA",
+          "postal_code": "93933",
+          "country": "United States"
+        }
+      },
+      "project_type": "commercial",
+      "owner_id": "e07e0c4a-30db-4def-bf60-a5fbbf673ed3",
+      "team_id": null,
+      "status": null,
+      "ahj_id": "85656897-7842-4bc8-bb31-64759c3d64e4",
+      "preferred_solar_modules": [],
+      "partner_id": null,
+      "tags": [],
+      "created_at": "2023-12-12 13:39:47 UTC"
+    }
+  }

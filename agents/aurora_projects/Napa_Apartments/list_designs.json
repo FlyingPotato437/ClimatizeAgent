@@ -1,0 +1,14 @@
+{
+    "designs": [
+      {
+        "id": "2a31762b-1688-4954-b98c-abd5687e28af",
+        "external_provider_id": null,
+        "name": "Prelim",
+        "created_at": "2024-02-20 16:00:03 UTC",
+        "system_size_stc": 52480,
+        "system_size_ptc": null,
+        "system_size_ac": 49000,
+        "milestone": null
+      }
+    ]
+  }

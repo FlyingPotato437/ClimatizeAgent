@@ -1,0 +1,395 @@
+{
+    "roofs": [
+      {
+        "units_of_measurement": "Imperial",
+        "shape": "gable",
+        "area": 7612.41,
+        "modules_area": 981.82,
+        "pitch": null,
+        "effective_mean_height": 22.78,
+        "modules": true,
+        "edges_length": {
+          "eave": 1110.7,
+          "hip": 0,
+          "rake": 359.94,
+          "ridge": 24.75,
+          "valley": 5.21
+        },
+        "obstructions": {
+          "circle_count": 0,
+          "polygon_count": 0
+        },
+        "faces": [
+          {
+            "units_of_measurement": "Imperial",
+            "area": 1499.01,
+            "mean_height": 12,
+            "modules_area": 0,
+            "pitch": 0,
+            "azimuth": 197,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 87.43,
+            "mean_height": 12,
+            "modules_area": 0,
+            "pitch": 0,
+            "azimuth": 197,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 1312.51,
+            "mean_height": 12,
+            "modules_area": 0,
+            "pitch": 0,
+            "azimuth": 197,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 790.54,
+            "mean_height": 21.87,
+            "modules_area": 384.19,
+            "pitch": 9.5,
+            "azimuth": 196.2,
+            "modules": true,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 787.92,
+            "mean_height": 21.87,
+            "modules_area": 384.19,
+            "pitch": 9.5,
+            "azimuth": 196.2,
+            "modules": true,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 602.93,
+            "mean_height": 21.55,
+            "modules_area": 0,
+            "pitch": 9.5,
+            "azimuth": 16.8,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 605.76,
+            "mean_height": 21.55,
+            "modules_area": 0,
+            "pitch": 9.5,
+            "azimuth": 16.8,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 412.49,
+            "mean_height": 22.11,
+            "modules_area": 0,
+            "pitch": 9.5,
+            "azimuth": 16.3,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 535.67,
+            "mean_height": 22.78,
+            "modules_area": 0,
+            "pitch": 14,
+            "azimuth": 17,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 565.66,
+            "mean_height": 22.78,
+            "modules_area": 213.44,
+            "pitch": 14,
+            "azimuth": 197,
+            "modules": true,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 412.49,
+            "mean_height": 22.11,
+            "modules_area": 0,
+            "pitch": 9.5,
+            "azimuth": 16.3,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          }
+        ]
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "shape": "gable",
+        "area": 7631.5,
+        "modules_area": 981.82,
+        "pitch": null,
+        "effective_mean_height": 22.78,
+        "modules": true,
+        "edges_length": {
+          "eave": 1114.69,
+          "hip": 0,
+          "rake": 359.94,
+          "ridge": 24.75,
+          "valley": 4.08
+        },
+        "obstructions": {
+          "circle_count": 0,
+          "polygon_count": 0
+        },
+        "faces": [
+          {
+            "units_of_measurement": "Imperial",
+            "area": 1326.62,
+            "mean_height": 12,
+            "modules_area": 0,
+            "pitch": 0,
+            "azimuth": 197,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 102.21,
+            "mean_height": 12,
+            "modules_area": 0,
+            "pitch": 0,
+            "azimuth": 197,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 1469.98,
+            "mean_height": 12,
+            "modules_area": 0,
+            "pitch": 0,
+            "azimuth": 197,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 794.23,
+            "mean_height": 21.87,
+            "modules_area": 384.19,
+            "pitch": 9.5,
+            "azimuth": 196.2,
+            "modules": true,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 794.73,
+            "mean_height": 21.87,
+            "modules_area": 384.19,
+            "pitch": 9.5,
+            "azimuth": 196.2,
+            "modules": true,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 605.76,
+            "mean_height": 21.55,
+            "modules_area": 0,
+            "pitch": 9.5,
+            "azimuth": 16.8,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 603.73,
+            "mean_height": 21.55,
+            "modules_area": 0,
+            "pitch": 9.5,
+            "azimuth": 16.8,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 412.49,
+            "mean_height": 22.11,
+            "modules_area": 0,
+            "pitch": 9.5,
+            "azimuth": 16.3,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 542.81,
+            "mean_height": 22.78,
+            "modules_area": 0,
+            "pitch": 14,
+            "azimuth": 17,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 566.45,
+            "mean_height": 22.78,
+            "modules_area": 213.44,
+            "pitch": 14,
+            "azimuth": 197,
+            "modules": true,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 412.49,
+            "mean_height": 22.11,
+            "modules_area": 0,
+            "pitch": 9.5,
+            "azimuth": 16.3,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          }
+        ]
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "shape": "gable",
+        "area": 6365.98,
+        "modules_area": 768.38,
+        "pitch": null,
+        "effective_mean_height": 22.88,
+        "modules": true,
+        "edges_length": {
+          "eave": 651.29,
+          "hip": 0,
+          "rake": 85.28,
+          "ridge": 0,
+          "valley": 0
+        },
+        "obstructions": {
+          "circle_count": 0,
+          "polygon_count": 0
+        },
+        "faces": [
+          {
+            "units_of_measurement": "Imperial",
+            "area": 3867,
+            "mean_height": 12,
+            "modules_area": 0,
+            "pitch": 0,
+            "azimuth": 197,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 1329.93,
+            "mean_height": 22.88,
+            "modules_area": 768.38,
+            "pitch": 14,
+            "azimuth": 197.3,
+            "modules": true,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 1169.05,
+            "mean_height": 22.28,
+            "modules_area": 0,
+            "pitch": 14,
+            "azimuth": 17.5,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          }
+        ]
+      }
+    ]
+  }

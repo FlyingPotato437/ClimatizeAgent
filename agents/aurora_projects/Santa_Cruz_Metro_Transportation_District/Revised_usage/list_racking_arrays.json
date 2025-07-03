@@ -1,0 +1,104 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 5,
+        "columns": 3,
+        "array_layout": [
+          "0LL",
+          "LLL",
+          "LLL",
+          "LLL",
+          "LLL"
+        ],
+        "module": {
+          "id": "7fd4e688-1eed-4c79-b8e2-b63d5a86a3bf",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 500,
+          "name": "SIL-500 HM",
+          "count": 14
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 26.6,
+        "azimuth": 269.42,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 5,
+        "columns": 4,
+        "array_layout": [
+          "LLLL",
+          "LLLL",
+          "LLLL",
+          "0LL0",
+          "0LL0"
+        ],
+        "module": {
+          "id": "7fd4e688-1eed-4c79-b8e2-b63d5a86a3bf",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 500,
+          "name": "SIL-500 HM",
+          "count": 16
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 26.6,
+        "azimuth": 269.42,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 5,
+        "columns": 4,
+        "array_layout": [
+          "LLLL",
+          "LLLL",
+          "LLLL",
+          "0LL0",
+          "0LL0"
+        ],
+        "module": {
+          "id": "7fd4e688-1eed-4c79-b8e2-b63d5a86a3bf",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 500,
+          "name": "SIL-500 HM",
+          "count": 16
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 26.6,
+        "azimuth": 89.42,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 5,
+        "columns": 3,
+        "array_layout": [
+          "LL0",
+          "LLL",
+          "LLL",
+          "LLL",
+          "LLL"
+        ],
+        "module": {
+          "id": "7fd4e688-1eed-4c79-b8e2-b63d5a86a3bf",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 500,
+          "name": "SIL-500 HM",
+          "count": 14
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 26.6,
+        "azimuth": 89.42,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }

@@ -1,0 +1,28 @@
+
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 3,
+        "columns": 25,
+        "array_layout": [
+          "PPPPPPPPPPPPPPPPPPPPPPPP0",
+          "PPPPPPPPPPPPPPPPPPPPPPPP0",
+          "PPPPPPPPPPPPPPPPPPPPPPPPP"
+        ],
+        "module": {
+          "id": "e9aac5d6-f892-45f5-a07d-36072b6441a5",
+          "manufacturer": "JA Solar",
+          "rating_stc": 405,
+          "name": "JAM72S10-405PR",
+          "count": 73
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 20,
+        "azimuth": 237.33,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }

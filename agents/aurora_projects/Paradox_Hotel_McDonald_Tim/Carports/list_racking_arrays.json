@@ -1,0 +1,96 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 3,
+        "columns": 40,
+        "array_layout": [
+          "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+          "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+          "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP"
+        ],
+        "module": {
+          "id": "e3b1618a-943d-43e5-8555-763002a1c770",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 520,
+          "name": "SIL-520 QM",
+          "count": 120
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 72.47,
+        "pitch": 10,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 3,
+        "columns": 40,
+        "array_layout": [
+          "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+          "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+          "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP"
+        ],
+        "module": {
+          "id": "e3b1618a-943d-43e5-8555-763002a1c770",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 520,
+          "name": "SIL-520 QM",
+          "count": 120
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 72.47,
+        "pitch": 10,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 3,
+        "columns": 40,
+        "array_layout": [
+          "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+          "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+          "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP"
+        ],
+        "module": {
+          "id": "e3b1618a-943d-43e5-8555-763002a1c770",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 520,
+          "name": "SIL-520 QM",
+          "count": 120
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 252.37,
+        "pitch": 10,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 3,
+        "columns": 40,
+        "array_layout": [
+          "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+          "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+          "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP"
+        ],
+        "module": {
+          "id": "e3b1618a-943d-43e5-8555-763002a1c770",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 520,
+          "name": "SIL-520 QM",
+          "count": 120
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 252.37,
+        "pitch": 10,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }

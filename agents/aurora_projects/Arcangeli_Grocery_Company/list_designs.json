@@ -1,0 +1,54 @@
+{
+    "designs": [
+      {
+        "id": "e82288ae-86e0-4756-af4c-5e6f3fa41475",
+        "external_provider_id": null,
+        "name": "Q.Peak 400's_Solectria_portrait",
+        "created_at": "2023-05-03 21:03:28 UTC",
+        "system_size_stc": 21200,
+        "system_size_ptc": null,
+        "system_size_ac": 0,
+        "milestone": null
+      },
+      {
+        "id": "88c32a07-1d9b-4f1f-b0af-91583f65b855",
+        "external_provider_id": null,
+        "name": "Q.Peak 400's_SolarEdge_Portrait",
+        "created_at": "2023-05-03 15:29:36 UTC",
+        "system_size_stc": 21600,
+        "system_size_ptc": null,
+        "system_size_ac": 17300,
+        "milestone": null
+      },
+      {
+        "id": "a0e96a13-f493-4b78-8776-688888a7f190",
+        "external_provider_id": null,
+        "name": "Q.Peak 400's_SolarEdge_208V_landscape",
+        "created_at": "2023-04-26 17:40:52 UTC",
+        "system_size_stc": 21600,
+        "system_size_ptc": null,
+        "system_size_ac": 17300,
+        "milestone": null
+      },
+      {
+        "id": "6180bc90-4c93-4856-bd50-6e3af1385920",
+        "external_provider_id": null,
+        "name": "Q.Cell Bifacial (copy)",
+        "created_at": "2023-04-26 17:09:37 UTC",
+        "system_size_stc": 23815,
+        "system_size_ptc": 22254.1,
+        "system_size_ac": 17607,
+        "milestone": null
+      },
+      {
+        "id": "fa5db0a0-86f7-4f82-84aa-4e34849b1d96",
+        "external_provider_id": null,
+        "name": "Drone photo (copy)",
+        "created_at": "2023-04-01 20:04:28 UTC",
+        "system_size_stc": 21600,
+        "system_size_ptc": null,
+        "system_size_ac": 33300,
+        "milestone": null
+      }
+    ]
+  }

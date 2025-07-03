@@ -1,0 +1,214 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 7,
+        "array_layout": [
+          "LLLLLLL"
+        ],
+        "module": {
+          "id": "9989997b-0187-4b09-b4b0-7f61439861a9",
+          "manufacturer": "Qcells",
+          "rating_stc": 485,
+          "name": "Q.PEAK DUO XL-G10.3/BFG 485W",
+          "count": 7
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 6,
+        "array_layout": [
+          "LLLLLL"
+        ],
+        "module": {
+          "id": "9989997b-0187-4b09-b4b0-7f61439861a9",
+          "manufacturer": "Qcells",
+          "rating_stc": 485,
+          "name": "Q.PEAK DUO XL-G10.3/BFG 485W",
+          "count": 6
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 6,
+        "array_layout": [
+          "LLLLLL"
+        ],
+        "module": {
+          "id": "9989997b-0187-4b09-b4b0-7f61439861a9",
+          "manufacturer": "Qcells",
+          "rating_stc": 485,
+          "name": "Q.PEAK DUO XL-G10.3/BFG 485W",
+          "count": 6
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 6,
+        "array_layout": [
+          "LLLLLL"
+        ],
+        "module": {
+          "id": "9989997b-0187-4b09-b4b0-7f61439861a9",
+          "manufacturer": "Qcells",
+          "rating_stc": 485,
+          "name": "Q.PEAK DUO XL-G10.3/BFG 485W",
+          "count": 6
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 6,
+        "array_layout": [
+          "LLLLLL"
+        ],
+        "module": {
+          "id": "9989997b-0187-4b09-b4b0-7f61439861a9",
+          "manufacturer": "Qcells",
+          "rating_stc": 485,
+          "name": "Q.PEAK DUO XL-G10.3/BFG 485W",
+          "count": 6
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 1,
+        "array_layout": [
+          "L"
+        ],
+        "module": {
+          "id": "9989997b-0187-4b09-b4b0-7f61439861a9",
+          "manufacturer": "Qcells",
+          "rating_stc": 485,
+          "name": "Q.PEAK DUO XL-G10.3/BFG 485W",
+          "count": 1
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 4,
+        "array_layout": [
+          "LLLL"
+        ],
+        "module": {
+          "id": "9989997b-0187-4b09-b4b0-7f61439861a9",
+          "manufacturer": "Qcells",
+          "rating_stc": 485,
+          "name": "Q.PEAK DUO XL-G10.3/BFG 485W",
+          "count": 4
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 7,
+        "array_layout": [
+          "LLLLLLL"
+        ],
+        "module": {
+          "id": "9989997b-0187-4b09-b4b0-7f61439861a9",
+          "manufacturer": "Qcells",
+          "rating_stc": 485,
+          "name": "Q.PEAK DUO XL-G10.3/BFG 485W",
+          "count": 7
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 6,
+        "array_layout": [
+          "PPPPPP"
+        ],
+        "module": {
+          "id": "922aaf3f-d47b-482f-8afb-94619daef2f0",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 370,
+          "name": "SIL-370 HC",
+          "count": 6
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 14,
+        "azimuth": 270.48,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 2,
+        "array_layout": [
+          "PP"
+        ],
+        "module": {
+          "id": "922aaf3f-d47b-482f-8afb-94619daef2f0",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 370,
+          "name": "SIL-370 HC",
+          "count": 2
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 14,
+        "azimuth": 270.48,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }

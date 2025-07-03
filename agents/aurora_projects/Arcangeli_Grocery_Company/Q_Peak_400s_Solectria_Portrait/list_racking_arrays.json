@@ -1,0 +1,109 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 12,
+        "array_layout": [
+          "PPPPPPPPPPPP"
+        ],
+        "module": {
+          "id": "7d5bd4fe-9f26-4f42-976d-d53b53321ed4",
+          "manufacturer": "Qcells",
+          "rating_stc": 400,
+          "name": "Q.PEAK DUO BLK ML-G10 400",
+          "count": 12
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 12,
+        "array_layout": [
+          "PPPPPPPPPPPP"
+        ],
+        "module": {
+          "id": "7d5bd4fe-9f26-4f42-976d-d53b53321ed4",
+          "manufacturer": "Qcells",
+          "rating_stc": 400,
+          "name": "Q.PEAK DUO BLK ML-G10 400",
+          "count": 12
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 3,
+        "array_layout": [
+          "PPP"
+        ],
+        "module": {
+          "id": "7d5bd4fe-9f26-4f42-976d-d53b53321ed4",
+          "manufacturer": "Qcells",
+          "rating_stc": 400,
+          "name": "Q.PEAK DUO BLK ML-G10 400",
+          "count": 3
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 11,
+        "array_layout": [
+          "PPPPPPPPPPP"
+        ],
+        "module": {
+          "id": "7d5bd4fe-9f26-4f42-976d-d53b53321ed4",
+          "manufacturer": "Qcells",
+          "rating_stc": 400,
+          "name": "Q.PEAK DUO BLK ML-G10 400",
+          "count": 11
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 15,
+        "array_layout": [
+          "PPPPPPPPPPPPPPP"
+        ],
+        "module": {
+          "id": "7d5bd4fe-9f26-4f42-976d-d53b53321ed4",
+          "manufacturer": "Qcells",
+          "rating_stc": 400,
+          "name": "Q.PEAK DUO BLK ML-G10 400",
+          "count": 15
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 180.32,
+        "rotation": 0,
+        "tilt": 10
+      }
+    ]
+  }

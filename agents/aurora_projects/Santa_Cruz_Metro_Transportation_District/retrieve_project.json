@@ -1,0 +1,35 @@
+{
+    "project": {
+      "id": "df17cdb1-6509-4c16-be9a-8389f4be525d",
+      "external_provider_id": null,
+      "created_from_lead_id": null,
+      "name": "Santa Cruz Metro Transportation District",
+      "customer_salutation": null,
+      "customer_first_name": "Freddy Rocha",
+      "customer_last_name": "SCMTD",
+      "mailing_address": "246 Kings Village Rd, Scotts Valley, CA 95066, USA",
+      "customer_email": "FRocha@scmtd.com",
+      "customer_phone": "831-840-3306",
+      "location": {
+        "latitude": 37.0491811,
+        "longitude": -122.0280059,
+        "property_address": "Parking lot, 246 Kings Village Rd, Scotts Valley, CA 95066, USA",
+        "property_address_components": {
+          "street_address": "435 Kings Village Road",
+          "city": "Scotts Valley",
+          "region": "CA",
+          "postal_code": "95066",
+          "country": "United States"
+        }
+      },
+      "project_type": "commercial",
+      "owner_id": "e07e0c4a-30db-4def-bf60-a5fbbf673ed3",
+      "team_id": null,
+      "status": null,
+      "ahj_id": "c5403c8d-ce71-45cb-bc09-7e9772460705",
+      "preferred_solar_modules": [],
+      "partner_id": null,
+      "tags": [],
+      "created_at": "2023-07-05 19:18:30 UTC"
+    }
+  }

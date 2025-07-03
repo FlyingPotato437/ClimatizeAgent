@@ -1,0 +1,35 @@
+{
+    "project": {
+      "id": "eac7e880-8b5d-4b5c-8ebc-172f274d571d",
+      "external_provider_id": null,
+      "created_from_lead_id": null,
+      "name": "Lift Line",
+      "customer_salutation": null,
+      "customer_first_name": "Brenda",
+      "customer_last_name": " Castaneda ",
+      "mailing_address": "545 Ohlone Pkwy, Watsonville, CA 95076, USA",
+      "customer_email": "brendac@cbridges.org",
+      "customer_phone": "831.688.9663",
+      "location": {
+        "latitude": 36.9091117,
+        "longitude": -121.7725524,
+        "property_address": "545 Ohlone Pkwy, Watsonville, CA 95076, USA",
+        "property_address_components": {
+          "street_address": "545 Ohlone Parkway",
+          "city": "Watsonville",
+          "region": "CA",
+          "postal_code": "95076",
+          "country": "United States"
+        }
+      },
+      "project_type": "commercial",
+      "owner_id": "e07e0c4a-30db-4def-bf60-a5fbbf673ed3",
+      "team_id": null,
+      "status": null,
+      "ahj_id": "9190b380-7818-420e-9811-fa58649b9a41",
+      "preferred_solar_modules": [],
+      "partner_id": null,
+      "tags": [],
+      "created_at": "2024-01-26 20:39:22 UTC"
+    }
+  }

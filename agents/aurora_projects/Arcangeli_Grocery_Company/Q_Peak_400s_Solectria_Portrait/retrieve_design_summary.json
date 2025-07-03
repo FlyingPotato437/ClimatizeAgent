@@ -1,0 +1,85 @@
+{
+    "design": {
+      "design_id": "e82288ae-86e0-4756-af4c-5e6f3fa41475",
+      "design_request_id": null,
+      "external_provider_id": null,
+      "project_id": "dfea112c-1f44-4380-8387-f395a11f320b",
+      "bill_of_materials": [
+        {
+          "id": "7d5bd4fe-9f26-4f42-976d-d53b53321ed4",
+          "component_type": "modules",
+          "sku": null,
+          "name": "Q.PEAK DUO BLK ML-G10 400",
+          "manufacturer_name": "Qcells",
+          "quantity": 53
+        }
+      ],
+      "arrays": [
+        {
+          "module": {
+            "id": "7d5bd4fe-9f26-4f42-976d-d53b53321ed4",
+            "name": "Q.PEAK DUO BLK ML-G10 400",
+            "rating_stc": 400,
+            "orientation": "portrait",
+            "count": 53
+          },
+          "azimuth": 180.32,
+          "pitch": 10,
+          "face": 1,
+          "configuration": "no inverter/MLPE",
+          "shading": {
+            "solar_access": {
+              "annual": 99.22834905660378,
+              "monthly": [
+                98.6377358490566,
+                99.0856603773585,
+                99.43924528301886,
+                99.48745283018866,
+                99.48283018867924,
+                99.65363207547169,
+                99.49608490566037,
+                99.40132075471698,
+                99.39966981132075,
+                99.33966981132075,
+                98.49665094339622,
+                98.0597641509434
+              ]
+            },
+            "total_solar_resource_fraction": {
+              "annual": 92.28236462264151
+            }
+          },
+          "size": 21200,
+          "ground_mounted": false
+        }
+      ],
+      "string_inverters": [],
+      "energy_production": {
+        "up_to_date": false,
+        "annual": 0,
+        "monthly": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hourly": null
+      },
+      "batteries": [],
+      "storage_selected_operating_mode": null,
+      "storage_inverters": [],
+      "backup_enabled": null,
+      "system_size_stc": 21200,
+      "system_size_ptc": null,
+      "system_size_ac": 0,
+      "created_at": "2023-05-03 21:03:28 UTC"
+    }
+  }

@@ -1,0 +1,24 @@
+{
+    "designs": [
+      {
+        "id": "7491aedf-86e1-43e4-94e8-ddb8821ff996",
+        "external_provider_id": null,
+        "name": "one array SSE",
+        "created_at": "2024-03-26 01:15:22 UTC",
+        "system_size_stc": 18040,
+        "system_size_ptc": null,
+        "system_size_ac": 15356,
+        "milestone": null
+      },
+      {
+        "id": "f4cff085-cf87-4f63-94f3-25df66496b14",
+        "external_provider_id": null,
+        "name": "Multi azimuth",
+        "created_at": "2024-03-22 21:04:56 UTC",
+        "system_size_stc": 16400,
+        "system_size_ptc": null,
+        "system_size_ac": 13960,
+        "milestone": null
+      }
+    ]
+  }
