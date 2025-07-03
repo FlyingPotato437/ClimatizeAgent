@@ -1,0 +1,87 @@
+{
+    "roofs": [
+      {
+        "units_of_measurement": "Imperial",
+        "shape": "flat",
+        "area": 652.96,
+        "modules_area": 166.91,
+        "pitch": 0,
+        "effective_mean_height": 9.84,
+        "modules": true,
+        "edges_length": {
+          "eave": 118.83,
+          "hip": 0,
+          "rake": 0,
+          "ridge": 0,
+          "valley": 0
+        },
+        "obstructions": {
+          "circle_count": 0,
+          "polygon_count": 1
+        },
+        "faces": [
+          {
+            "units_of_measurement": "Imperial",
+            "area": 652.96,
+            "mean_height": 9.84,
+            "modules_area": 166.91,
+            "pitch": 0,
+            "azimuth": 214.4,
+            "modules": true,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 1
+            }
+          }
+        ]
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "shape": "flat",
+        "area": 2835.09,
+        "modules_area": 751.09,
+        "pitch": 0,
+        "effective_mean_height": 11.8,
+        "modules": true,
+        "edges_length": {
+          "eave": 378.2,
+          "hip": 0,
+          "rake": 0,
+          "ridge": 0,
+          "valley": 0
+        },
+        "obstructions": {
+          "circle_count": 3,
+          "polygon_count": 3
+        },
+        "faces": [
+          {
+            "units_of_measurement": "Imperial",
+            "area": 2076.03,
+            "mean_height": 11.8,
+            "modules_area": 751.09,
+            "pitch": 0,
+            "azimuth": 214.7,
+            "modules": true,
+            "obstructions": {
+              "circle_count": 3,
+              "polygon_count": 3
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 759.06,
+            "mean_height": 9.84,
+            "modules_area": 0,
+            "pitch": 0,
+            "azimuth": 214.8,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          }
+        ]
+      }
+    ]
+  }

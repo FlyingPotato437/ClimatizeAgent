@@ -1,0 +1,172 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 8,
+        "array_layout": [
+          "PPPPPPPP"
+        ],
+        "module": {
+          "id": "d7cd19fe-5080-4751-8f3b-2c007b1728a7",
+          "manufacturer": "Panasonic",
+          "rating_stc": 530,
+          "name": "AE14H530VHC10B",
+          "count": 8
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 214.68,
+        "rotation": 0,
+        "tilt": 15
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 7,
+        "array_layout": [
+          "PPPPPPP"
+        ],
+        "module": {
+          "id": "d7cd19fe-5080-4751-8f3b-2c007b1728a7",
+          "manufacturer": "Panasonic",
+          "rating_stc": 530,
+          "name": "AE14H530VHC10B",
+          "count": 7
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 214.68,
+        "rotation": 0,
+        "tilt": 15
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 4,
+        "array_layout": [
+          "PPPP"
+        ],
+        "module": {
+          "id": "d7cd19fe-5080-4751-8f3b-2c007b1728a7",
+          "manufacturer": "Panasonic",
+          "rating_stc": 530,
+          "name": "AE14H530VHC10B",
+          "count": 4
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 214.68,
+        "rotation": 0,
+        "tilt": 15
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 4,
+        "array_layout": [
+          "PPPP"
+        ],
+        "module": {
+          "id": "d7cd19fe-5080-4751-8f3b-2c007b1728a7",
+          "manufacturer": "Panasonic",
+          "rating_stc": 530,
+          "name": "AE14H530VHC10B",
+          "count": 4
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 214.68,
+        "rotation": 0,
+        "tilt": 15
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 2,
+        "array_layout": [
+          "PP"
+        ],
+        "module": {
+          "id": "d7cd19fe-5080-4751-8f3b-2c007b1728a7",
+          "manufacturer": "Panasonic",
+          "rating_stc": 530,
+          "name": "AE14H530VHC10B",
+          "count": 2
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 214.68,
+        "rotation": 0,
+        "tilt": 15
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 2,
+        "array_layout": [
+          "PP"
+        ],
+        "module": {
+          "id": "d7cd19fe-5080-4751-8f3b-2c007b1728a7",
+          "manufacturer": "Panasonic",
+          "rating_stc": 530,
+          "name": "AE14H530VHC10B",
+          "count": 2
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 214.68,
+        "rotation": 0,
+        "tilt": 15
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 3,
+        "array_layout": [
+          "PPP"
+        ],
+        "module": {
+          "id": "d7cd19fe-5080-4751-8f3b-2c007b1728a7",
+          "manufacturer": "Panasonic",
+          "rating_stc": 530,
+          "name": "AE14H530VHC10B",
+          "count": 3
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 214.38,
+        "rotation": 0,
+        "tilt": 15
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 3,
+        "array_layout": [
+          "PPP"
+        ],
+        "module": {
+          "id": "d7cd19fe-5080-4751-8f3b-2c007b1728a7",
+          "manufacturer": "Panasonic",
+          "rating_stc": 530,
+          "name": "AE14H530VHC10B",
+          "count": 3
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 0,
+        "azimuth": 214.38,
+        "rotation": 0,
+        "tilt": 15
+      }
+    ]
+  }

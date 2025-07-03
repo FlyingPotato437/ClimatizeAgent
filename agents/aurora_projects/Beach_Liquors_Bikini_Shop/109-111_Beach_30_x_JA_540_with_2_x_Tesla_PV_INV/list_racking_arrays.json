@@ -1,0 +1,54 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 5,
+        "columns": 4,
+        "array_layout": [
+          "LLLL",
+          "LLLL",
+          "LLLL",
+          "LLLL",
+          "LLLL"
+        ],
+        "module": {
+          "id": "ad2e419b-50d6-45f1-85c5-7e09572d3f79",
+          "manufacturer": "JA Solar",
+          "rating_stc": 540,
+          "name": "JAM72S30-540/MR (1000V)",
+          "count": 20
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 68.53,
+        "pitch": 10,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 5,
+        "columns": 2,
+        "array_layout": [
+          "LL",
+          "LL",
+          "LL",
+          "LL",
+          "LL"
+        ],
+        "module": {
+          "id": "ad2e419b-50d6-45f1-85c5-7e09572d3f79",
+          "manufacturer": "JA Solar",
+          "rating_stc": 540,
+          "name": "JAM72S30-540/MR (1000V)",
+          "count": 10
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 339,
+        "pitch": 10,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }

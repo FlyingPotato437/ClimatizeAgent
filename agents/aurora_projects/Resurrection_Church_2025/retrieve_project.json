@@ -1,0 +1,35 @@
+{
+    "project": {
+      "id": "4a2c49a0-4f6e-4b85-93c8-4fe607b529bf",
+      "external_provider_id": null,
+      "created_from_lead_id": null,
+      "name": "Resurrection Church (2025)",
+      "customer_salutation": null,
+      "customer_first_name": "Bogaard Construction",
+      "customer_last_name": "",
+      "mailing_address": "7600 Soquel Dr, Aptos, CA 95003, USA",
+      "customer_email": "jlee@bogardconstruction.com",
+      "customer_phone": "+1 831 246 2074",
+      "location": {
+        "latitude": 36.98031520000001,
+        "longitude": -121.9094322,
+        "property_address": "7600 Soquel Dr, Aptos, CA 95003, USA",
+        "property_address_components": {
+          "street_address": "7600 Soquel Dr",
+          "city": "Aptos",
+          "region": "CA",
+          "postal_code": "95003",
+          "country": "United States"
+        }
+      },
+      "project_type": "commercial",
+      "owner_id": "dd2e1aa0-364f-4750-9fcf-0c04e9794b2c",
+      "team_id": null,
+      "status": "Remote Assessment Completed",
+      "ahj_id": "45a0bacc-a1de-40d9-97e3-5ea0655b76d1",
+      "preferred_solar_modules": [],
+      "partner_id": null,
+      "tags": [],
+      "created_at": "2025-05-13 21:25:29 UTC"
+    }
+  }

@@ -1,0 +1,35 @@
+{
+    "project": {
+      "id": "9144241e-8be3-4c38-9ff2-12033db377f3",
+      "external_provider_id": null,
+      "created_from_lead_id": null,
+      "name": "Beach Liquors/Bikini Shop",
+      "customer_salutation": null,
+      "customer_first_name": "Kathy",
+      "customer_last_name": "Pappas",
+      "mailing_address": "111 Beach St, Santa Cruz, CA 95060, USA",
+      "customer_email": "kathywp21@yahoo.com",
+      "customer_phone": "+1 831 818 3034",
+      "location": {
+        "latitude": 36.9630901,
+        "longitude": -122.0236984,
+        "property_address": "111 Beach St, Santa Cruz, CA 95060, USA",
+        "property_address_components": {
+          "street_address": "111 Beach Street",
+          "city": "Santa Cruz",
+          "region": "CA",
+          "postal_code": "95060",
+          "country": "United States"
+        }
+      },
+      "project_type": "commercial",
+      "owner_id": "dd2e1aa0-364f-4750-9fcf-0c04e9794b2c",
+      "team_id": null,
+      "status": null,
+      "ahj_id": "70ee1ab6-8477-4d88-b177-177d97e6319b",
+      "preferred_solar_modules": [],
+      "partner_id": null,
+      "tags": [],
+      "created_at": "2022-11-02 17:05:36 UTC"
+    }
+  }

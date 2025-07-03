@@ -1,0 +1,65 @@
+{
+    "roofs": [
+      {
+        "units_of_measurement": "Imperial",
+        "shape": "gable",
+        "area": 6147.63,
+        "modules_area": 767.59,
+        "pitch": null,
+        "effective_mean_height": 14.54,
+        "modules": true,
+        "edges_length": {
+          "eave": 426.18,
+          "hip": 0,
+          "rake": 51.14,
+          "ridge": 47.08,
+          "valley": 0
+        },
+        "obstructions": {
+          "circle_count": 2,
+          "polygon_count": 11
+        },
+        "faces": [
+          {
+            "units_of_measurement": "Imperial",
+            "area": 5545.72,
+            "mean_height": 14.54,
+            "modules_area": 767.59,
+            "pitch": 0,
+            "azimuth": 180,
+            "modules": true,
+            "obstructions": {
+              "circle_count": 2,
+              "polygon_count": 11
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 298.91,
+            "mean_height": 12.02,
+            "modules_area": 0,
+            "pitch": 20,
+            "azimuth": 270.2,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 303,
+            "mean_height": 12.04,
+            "modules_area": 0,
+            "pitch": 20,
+            "azimuth": 90.1,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          }
+        ]
+      }
+    ]
+  }

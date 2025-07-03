@@ -1,0 +1,14 @@
+{
+    "designs": [
+      {
+        "id": "87c1087d-45d9-4947-ab10-ceef69362b87",
+        "external_provider_id": null,
+        "name": "Enphase IQ8H",
+        "created_at": "2024-11-15 05:17:55 UTC",
+        "system_size_stc": 15600,
+        "system_size_ptc": null,
+        "system_size_ac": 10800,
+        "milestone": null
+      }
+    ]
+  }

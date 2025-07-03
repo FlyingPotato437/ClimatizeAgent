@@ -1,0 +1,78 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 4,
+        "columns": 3,
+        "array_layout": [
+          "LLL",
+          "LLL",
+          "LLL",
+          "LLL"
+        ],
+        "module": {
+          "id": "3972181b-fbec-4333-a4c6-eb1145c05fda",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 440,
+          "name": "SIL-440 QD",
+          "count": 12
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 338.49,
+        "pitch": 10,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 4,
+        "columns": 3,
+        "array_layout": [
+          "LLL",
+          "LLL",
+          "LLL",
+          "LLL"
+        ],
+        "module": {
+          "id": "3972181b-fbec-4333-a4c6-eb1145c05fda",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 440,
+          "name": "SIL-440 QD",
+          "count": 12
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 359.91,
+        "pitch": 10,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 6,
+        "columns": 3,
+        "array_layout": [
+          "LLL",
+          "LLL",
+          "LLL",
+          "LLL",
+          "LLL",
+          "LLL"
+        ],
+        "module": {
+          "id": "3972181b-fbec-4333-a4c6-eb1145c05fda",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 440,
+          "name": "SIL-440 QD",
+          "count": 18
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 0.2,
+        "pitch": 10,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }

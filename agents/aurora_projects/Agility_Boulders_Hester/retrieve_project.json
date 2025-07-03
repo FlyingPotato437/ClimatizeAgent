@@ -1,0 +1,35 @@
+{
+    "project": {
+      "id": "dfb57784-cae9-4e1f-9f9b-5b811a0ec23d",
+      "external_provider_id": null,
+      "created_from_lead_id": null,
+      "name": "Agility Boulders (Hester)",
+      "customer_salutation": null,
+      "customer_first_name": "John",
+      "customer_last_name": "Hester",
+      "mailing_address": "1404 38th Ave, Santa Cruz, CA 95062, USA",
+      "customer_email": "jnathanaelhester@gmail.com",
+      "customer_phone": "+1 415 203 3666",
+      "location": {
+        "latitude": 36.9710989,
+        "longitude": -121.9667103,
+        "property_address": "1404 38th Ave, Santa Cruz, CA 95062, USA",
+        "property_address_components": {
+          "street_address": "1404 38th Ave",
+          "city": "Santa Cruz",
+          "region": "CA",
+          "postal_code": "95062",
+          "country": "United States"
+        }
+      },
+      "project_type": "commercial",
+      "owner_id": "dd2e1aa0-364f-4750-9fcf-0c04e9794b2c",
+      "team_id": null,
+      "status": "Remote Assessment Completed",
+      "ahj_id": "4526b787-30a2-4348-9dfb-b5f26fbe0ff9",
+      "preferred_solar_modules": [],
+      "partner_id": null,
+      "tags": [],
+      "created_at": "2024-11-07 14:55:28 UTC"
+    }
+  }

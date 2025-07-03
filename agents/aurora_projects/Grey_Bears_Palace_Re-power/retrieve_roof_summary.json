@@ -1,0 +1,39 @@
+{
+    "roofs": [
+      {
+        "units_of_measurement": "Imperial",
+        "shape": "flat",
+        "area": 9410.13,
+        "modules_area": 2407.67,
+        "pitch": 0,
+        "effective_mean_height": 19.69,
+        "modules": true,
+        "edges_length": {
+          "eave": 436.54,
+          "hip": 0,
+          "rake": 0,
+          "ridge": 0,
+          "valley": 0
+        },
+        "obstructions": {
+          "circle_count": 6,
+          "polygon_count": 9
+        },
+        "faces": [
+          {
+            "units_of_measurement": "Imperial",
+            "area": 9410.13,
+            "mean_height": 19.69,
+            "modules_area": 2407.67,
+            "pitch": 0,
+            "azimuth": 188,
+            "modules": true,
+            "obstructions": {
+              "circle_count": 6,
+              "polygon_count": 9
+            }
+          }
+        ]
+      }
+    ]
+  }

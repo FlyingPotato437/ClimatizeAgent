@@ -1,0 +1,35 @@
+{
+    "project": {
+      "id": "6004498e-e54a-4c33-af65-a09bc06bd8a9",
+      "external_provider_id": null,
+      "created_from_lead_id": null,
+      "name": "1520 Mission Blvd. (Selman)",
+      "customer_salutation": null,
+      "customer_first_name": "Selman",
+      "customer_last_name": "Matisse",
+      "mailing_address": "1520 Mission St, Santa Cruz, CA 95060, USA",
+      "customer_email": "matisse@extrakitchen.com",
+      "customer_phone": "+1 831 227 5069",
+      "location": {
+        "latitude": 36.9669629,
+        "longitude": -122.0402739,
+        "property_address": "1520 Mission St, Santa Cruz, CA 95060, USA",
+        "property_address_components": {
+          "street_address": "1520 Mission St",
+          "city": "Santa Cruz",
+          "region": "CA",
+          "postal_code": "95060",
+          "country": "United States"
+        }
+      },
+      "project_type": "commercial",
+      "owner_id": "dd2e1aa0-364f-4750-9fcf-0c04e9794b2c",
+      "team_id": null,
+      "status": "Remote Assessment Completed",
+      "ahj_id": "70ee1ab6-8477-4d88-b177-177d97e6319b",
+      "preferred_solar_modules": [],
+      "partner_id": null,
+      "tags": [],
+      "created_at": "2025-03-21 00:11:09 UTC"
+    }
+  }

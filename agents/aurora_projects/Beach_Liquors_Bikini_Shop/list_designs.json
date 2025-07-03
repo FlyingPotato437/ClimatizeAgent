@@ -1,0 +1,64 @@
+{
+    "designs": [
+      {
+        "id": "8d3a6dae-39e5-4817-a35c-e1b812d7e0ca",
+        "external_provider_id": null,
+        "name": "109-111 Beach - Silfab 440",
+        "created_at": "2025-04-01 04:00:01 UTC",
+        "system_size_stc": 17600,
+        "system_size_ptc": null,
+        "system_size_ac": 15200,
+        "milestone": null
+      },
+      {
+        "id": "1334093e-c1d2-4478-9454-78e9867285e2",
+        "external_provider_id": null,
+        "name": "109-111 Beach - 30 x JA 540 with 2 x Tesla PV INV",
+        "created_at": "2025-03-28 22:14:26 UTC",
+        "system_size_stc": 16200,
+        "system_size_ptc": null,
+        "system_size_ac": 15200,
+        "milestone": null
+      },
+      {
+        "id": "2b6bb368-62a2-4f38-939c-00ae7f380dae",
+        "external_provider_id": null,
+        "name": "109_111_retail shops",
+        "created_at": "2022-11-02 18:20:36 UTC",
+        "system_size_stc": 18480,
+        "system_size_ptc": null,
+        "system_size_ac": 14658,
+        "milestone": null
+      },
+      {
+        "id": "3118225c-4866-4465-bf52-328d191e58dc",
+        "external_provider_id": null,
+        "name": "14.4 kW surf shop",
+        "created_at": "2022-11-02 18:20:29 UTC",
+        "system_size_stc": 14400,
+        "system_size_ptc": null,
+        "system_size_ac": 12564,
+        "milestone": null
+      },
+      {
+        "id": "eaadd528-da15-4aad-8bc6-daea93edeb85",
+        "external_provider_id": null,
+        "name": "38 Front St. NEMA",
+        "created_at": "2022-11-02 18:20:24 UTC",
+        "system_size_stc": 9200,
+        "system_size_ptc": null,
+        "system_size_ac": 8027,
+        "milestone": null
+      },
+      {
+        "id": "c216d9fb-16b1-4ae5-b6a0-8a5d9b63d76c",
+        "external_provider_id": null,
+        "name": "39.2 kW PV",
+        "created_at": "2022-11-02 17:06:36 UTC",
+        "system_size_stc": 39200,
+        "system_size_ptc": null,
+        "system_size_ac": 34202,
+        "milestone": null
+      }
+    ]
+  }

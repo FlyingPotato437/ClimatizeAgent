@@ -1,0 +1,14 @@
+{
+    "designs": [
+      {
+        "id": "53da7c59-567e-4674-aa98-0a9a53a589d2",
+        "external_provider_id": null,
+        "name": "Design 1",
+        "created_at": "2025-02-22 02:40:11 UTC",
+        "system_size_stc": 48760,
+        "system_size_ptc": null,
+        "system_size_ac": 40000,
+        "milestone": null
+      }
+    ]
+  }

@@ -1,0 +1,26 @@
+azure-functions==1.18.0
+azure-cosmos==4.7.0
+azure-storage-blob==12.21.0
+azure-data-tables==12.5.0
+pydantic==2.8.2
+requests==2.32.3
+openai==1.40.3
+python-dotenv==1.0.1
+azure-servicebus==7.12.0
+numpy==1.26.4
+pandas==2.2.2
+fastapi==0.112.0
+uvicorn==0.30.1
+python-multipart==0.0.9
+Pillow==10.4.0
+httpx==0.28.1
+# LangChain for multi-agent architecture (latest 2024 versions)
+langchain==0.2.16
+langchain-openai==0.1.23
+langchain-community==0.2.16
+langchain-core==0.2.38
+langgraph==0.2.14
+# Additional dependencies for agent collaboration
+redis==5.0.4
+celery==5.3.6
+-e /Users/radhamunver/Downloads/permit-ml-generator

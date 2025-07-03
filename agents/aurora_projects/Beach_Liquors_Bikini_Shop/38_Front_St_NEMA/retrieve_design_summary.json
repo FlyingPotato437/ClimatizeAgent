@@ -1,0 +1,77 @@
+{
+  "design": {
+    "design_id": "eaadd528-da15-4aad-8bc6-daea93edeb85",
+    "design_request_id": null,
+    "external_provider_id": null,
+    "project_id": "9144241e-8be3-4c38-9ff2-12033db377f3",
+    "bill_of_materials": [
+      {
+        "id": "4b75a2a2-15e7-4068-88ed-cff5b58f12a9",
+        "component_type": "microinverters",
+        "sku": null,
+        "name": "IQ8A-72-2-US",
+        "manufacturer_name": "Enphase Energy Inc.",
+        "quantity": 23
+      },
+      {
+        "id": "7d5bd4fe-9f26-4f42-976d-d53b53321ed4",
+        "component_type": "modules",
+        "sku": null,
+        "name": "Q.PEAK DUO BLK ML-G10 400",
+        "manufacturer_name": "Qcells",
+        "quantity": 23
+      }
+    ],
+    "arrays": [
+      {
+        "module": {
+          "id": "7d5bd4fe-9f26-4f42-976d-d53b53321ed4",
+          "name": "Q.PEAK DUO BLK ML-G10 400",
+          "rating_stc": 400,
+          "orientation": "portrait",
+          "count": 23
+        },
+        "azimuth": 159.41,
+        "pitch": 20,
+        "face": 1,
+        "configuration": "microinverter",
+        "microinverter": {
+          "id": "4b75a2a2-15e7-4068-88ed-cff5b58f12a9",
+          "name": "IQ8A-72-2-US",
+          "count": 23,
+          "rated_power": 349
+        },
+        "size": 9200,
+        "ground_mounted": false
+      }
+    ],
+    "string_inverters": [],
+    "energy_production": {
+      "up_to_date": false,
+      "annual": 0,
+      "monthly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hourly": null
+    },
+    "batteries": [],
+    "storage_selected_operating_mode": null,
+    "storage_inverters": [],
+    "backup_enabled": null,
+    "system_size_stc": 9200,
+    "system_size_ptc": null,
+    "system_size_ac": 8027,
+    "created_at": "2022-11-02 18:20:24 UTC"
+  }
+}

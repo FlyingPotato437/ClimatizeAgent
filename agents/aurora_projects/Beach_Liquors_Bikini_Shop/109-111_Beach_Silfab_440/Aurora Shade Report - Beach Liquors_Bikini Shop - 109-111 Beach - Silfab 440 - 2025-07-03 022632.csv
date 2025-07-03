@@ -1,0 +1,8 @@
+Array ID,Panel count,Azimuth,Pitch,Annual TOF,Annual solar access,Annual TSRF
+1,25,247,10,89,100,89
+2,15,157,10,92,100,92
+Weighted average by panel count:,,,,,100,90.1
+
+Array ID,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec
+1,100,100,100,100,100,100,100,100,100,100,100,100
+2,100,100,100,100,100,100,100,100,100,100,100,100
