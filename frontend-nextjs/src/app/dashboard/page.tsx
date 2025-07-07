@@ -18,6 +18,9 @@ import {
   AlertTriangle,
   CheckCircle2
 } from "lucide-react";
+import ProjectModal from "../../components/ProjectModal";
+import ProjectResultsModal from "../../components/ProjectResultsModal";
+import { api, WorkflowResponse } from "../../lib/api";
 
 interface Project {
   id: string;
@@ -32,7 +35,7 @@ interface Project {
 }
 
 export default function Dashboard() {
-  const [projects] = useState<Project[]>([
+  const [projects, setProjects] = useState<Project[]>([
     {
       id: "1",
       name: "Sunrise Solar Farm",
@@ -68,6 +71,46 @@ export default function Dashboard() {
     }
   ]);
 
+  // Modal states
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isResultsModalOpen, setIsResultsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [currentResult, setCurrentResult] = useState<WorkflowResponse | null>(null);
+
+  // Handle project creation
+  const handleProjectCreated = (result: WorkflowResponse) => {
+    const newProject: Project = {
+      id: result.project_id,
+      name: `Project ${result.project_id}`,
+      location: "Generated via AI",
+      capacity: "Unknown",
+      status: result.success ? "Approved" : "Analysis",
+      investment: 0,
+      irr: 0,
+      risk_score: 5,
+      updated: new Date().toISOString().split('T')[0]
+    };
+    setProjects(prev => [newProject, ...prev]);
+    setCurrentResult(result);
+    setIsResultsModalOpen(true);
+  };
+
+  // Handle modal form submission
+  const handleModalSubmit = async (formData: any) => {
+    setIsLoading(true);
+    try {
+      console.log('Submitting project:', formData);
+      const result = await api.runProjectWorkflow(formData);
+      console.log('Project result:', result);
+      handleProjectCreated(result);
+      setIsModalOpen(false);
+    } catch (error) {
+      console.error('Failed to create project:', error);
+      alert('Failed to create project. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
 
   const getStatusColor = (status: string) => {
@@ -128,7 +171,10 @@ export default function Dashboard() {
                 <Filter className="w-4 h-4 mr-2" />
                 Filter
               </button>
-              <button className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors flex items-center">
+              <button 
+                onClick={() => setIsModalOpen(true)}
+                className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors flex items-center"
+              >
                 <PlusCircle className="w-4 h-4 mr-2" />
                 New Project
               </button>
@@ -408,6 +454,21 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSubmit={handleModalSubmit}
+        isLoading={isLoading}
+      />
+
+      {/* Results Modal */}
+      <ProjectResultsModal
+        isOpen={isResultsModalOpen}
+        onClose={() => setIsResultsModalOpen(false)}
+        result={currentResult}
+      />
     </div>
   );
 } 
