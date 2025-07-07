@@ -224,6 +224,29 @@ async def run_research_agent(project_request: ProjectRequest):
         logger.error(f"Research agent failed: {e}")
         raise HTTPException(status_code=500, detail=f"Research agent failed: {str(e)}")
 
+class AuroraProjectRequest(BaseModel):
+    """Request model for Aurora-based research analysis."""
+    aurora_project_path: str
+
+@app.post("/api/v1/projects/research/aurora")
+async def run_research_agent_with_aurora(project_request: AuroraProjectRequest):
+    """Run research agent with Aurora project data."""
+    if not enhanced_orchestrator:
+        raise HTTPException(status_code=503, detail="Orchestrator not initialized")
+    
+    try:
+        logger.info(f"Running Aurora-based research analysis for {project_request.aurora_project_path}")
+        
+        result = await enhanced_orchestrator.research_agent.run_feasibility_screening_with_aurora(
+            aurora_project_path=project_request.aurora_project_path
+        )
+        
+        return {"status": "completed", "result": result}
+        
+    except Exception as e:
+        logger.error(f"Aurora-based research agent failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Aurora-based research agent failed: {str(e)}")
+
 @app.post("/api/v1/projects/design")
 async def run_design_agent(project_request: ProjectRequest):
     """Run design agent only."""
