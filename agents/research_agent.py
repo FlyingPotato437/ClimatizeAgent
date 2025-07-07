@@ -248,74 +248,84 @@ class LangChainResearchAgent:
                 "error": str(e),
                 "analysis": "Failed to complete analysis"
             }
+        
+def load_aurora_project_data(project_path: str) -> Dict[str, Any]:
+    """Load and process Aurora project data from the specified project folder"""
+    import json
+    import csv
+    from pathlib import Path
+    
+    project_dir = Path(project_path)
+    
+    # Load project information
+    with open(project_dir / "retrieve_project.json", "r") as f:
+        project_data = json.load(f)
+    
+    # Load design summary
+    with open(project_dir / "retrieve_design_summary.json", "r") as f:
+        design_data = json.load(f)
+    
+    # Load bill of materials
+    bom_data = []
+    with open(project_dir / "Bill-of-Materials.csv", "r") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            bom_data.append(row)
+    
+    # Extract key information
+    project_info = project_data["project"]
+    design_info = design_data["design"]
+    
+    # Calculate system size in MWac
+    total_dc_size = sum(array["size"] for array in design_info["arrays"])
+    system_size_ac = total_dc_size / 1000  # Convert to MWac (approximate)
+    
+    # Extract address information
+    location = project_info["location"]
+    address = f"{location['property_address_components']['street_address']}, {location['property_address_components']['city']}, {location['property_address_components']['region']} {location['property_address_components']['postal_code']}"
+    
+    # Handle different inverter types safely
+    inverter_info = "Unknown"
+    if design_info.get("string_inverters") and len(design_info["string_inverters"]) > 0:
+        inverter = design_info["string_inverters"][0]
+        inverter_info = f"{inverter['name']} ({inverter['rated_power']}W)"
+    elif design_info.get("microinverters") and len(design_info["microinverters"]) > 0:
+        microinverter = design_info["microinverters"][0]
+        inverter_info = f"{microinverter['name']} ({microinverter['rated_power']}W)"
+    else:
+        # Try to get inverter info from BOM
+        for item in bom_data:
+            if "inverter" in item.get("Type", "").lower():
+                inverter_info = f"{item.get('Item', 'Unknown')} ({item.get('Manufacturer', 'Unknown')})"
+                break
+    
+    # Create comprehensive project description
+    project_description = f"""
+Project: {project_info['name']}
+System Size: {system_size_ac:.2f} MWac ({total_dc_size/1000:.2f} MWdc)
+Location: {address}
+Annual Production: {design_info['energy_production']['annual']:.0f} kWh
+Module Type: {design_info['arrays'][0]['module']['name']} ({design_info['arrays'][0]['module']['rating_stc']}W)
+Inverter: {inverter_info}
+Total Modules: {sum(array['module']['count'] for array in design_info['arrays'])}
+Arrays: {len(design_info['arrays'])} arrays
+"""
+    
+    return {
+        "project_address": address,
+        "system_size_ac": system_size_ac,
+        "project_description": project_description,
+        "raw_data": {
+            "project": project_data,
+            "design": design_data,
+            "bom": bom_data
+        }
+    }
 
 # Usage example
 def create_research_agent(openai_api_key: str = None) -> LangChainResearchAgent:
     """Factory function to create a permit agent"""
     return LangChainResearchAgent(openai_api_key=openai_api_key)
-
-# Test function
-def test_research_agent():
-    """Test the LangChain permit agent"""
-    
-    # Create ML Agent
-    research_agent_ml = create_research_agent()
-    
-    # Test 1: Simplified analysis with just address and system size (requires OpenAI API key)
-    print("\n" + "="*60)
-    print("SIMPLIFIED SOLAR PROJECT ANALYSIS")
-    print("="*60)
-    simple_result = research_agent_ml.analyze_solar_project(
-        project_address="123 Main St, San Jose, Santa Clara County, CA 95110",
-        system_size_ac=8.5
-    )
-    print("Status:", simple_result["status"])
-    if simple_result["status"] == "success":
-        print("\nANALYSIS:")
-        print("-" * 40)
-        print(simple_result["analysis"])
-    else:
-        print("Error:", simple_result["error"])
-    
-    # Test 2: Development Memo Generation (requires OpenAI API key)
-    print("\n" + "="*60)
-    print("DEVELOPMENT MEMO GENERATION")
-    print("="*60)
-    memo_result = research_agent_ml.generate_development_memo(
-        project_address="123 Main St, San Jose, Santa Clara County, CA 95110",
-        system_size_ac=8.5
-    )
-    print("Status:", memo_result["status"])
-    if memo_result["status"] == "success":
-        print("\nDEVELOPMENT MEMO:")
-        print("-" * 40)
-        print(memo_result["development_memo"])
-    else:
-        print("Error:", memo_result["error"])
-    
-    # Test 3: Complete Solar Project Reseach Workflow (requires OpenAI API key)
-    print("\n" + "="*60)
-    print("COMPLETE SOLAR PROJECT RESEARCH WORKFLOW")
-    print("="*60)
-    workflow_result = research_agent_ml.create_permit_workflow(
-        project_address="123 Main St, San Jose, Santa Clara County, CA 95110",
-        system_size_ac=8.5
-    )
-    print("Status:", workflow_result["status"])
-    if workflow_result["status"] == "success":
-        print("\nWORKFLOW SUMMARY:")
-        print("-" * 40)
-        summary = workflow_result["workflow"]["workflow_summary"]
-        print(f"Project Address: {summary['project_address']}")
-        print(f"System Size: {summary['system_size_ac']} MWac")
-        print(f"Applicable Permits: {len(summary['applicable_permits'])} found")
-        print(f"Next Steps: {summary['next_steps']}")
-        
-        print("\nPERMIT ANALYSIS:")
-        print("-" * 40)
-        print(workflow_result["workflow"]["permit_analysis"])
-    else:
-        print("Error:", workflow_result["error"])
 
 def save_results_to_files(project_address: str, system_size_ac: float, openai_api_key: str = None):
     """Save research analysis results to formatted text files"""
@@ -369,20 +379,27 @@ def save_results_to_files(project_address: str, system_size_ac: float, openai_ap
     print(f"\nAll results saved to {output_dir.absolute()}")
 
 if __name__ == "__main__":
-    # Run both pretty print and save to files
-    print("Running research agent analysis...")
-    print("This will display results in terminal AND save to files.\n")
+    # Load Aurora project data instead of using hardcoded values
+    project = "1520_Mission_Blvd_Selman"
+    aurora_project_path = f"./aurora_projects/{project}"
+    aurora_data = load_aurora_project_data(aurora_project_path)
+    
+    print("Running research agent analysis with Aurora project data...")
+    print(f"Project: {aurora_data['project_description'].split('Project: ')[1].split('\n')[0]}")
+    print(f"Address: {aurora_data['project_address']}")
+    print(f"System Size: {aurora_data['system_size_ac']:.2f} MWac\n")
     
     # Create agent once
     research_agent = create_research_agent()
-    project_address = "123 Main St, San Jose, Santa Clara County, CA 95110"
-    system_size_ac = 8.5
     
-    # Run analysis once and store results
+    # Run analysis with Aurora data
     print("="*60)
     print("SIMPLIFIED SOLAR PROJECT ANALYSIS")
     print("="*60)
-    simple_result = research_agent.analyze_solar_project(project_address, system_size_ac)
+    simple_result = research_agent.analyze_solar_project(
+        aurora_data["project_address"], 
+        aurora_data["system_size_ac"]
+    )
     print("Status:", simple_result["status"])
     if simple_result["status"] == "success":
         print("\nANALYSIS:")
@@ -394,7 +411,11 @@ if __name__ == "__main__":
     print("\n" + "="*60)
     print("DEVELOPMENT MEMO GENERATION")
     print("="*60)
-    memo_result = research_agent.generate_development_memo(project_address, system_size_ac)
+    memo_result = research_agent.generate_development_memo(
+        aurora_data["project_address"], 
+        aurora_data["system_size_ac"],
+        aurora_data["project_description"]
+    )
     print("Status:", memo_result["status"])
     if memo_result["status"] == "success":
         print("\nDEVELOPMENT MEMO:")
@@ -406,7 +427,11 @@ if __name__ == "__main__":
     print("\n" + "="*60)
     print("COMPLETE RESEARCH WORKFLOW")
     print("="*60)
-    workflow_result = research_agent.create_permit_workflow(project_address, system_size_ac)
+    workflow_result = research_agent.create_permit_workflow(
+        aurora_data["project_address"], 
+        aurora_data["system_size_ac"],
+        aurora_data["project_description"]
+    )
     print("Status:", workflow_result["status"])
     if workflow_result["status"] == "success":
         print("\nWORKFLOW SUMMARY:")
@@ -415,46 +440,41 @@ if __name__ == "__main__":
         print(f"Project Address: {summary['project_address']}")
         print(f"System Size: {summary['system_size_ac']} MWac")
         print(f"Next Steps: {summary['next_steps']}")
-
     else:
         print("Error:", workflow_result["error"])
     
-    # Save results to files using the already-generated results
+    # Save results to files using Aurora data
     print("\n" + "="*60)
     print("SAVING RESULTS TO FILES")
     print("="*60)
     
-    # Create output directory
-    output_dir = Path("./research_output")
-    output_dir.mkdir(exist_ok=True)
+    # Create output directory - Fixed the path issue
+    output_dir = Path(f"./research_output/{project}")
+    output_dir.mkdir(parents=True, exist_ok=True)
     
-    # Save results using the data we already have
+    # Save results using the Aurora data
     if simple_result["status"] == "success":
-        with open(output_dir / "simple_permit_analysis.txt", "w") as f:
-            f.write("SOLAR PROJECT PERMIT ANALYSIS\n")
-            f.write("=" * 50 + "\n\n")
-            f.write(f"Project Address: {project_address}\n")
-            f.write(f"System Size: {system_size_ac} MWac\n\n")
-            f.write("ANALYSIS:\n")
-            f.write("-" * 20 + "\n")
+        with open(output_dir / "simple_permit_analysis.md", "w") as f:
+            f.write("# Solar Project Permit Analysis\n\n")
+            f.write(f"**Project Address:** {aurora_data['project_address']}\n")
+            f.write(f"**System Size:** {aurora_data['system_size_ac']:.2f} MWac\n\n")
+            f.write("## Analysis\n\n")
             f.write(simple_result["analysis"])
-        print("✓ Simple analysis saved to research_output/simple_permit_analysis.txt")
+        print("✓ Simple analysis saved to research_output/simple_permit_analysis.md")
     
     if memo_result["status"] == "success":
-        with open(output_dir / "development_memo.txt", "w") as f:
+        with open(output_dir / "development_memo.md", "w") as f:
             f.write(memo_result["development_memo"])
-        print("✓ Development memo saved to research_output/development_memo.txt")
+        print("✓ Development memo saved to research_output/development_memo.md")
     
     if workflow_result["status"] == "success":
-        with open(output_dir / "complete_workflow.txt", "w") as f:
-            f.write("COMPLETE RESEARCH WORKFLOW\n")
-            f.write("=" * 50 + "\n\n")
-            f.write(f"Project Address: {project_address}\n")
-            f.write(f"System Size: {system_size_ac} MWac\n\n")
-            f.write("DEVELOPMENT MEMO:\n")
-            f.write("-" * 20 + "\n")
+        with open(output_dir / "complete_workflow.md", "w") as f:
+            f.write("# Complete Research Workflow\n\n")
+            f.write(f"**Project Address:** {aurora_data['project_address']}\n")
+            f.write(f"**System Size:** {aurora_data['system_size_ac']:.2f} MWac\n\n")
+            f.write("## Development Memo\n\n")
             f.write(workflow_result["workflow"]["development_memo"])
-            f.write("\n\n" + "=" * 50 + "\n\n")
-        print("✓ Complete workflow saved to research_output/complete_workflow.txt")
+            f.write("\n\n---\n\n")
+        print("✓ Complete workflow saved to research_output/complete_workflow.md")
     
     print(f"\nAll results saved to {output_dir.absolute()}")
