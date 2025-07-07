@@ -1,0 +1,57 @@
+SOLAR PROJECT PERMIT ANALYSIS
+==================================================
+
+Project Address: Kearny Street, Monterey County, CA 93933
+System Size: 29.57 MWac
+
+ANALYSIS:
+--------------------
+For a 29.565 MWac solar project at Kearny Street, Monterey County, CA 93933, you will need the following permits and approvals:
+
+1. Conditional Use Permit (CUP)
+   - Agency: Monterey County Planning Department
+   - Timeline: 6–12 months
+   - Notes: Required for large-scale solar; includes public hearings and environmental review.
+
+2. FAA Permit (Form 7460-1)
+   - Agency: Federal Aviation Administration
+   - Timeline: 1–2 months
+   - Notes: Required if structures exceed certain heights or are near airports.
+
+3. Nationwide Permit (Section 404)
+   - Agency: US Army Corps of Engineers
+   - Timeline: 3–6 months
+   - Notes: Needed if project impacts wetlands or waters of the U.S.
+
+4. Wetlands Permit
+   - Agency: USACE/EPA
+   - Timeline: 3–6 months
+   - Notes: Required if wetlands are present on site.
+
+5. Wildlife Permit
+   - Agency: US Fish & Wildlife Service (USFWS)
+   - Timeline: 3–6 months
+   - Notes: Needed if protected species or habitats are present.
+
+6. State/County Environmental Permits
+   - Agency: California Department of Fish & Wildlife (CDFW), Monterey County
+   - Timeline: 3–6 months
+   - Notes: Includes CEQA review and possible mitigation measures.
+
+7. Interconnection Approval
+   - Agency: CAISO (California ISO) and PG&E (utility)
+   - Timeline: 18–36 months (can overlap with other permitting)
+   - Notes: Involves feasibility, system impact, and facilities studies.
+
+Estimated Overall Timeline:
+- Permitting (including environmental and CUP): 6–18 months (can overlap with diligence)
+- Interconnection studies: 18–36 months (often the critical path)
+- Total development timeline (site control to construction-ready): 3–4 years
+
+Recommendations:
+- Begin site control, environmental studies, and CUP application as soon as possible.
+- Initiate interconnection application with CAISO/PG&E early, as this is typically the longest process.
+- Conduct detailed title, zoning, and environmental diligence to identify any fatal flaws.
+- Engage with local stakeholders and agencies early to streamline permitting and address concerns.
+
+All timelines are estimates and may vary based on project specifics, agency workload, and environmental findings. Early and proactive engagement with permitting agencies and the utility is critical to keeping the project on track.

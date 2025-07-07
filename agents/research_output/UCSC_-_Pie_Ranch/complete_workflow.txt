@@ -1,0 +1,271 @@
+COMPLETE RESEARCH WORKFLOW
+==================================================
+
+Project Address: Kearny Street, Monterey County, CA 93933
+System Size: 29.57 MWac
+
+DEVELOPMENT MEMO:
+--------------------
+---
+
+**MEMORANDUM**
+
+**To:** External Partners and Investors  
+**From:** [Your Company Name], Solar Project Development Team  
+**Date:** [Insert Date]  
+**Subject:** Development Memo – UCSC Pie Ranch Solar PV Project, Kearny Street, Monterey County, CA
+
+---
+
+### 1. Project Overview
+
+- **Project Name:** UCSC – Pie Ranch Solar PV Project  
+- **Location:** Kearny Street, Monterey County, CA 93933  
+- **System Size:** 29.57 MWac (29.57 MWdc)  
+- **Technology:** Single-axis tracking, bifacial modules (JAM72S10-405PR)  
+- **Inverters:** SE33.3KUS (480V, 33.3 kW)  
+- **Arrays:** 3  
+- **Modules:** 73 (Note: Module count appears inconsistent with system size; must be confirmed)  
+- **Memo Content:** This memo summarizes project generation estimates, real estate status, grid proximity, permitting, interconnection, costs, market context, and key risks for the UCSC Pie Ranch Solar PV Project.
+
+---
+
+### 2. Estimated Generation
+
+**Assumptions:**  
+- Single-axis tracking, bifacial modules  
+- System losses: 14% (per NREL PVWatts default)  
+- Tilt: Latitude (~36.7°)  
+- Azimuth: 180° (true south)  
+- Location: Monterey County, CA
+
+**Annual Generation Estimate:**  
+- **Capacity Factor (CF):**  
+  - NREL ATB (2023) for CA, utility-scale PV, single-axis tracking: ~28%  
+  - [NREL ATB 2023](https://atb.nrel.gov/electricity/2023/index)  
+- **Annual Generation:**  
+  - 29.57 MWac × 8,760 hr/yr × 28% CF ≈ **72,400,000 kWh/year (72.4 GWh/year)**
+- **Monthly Generation:**  
+  - Average: 72,400,000 kWh / 12 ≈ **6,033,000 kWh/month**  
+  - (Monthly variation: ~60–120% of average, depending on season)
+- **Specific Production:**  
+  - 72,400,000 kWh / 29,570 kWac ≈ **2,450 kWh/kWac/year**
+
+**Note:** The provided annual production figure (48,913 kWh) is inconsistent with system size and likely a typo. Above estimates use industry-standard methodology.
+
+---
+
+### 3. Real Estate
+
+**Ownership & Legal Records:**  
+- **Zoning:** Monterey County zoning maps (TBD – confirm parcel zoning)  
+- **Land Use Type:** Likely agricultural or rural (TBD)  
+- **Acreage:** Utility-scale PV typically requires 5–7 acres/MWac; estimate **~180–210 acres**  
+- **Parcel ID:** TBD – Monterey County GIS [Parcel Viewer](https://montereycountyca.gov/government/departments-a-h/assessor/assessor-maps-gis)  
+- **Easements/Deed Restrictions:** TBD – Title search required  
+- **Environmental Constraints:**  
+  - **Wetlands/Floodplains:** Check USFWS National Wetlands Inventory ([NWI Mapper](https://www.fws.gov/program/national-wetlands-inventory/wetlands-mapper)), FEMA Flood Map ([FEMA Map Service Center](https://msc.fema.gov/portal/home))  
+  - **Habitat:** California Natural Diversity Database ([CNDDB](https://wildlife.ca.gov/Data/CNDDB))  
+  - **Slope:** <5% preferred; confirm via USGS topo ([USGS National Map](https://viewer.nationalmap.gov/advanced-viewer/))  
+- **Key GIS Resources:**  
+  - [Monterey County GIS](https://montereycountyca.gov/government/departments-a-h/information-technology/gis)  
+  - [CA Open Data Portal](https://data.ca.gov/)  
+  - [USGS National Map](https://viewer.nationalmap.gov/advanced-viewer/)
+
+---
+
+### 4. Electricity Grid Proximity and Capacity
+
+- **Nearest 3-Phase Lines/Substations:**  
+  - Likely within 1–3 miles; confirm via [PG&E Transmission Map](https://www.pge.com/en_US/for-our-business-partners/interconnection-renewables/interconnections-renewables.page)  
+- **Estimated Hosting Capacity:**  
+  - Use [PG&E Distribution Interconnection Capacity Map (ICA)](https://www.pge.com/en_US/for-our-business-partners/distribution-resource-planning/interconnection-capacity-analysis-map.page)  
+- **Interconnection Queue Activity:**  
+  - [CAISO Interconnection Queue](https://www.caiso.com/Documents/InterconnectionQueue.xlsx)  
+- **Utility Service Provider:**  
+  - Pacific Gas & Electric (PG&E)  
+  - [PG&E Interconnection Contacts](https://www.pge.com/en_US/for-our-business-partners/interconnection-renewables/interconnections-renewables.page)
+
+---
+
+### 5. Permitting and Regulatory Requirements
+
+**Key Permits & Agencies:**
+
+| Permit/Approval                | Agency/Contact                                   | Cost (Est.) | Timeline (Est.) | Notes                        |
+|-------------------------------|--------------------------------------------------|-------------|-----------------|------------------------------|
+| Conditional Use Permit (CUP)  | Monterey County Planning Dept. [Link](https://www.co.monterey.ca.us/government/departments-a-h/resource-management-agency-rma-/planning) | $10k–$50k   | 6–12 months      | Required for all projects    |
+| FAA Permit (Form 7460-1)      | FAA [OE/AAA](https://oeaaa.faa.gov/oeaaa/external/portal.jsp) | $0          | 1–2 months       | If near airport              |
+| Nationwide Permit (NWP)       | US Army Corps of Engineers [Link](https://www.spk.usace.army.mil/Missions/Regulatory/Permitting/Nationwide/) | $0–$10k     | 3–6 months        | For water impacts            |
+| Wetlands Permit               | USACE/EPA [Link](https://www.epa.gov/cwa-404/section-404-permit-program) | $0–$10k     | 3–6 months        | If wetlands present          |
+| Wildlife Permit               | USFWS [Link](https://www.fws.gov/service/permits) | $0–$10k     | 3–6 months        | If endangered species present|
+| State/County Specific Permits | CA Dept. of Fish & Wildlife [Link](https://wildlife.ca.gov/Conservation/CEQA) | $0–$10k     | 3–6 months        | CEQA review likely required  |
+
+**Permitting Matrix:**  
+(See table above. All costs/timelines are estimates and must be confirmed with agencies.)
+
+---
+
+### 6. Interconnection and Utility Programs
+
+- **Procedures:**  
+  - PG&E Wholesale Distribution Access Tariff (WDAT) or CAISO interconnection  
+  - [PG&E Interconnection Process](https://www.pge.com/en_US/for-our-business-partners/interconnection-renewables/interconnections-renewables.page)  
+- **Required Studies:**  
+  - Feasibility Study  
+  - System Impact Study (SIS)  
+  - Facilities Study  
+- **Application Timelines:**  
+  - Feasibility: 2–3 months  
+  - SIS: 6–12 months  
+  - Facilities: 3–6 months  
+  - Total: 12–24 months typical  
+- **Documentation:**  
+  - [PG&E Interconnection Handbook](https://www.pge.com/pge_global/common/pdfs/solar-and-vehicles/interconnection/wholesale-electric-rules/wholesale-distribution-access-tariff.pdf)
+
+---
+
+### 7. Development Timeline
+
+| Phase                        | Duration (Est.)      |
+|------------------------------|----------------------|
+| Site Control                 | 1–3 months           |
+| Environmental/Permitting     | 12–18 months         |
+| Interconnection Studies      | 12–24 months         |
+| Design & Engineering         | 6–9 months           |
+| Procurement                  | 3–6 months           |
+| Construction                 | 8–12 months          |
+| Commissioning/Energization   | 1–2 months           |
+| **Total**                    | **24–36 months**     |
+
+---
+
+### 8. Estimated Pre-Development Costs
+
+| Item                        | Estimated Cost ($)   |
+|-----------------------------|----------------------|
+| Site Control/Option         | $50,000              |
+| Environmental Studies       | $150,000             |
+| Permitting Fees             | $75,000              |
+| Interconnection Application | $150,000             |
+| Legal/Title                 | $50,000              |
+| Engineering/Design          | $100,000             |
+| Miscellaneous/Contingency   | $75,000              |
+| **Total**                   | **$650,000**         |
+
+---
+
+### 9. EPC Build Cost
+
+- **NREL Q1 2023 Utility-Scale PV Benchmark:** $1.13/Wac  
+  - [NREL 2023 PV Cost Benchmark](https://www.nrel.gov/docs/fy23osti/83931.pdf)  
+- **Total EPC Cost:**  
+  - 29,570 kWac × $1.13/Wac = **$33,419,100**
+
+---
+
+### 10. Electricity Rate Benchmarks
+
+| Sector         | CA Average Retail Rate (¢/kWh) | Source |
+|----------------|-------------------------------|--------|
+| Residential    | 29.97                         | [EIA](https://www.eia.gov/electricity/state/california/) (Feb 2024) |
+| Commercial     | 25.13                         | [EIA](https://www.eia.gov/electricity/state/california/) (Feb 2024) |
+| Industrial     | 18.17                         | [EIA](https://www.eia.gov/electricity/state/california/) (Feb 2024) |
+
+---
+
+### 11. REC Market
+
+- **Compliance Market:** Yes (California RPS)  
+- **Tracking System:** Western Renewable Energy Generation Information System ([WREGIS](https://www.wecc.org/Administrative/WREGIS%20Overview.pdf))  
+- **Current REC Prices:**  
+  - CA RPS Class 1: $10–$20/MWh ([S&P Global, May 2024](https://www.spglobal.com/commodityinsights/en/market-insights/latest-news/electric-power/050324-california-recs-prices-stable-on-light-trading))  
+- **Voluntary Market:** Yes
+
+---
+
+### 12. Avoided Cost / Merchant Rate
+
+- **CAISO SP15 2023 Average Day-Ahead Price:** ~4.5–6.0 ¢/kWh ([CAISO OASIS](http://oasis.caiso.com/mrioasis/logon.do))  
+- **PG&E Avoided Cost Calculator:** ~5–7 ¢/kWh ([CPUC Avoided Cost Calculator](https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/electric-costs/avoided-cost-calculator))  
+- **Note:** Actual merchant rates vary by time of day and year.
+
+---
+
+### 13. Decommissioning Requirements
+
+- **State/County Mandates:**  
+  - Monterey County requires a decommissioning plan and financial assurance (bond or escrow) for utility-scale solar.  
+  - [Monterey County Code, Section 21.64.320](https://library.municode.com/ca/monterey_county/codes/code_of_ordinances?nodeId=TIT21ZO_CH21.64SPPR_21.64.320SOEN)  
+- **Bond Amount:** Typically $25,000–$50,000/MWac (TBD with county)
+
+---
+
+### 14. Climate and Weather Risk
+
+- **Hurricanes:** None (not a risk in CA)  
+- **Hail:** Low risk  
+- **Snow:** Negligible  
+- **Extreme Heat:** Moderate; Monterey has mild coastal climate  
+- **Solar Resource Variability:** Low; annual GHI ~2,000 kWh/m²/yr ([NREL NSRDB](https://nsrdb.nrel.gov/))  
+- **Wildfire:** Moderate risk in region; site-specific assessment required
+
+---
+
+### 15. Favorability Index
+
+| Factor             | Score (0–2) | Notes                                   |
+|--------------------|-------------|-----------------------------------------|
+| Solar Resource     | 2           | High insolation                         |
+| Permitting         | 1           | Moderate complexity, CEQA applies       |
+| Grid Access        | 1           | Proximity good, but queue is active     |
+| Land Cost/Use      | 2           | Rural/agricultural, likely affordable   |
+| Community Support  | 1           | TBD – outreach required                 |
+| Environmental      | 1           | Some constraints possible               |
+| **Total (0–10)**   | **8/10**    | Favorable, with moderate permitting risk|
+
+---
+
+### 16. Concerns and Trends
+
+- **Permitting Complexity:** CEQA review and potential for environmental constraints (habitat, wetlands) may extend timelines.
+- **Interconnection Queue:** CAISO/PG&E queues are active; delays possible.
+- **Module Count Discrepancy:** Provided module count (73) is inconsistent with system size; must be confirmed.
+- **Land Control:** Parcel ID, acreage, and title status must be confirmed.
+- **Community Engagement:** Early outreach recommended to mitigate opposition.
+- **Market Trends:** CA solar market remains robust, but NEM and wholesale price reforms may impact economics.
+- **Additional Diligence:**  
+  - Confirm site control and legal encumbrances  
+  - Detailed environmental and grid studies  
+  - Updated cost and schedule estimates as project advances
+
+---
+
+**Prepared by:**  
+[Your Name]  
+Solar Project Development Lead  
+[Your Company Name]  
+[Contact Information]
+
+---
+
+**References:**  
+- [NREL ATB 2023](https://atb.nrel.gov/electricity/2023/index)  
+- [NREL PV Cost Benchmark 2023](https://www.nrel.gov/docs/fy23osti/83931.pdf)  
+- [EIA California Electricity Data](https://www.eia.gov/electricity/state/california/)  
+- [CAISO Interconnection Queue](https://www.caiso.com/Documents/InterconnectionQueue.xlsx)  
+- [PG&E Interconnection](https://www.pge.com/en_US/for-our-business-partners/interconnection-renewables/interconnections-renewables.page)  
+- [Monterey County Planning](https://www.co.monterey.ca.us/government/departments-a-h/resource-management-agency-rma-/planning)  
+- [WREGIS](https://www.wecc.org/Administrative/WREGIS%20Overview.pdf)  
+- [CPUC Avoided Cost Calculator](https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/electric-costs/avoided-cost-calculator)  
+- [USFWS NWI Mapper](https://www.fws.gov/program/national-wetlands-inventory/wetlands-mapper)  
+- [FEMA Flood Map](https://msc.fema.gov/portal/home)  
+- [CNDDB](https://wildlife.ca.gov/Data/CNDDB)  
+- [USGS National Map](https://viewer.nationalmap.gov/advanced-viewer/)
+
+---
+
+**End of Memo**
+
+==================================================
+
