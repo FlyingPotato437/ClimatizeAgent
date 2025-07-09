@@ -562,7 +562,7 @@ async def main():
     research_agent = EnhancedResearchAgent(ai_service)
     
     # Test Aurora project path
-    aurora_project_path = "../../agents/aurora_projects/Napa_Apartments"
+    aurora_project_path = "../../agents/aurora_projects/Agility_Boulders_Hester"
     
     print(f"📁 Testing with Aurora project: {aurora_project_path}")
     
