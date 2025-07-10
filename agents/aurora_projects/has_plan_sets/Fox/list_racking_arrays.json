@@ -1,0 +1,103 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 2,
+        "columns": 6,
+        "array_layout": [
+          "PPPPPP",
+          "PPP000"
+        ],
+        "module": {
+          "id": "b36b3046-c03e-40a5-9e9b-e3a9cd75523c",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 430,
+          "name": "SIL-430 QD",
+          "count": 9
+        },
+        "adjacent_arrays": [
+          {
+            "idx": 1,
+            "x": 0.96,
+            "y": 4.68
+          }
+        ],
+        "ground_mounted": false,
+        "pitch": 20,
+        "azimuth": 150.64,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 4,
+        "array_layout": [
+          "LLLL"
+        ],
+        "module": {
+          "id": "b36b3046-c03e-40a5-9e9b-e3a9cd75523c",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 430,
+          "name": "SIL-430 QD",
+          "count": 4
+        },
+        "adjacent_arrays": [
+          {
+            "idx": 0,
+            "x": -0.96,
+            "y": -4.68
+          }
+        ],
+        "ground_mounted": false,
+        "pitch": 20,
+        "azimuth": 150.64,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 3,
+        "columns": 4,
+        "array_layout": [
+          "PPP0",
+          "PPPP",
+          "PPP0"
+        ],
+        "module": {
+          "id": "b36b3046-c03e-40a5-9e9b-e3a9cd75523c",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 430,
+          "name": "SIL-430 QD",
+          "count": 10
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 20,
+        "azimuth": 240.32,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 5,
+        "array_layout": [
+          "PPPPP"
+        ],
+        "module": {
+          "id": "b36b3046-c03e-40a5-9e9b-e3a9cd75523c",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 430,
+          "name": "SIL-430 QD",
+          "count": 5
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 20,
+        "azimuth": 239.89,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }

@@ -1,0 +1,34 @@
+{
+    "designs": [
+      {
+        "id": "eeef73ed-49db-4a23-94ea-9c1850fcc28c",
+        "external_provider_id": null,
+        "name": "Matt 11-19",
+        "created_at": "2024-11-19 23:46:35 UTC",
+        "system_size_stc": 12040,
+        "system_size_ptc": null,
+        "system_size_ac": 9772,
+        "milestone": null
+      },
+      {
+        "id": "54b4db46-ca9a-43c7-a111-837d0cc83596",
+        "external_provider_id": null,
+        "name": "Design 2",
+        "created_at": "2024-11-19 21:43:05 UTC",
+        "system_size_stc": 12470,
+        "system_size_ptc": null,
+        "system_size_ac": 10121,
+        "milestone": null
+      },
+      {
+        "id": "18db97c6-5d51-4d68-95ae-f43236c18980",
+        "external_provider_id": null,
+        "name": "Design 1",
+        "created_at": "2024-11-13 00:09:05 UTC",
+        "system_size_stc": 13330,
+        "system_size_ptc": null,
+        "system_size_ac": 10819,
+        "milestone": null
+      }
+    ]
+  }

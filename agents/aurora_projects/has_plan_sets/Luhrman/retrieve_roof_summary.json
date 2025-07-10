@@ -1,0 +1,78 @@
+{
+    "roofs": [
+      {
+        "units_of_measurement": "Imperial",
+        "shape": "gable",
+        "area": 2093.67,
+        "modules_area": 0,
+        "pitch": null,
+        "effective_mean_height": null,
+        "modules": false,
+        "edges_length": {
+          "eave": 108.22,
+          "hip": 0,
+          "rake": 162.78,
+          "ridge": 54.49,
+          "valley": 0
+        },
+        "obstructions": {
+          "circle_count": 0,
+          "polygon_count": 5
+        },
+        "faces": [
+          {
+            "units_of_measurement": "Imperial",
+            "area": 740.31,
+            "mean_height": 10.82,
+            "modules_area": 0,
+            "pitch": 26.6,
+            "azimuth": 178.9,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 4
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 583.63,
+            "mean_height": 20.13,
+            "modules_area": 0,
+            "pitch": 20,
+            "azimuth": 89.3,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 440.81,
+            "mean_height": 14.8,
+            "modules_area": 0,
+            "pitch": 20,
+            "azimuth": 358.9,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 0
+            }
+          },
+          {
+            "units_of_measurement": "Imperial",
+            "area": 328.92,
+            "mean_height": 21.53,
+            "modules_area": 0,
+            "pitch": 20,
+            "azimuth": 269.3,
+            "modules": false,
+            "obstructions": {
+              "circle_count": 0,
+              "polygon_count": 1
+            }
+          }
+        ]
+      }
+    ]
+  }

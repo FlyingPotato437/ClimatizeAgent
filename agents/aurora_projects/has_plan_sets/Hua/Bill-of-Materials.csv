@@ -1,0 +1,4 @@
+Type,Manufacturer,Item,Quantity
+Battery,"Tesla","Powerwall 3",1
+Module,"REC","REC460AA Pure-RX",17
+String inverter,"Tesla","Powerwall 3 (integrated inverter)",1

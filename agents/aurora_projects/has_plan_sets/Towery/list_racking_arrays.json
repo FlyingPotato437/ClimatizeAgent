@@ -1,0 +1,151 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 6,
+        "array_layout": [
+          "PPPPPP"
+        ],
+        "module": {
+          "id": "69c7a98c-83cc-4926-8e19-f25bc0ec95b9",
+          "manufacturer": "REC",
+          "rating_stc": 460,
+          "name": "REC460AA Pure-RX",
+          "count": 6
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 20,
+        "azimuth": 93.92,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 6,
+        "array_layout": [
+          "PPPPPP"
+        ],
+        "module": {
+          "id": "69c7a98c-83cc-4926-8e19-f25bc0ec95b9",
+          "manufacturer": "REC",
+          "rating_stc": 460,
+          "name": "REC460AA Pure-RX",
+          "count": 6
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 20,
+        "azimuth": 93.96,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 4,
+        "array_layout": [
+          "PPPP"
+        ],
+        "module": {
+          "id": "69c7a98c-83cc-4926-8e19-f25bc0ec95b9",
+          "manufacturer": "REC",
+          "rating_stc": 460,
+          "name": "REC460AA Pure-RX",
+          "count": 4
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 9.5,
+        "azimuth": 4.2,
+        "rotation": 179.45,
+        "tilt": 20
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 3,
+        "array_layout": [
+          "PPP"
+        ],
+        "module": {
+          "id": "69c7a98c-83cc-4926-8e19-f25bc0ec95b9",
+          "manufacturer": "REC",
+          "rating_stc": 460,
+          "name": "REC460AA Pure-RX",
+          "count": 3
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 9.5,
+        "azimuth": 4.2,
+        "rotation": 179.45,
+        "tilt": 20
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 6,
+        "array_layout": [
+          "PPPPPP"
+        ],
+        "module": {
+          "id": "69c7a98c-83cc-4926-8e19-f25bc0ec95b9",
+          "manufacturer": "REC",
+          "rating_stc": 460,
+          "name": "REC460AA Pure-RX",
+          "count": 6
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 20,
+        "azimuth": 273.96,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 2,
+        "array_layout": [
+          "PP"
+        ],
+        "module": {
+          "id": "69c7a98c-83cc-4926-8e19-f25bc0ec95b9",
+          "manufacturer": "REC",
+          "rating_stc": 460,
+          "name": "REC460AA Pure-RX",
+          "count": 2
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 7,
+        "azimuth": 273.96,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 2,
+        "array_layout": [
+          "PP"
+        ],
+        "module": {
+          "id": "69c7a98c-83cc-4926-8e19-f25bc0ec95b9",
+          "manufacturer": "REC",
+          "rating_stc": 460,
+          "name": "REC460AA Pure-RX",
+          "count": 2
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 20,
+        "azimuth": 273.92,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }

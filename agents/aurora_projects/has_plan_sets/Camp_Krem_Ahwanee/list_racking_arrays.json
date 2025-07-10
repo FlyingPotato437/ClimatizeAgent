@@ -1,0 +1,104 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 5,
+        "columns": 8,
+        "array_layout": [
+          "LLLLLLLL",
+          "LLLLLLLL",
+          "LLLLLLLL",
+          "LLLLLLLL",
+          "LLLLLLLL"
+        ],
+        "module": {
+          "id": "795d7d17-4bd9-4bb3-b9fb-2b521b75ecbe",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 490,
+          "name": "SIL-490 HN",
+          "count": 40
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 182.47,
+        "pitch": 15,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 5,
+        "columns": 8,
+        "array_layout": [
+          "LLLLLLLL",
+          "LLLLLLLL",
+          "LLLLLLLL",
+          "LLLLLLLL",
+          "LLLLLLLL"
+        ],
+        "module": {
+          "id": "795d7d17-4bd9-4bb3-b9fb-2b521b75ecbe",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 490,
+          "name": "SIL-490 HN",
+          "count": 40
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 181.45,
+        "pitch": 15,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 5,
+        "columns": 8,
+        "array_layout": [
+          "LLLLLLLL",
+          "LLLLLLLL",
+          "LLLLLLLL",
+          "LLLLLLLL",
+          "LLLLLLLL"
+        ],
+        "module": {
+          "id": "795d7d17-4bd9-4bb3-b9fb-2b521b75ecbe",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 490,
+          "name": "SIL-490 HN",
+          "count": 40
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 182.21,
+        "pitch": 15,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 5,
+        "columns": 8,
+        "array_layout": [
+          "LLLLLLLL",
+          "LLLLLLLL",
+          "LLLLLLLL",
+          "LLLLLLLL",
+          "LLLLLLLL"
+        ],
+        "module": {
+          "id": "795d7d17-4bd9-4bb3-b9fb-2b521b75ecbe",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 490,
+          "name": "SIL-490 HN",
+          "count": 40
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": true,
+        "azimuth": 182.02,
+        "pitch": 15,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }

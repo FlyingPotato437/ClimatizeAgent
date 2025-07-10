@@ -1,0 +1,64 @@
+{
+    "designs": [
+      {
+        "id": "e5d7217e-4933-4f18-906d-1860b99ba909",
+        "external_provider_id": null,
+        "name": "ADU roof REC 1-28",
+        "created_at": "2025-01-28 19:47:34 UTC",
+        "system_size_stc": 13340,
+        "system_size_ptc": null,
+        "system_size_ac": 11020,
+        "milestone": null
+      },
+      {
+        "id": "74cd6cae-9a96-4405-a63c-358ea3349640",
+        "external_provider_id": null,
+        "name": "Groundmount Tamarack",
+        "created_at": "2025-01-27 04:18:23 UTC",
+        "system_size_stc": 12480,
+        "system_size_ptc": null,
+        "system_size_ac": 8640,
+        "milestone": null
+      },
+      {
+        "id": "6d45f87b-6de0-43b2-bf23-bd6ae0b4411c",
+        "external_provider_id": null,
+        "name": "ADU roof 1-27 REC",
+        "created_at": "2025-01-27 03:51:15 UTC",
+        "system_size_stc": 12420,
+        "system_size_ptc": null,
+        "system_size_ac": 10260,
+        "milestone": null
+      },
+      {
+        "id": "aa9485a7-3589-4535-90e7-367a78829d66",
+        "external_provider_id": null,
+        "name": "Ground mount",
+        "created_at": "2025-01-20 20:06:35 UTC",
+        "system_size_stc": 12040,
+        "system_size_ptc": null,
+        "system_size_ac": 9772,
+        "milestone": null
+      },
+      {
+        "id": "b9a2d5b5-c261-421a-9df0-8cee4061283f",
+        "external_provider_id": null,
+        "name": "Carport",
+        "created_at": "2025-01-19 02:25:17 UTC",
+        "system_size_stc": 12040,
+        "system_size_ptc": null,
+        "system_size_ac": 9772,
+        "milestone": null
+      },
+      {
+        "id": "78684823-93ea-492e-807a-95560ee5849a",
+        "external_provider_id": null,
+        "name": "ADU roof",
+        "created_at": "2025-01-16 02:54:41 UTC",
+        "system_size_stc": 12040,
+        "system_size_ptc": null,
+        "system_size_ac": 9772,
+        "milestone": null
+      }
+    ]
+  }

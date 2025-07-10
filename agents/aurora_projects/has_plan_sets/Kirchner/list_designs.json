@@ -1,0 +1,54 @@
+{
+    "designs": [
+      {
+        "id": "318bea91-3f72-4189-ac8d-85e3d3cc9788",
+        "external_provider_id": null,
+        "name": "PW3 Standoffs",
+        "created_at": "2025-02-18 23:46:23 UTC",
+        "system_size_stc": 9200,
+        "system_size_ptc": null,
+        "system_size_ac": 11500,
+        "milestone": null
+      },
+      {
+        "id": "3209c1e9-3fa1-4818-9647-f87d2a4eb055",
+        "external_provider_id": null,
+        "name": "PW3 HUGS",
+        "created_at": "2025-02-13 18:49:58 UTC",
+        "system_size_stc": 8280,
+        "system_size_ptc": null,
+        "system_size_ac": 11500,
+        "milestone": null
+      },
+      {
+        "id": "75aeae5b-b7f7-4116-bb2c-474818a95c71",
+        "external_provider_id": null,
+        "name": "Franklin",
+        "created_at": "2025-02-13 01:49:47 UTC",
+        "system_size_stc": 9200,
+        "system_size_ptc": null,
+        "system_size_ac": 7600,
+        "milestone": null
+      },
+      {
+        "id": "ca786bb4-0cfa-4e57-990d-0450a7e08f6f",
+        "external_provider_id": null,
+        "name": "Enphase",
+        "created_at": "2025-02-13 01:49:29 UTC",
+        "system_size_stc": 9200,
+        "system_size_ptc": null,
+        "system_size_ac": 7600,
+        "milestone": null
+      },
+      {
+        "id": "5a97c4ba-4e43-407d-8713-48abfbd6ccf3",
+        "external_provider_id": null,
+        "name": "Tesla PV only",
+        "created_at": "2025-02-11 23:25:37 UTC",
+        "system_size_stc": 9200,
+        "system_size_ptc": null,
+        "system_size_ac": 7600,
+        "milestone": null
+      }
+    ]
+  }

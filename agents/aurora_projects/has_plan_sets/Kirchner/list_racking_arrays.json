@@ -1,0 +1,26 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 2,
+        "columns": 10,
+        "array_layout": [
+          "PPPPPPPPPP",
+          "PPPPPPPPPP"
+        ],
+        "module": {
+          "id": "69c7a98c-83cc-4926-8e19-f25bc0ec95b9",
+          "manufacturer": "REC",
+          "rating_stc": 460,
+          "name": "REC460AA Pure-RX",
+          "count": 20
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 20,
+        "azimuth": 198.17,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }

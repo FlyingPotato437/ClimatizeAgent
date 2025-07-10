@@ -1,0 +1,74 @@
+{
+    "designs": [
+      {
+        "id": "ca56e7f2-642b-4fac-a841-ba9d8c94c40a",
+        "external_provider_id": null,
+        "name": "South and west facing REC 460 + micros + FranklinWH (Copy)",
+        "created_at": "2025-01-23 04:34:11 UTC",
+        "system_size_stc": 11040,
+        "system_size_ptc": null,
+        "system_size_ac": 9120,
+        "milestone": null
+      },
+      {
+        "id": "8ac1a0f4-38f1-4e87-8f90-96506aee2547",
+        "external_provider_id": null,
+        "name": "South and west facing REC 460 + micros + FranklinWH",
+        "created_at": "2024-09-11 12:34:50 UTC",
+        "system_size_stc": 11040,
+        "system_size_ptc": null,
+        "system_size_ac": 9120,
+        "milestone": null
+      },
+      {
+        "id": "9af7e633-6287-4968-8aa9-f87095d4064c",
+        "external_provider_id": null,
+        "name": "106% coverage + (4) Encharge 5P's",
+        "created_at": "2024-09-06 17:06:04 UTC",
+        "system_size_stc": 9890,
+        "system_size_ptc": null,
+        "system_size_ac": 8027,
+        "milestone": null
+      },
+      {
+        "id": "989238b8-1561-4088-9fcb-8b0559dd051f",
+        "external_provider_id": null,
+        "name": "106% coverage on Enphase micros + (2) FranklinWH",
+        "created_at": "2024-09-06 02:23:19 UTC",
+        "system_size_stc": 9890,
+        "system_size_ptc": null,
+        "system_size_ac": 8027,
+        "milestone": null
+      },
+      {
+        "id": "316d91bd-4e40-445d-ad43-98f6c2b90989",
+        "external_provider_id": null,
+        "name": "106% coverage on (2) Tesla PowerWall 3",
+        "created_at": "2024-09-06 02:13:53 UTC",
+        "system_size_stc": 9890,
+        "system_size_ptc": null,
+        "system_size_ac": 11500,
+        "milestone": null
+      },
+      {
+        "id": "b5385d66-c072-4e1e-95a5-65ecc139f1d5",
+        "external_provider_id": null,
+        "name": "South and west facing (Copy)",
+        "created_at": "2024-09-06 02:13:04 UTC",
+        "system_size_stc": 9030,
+        "system_size_ptc": null,
+        "system_size_ac": 11500,
+        "milestone": null
+      },
+      {
+        "id": "1578151f-7422-4c05-8386-f9a8a040d7a7",
+        "external_provider_id": null,
+        "name": "All south facing",
+        "created_at": "2024-08-30 15:41:25 UTC",
+        "system_size_stc": 10320,
+        "system_size_ptc": null,
+        "system_size_ac": 11500,
+        "milestone": null
+      }
+    ]
+  }

@@ -1,0 +1,34 @@
+{
+    "designs": [
+      {
+        "id": "d011110c-15ce-45c1-a5d5-4b4ac9fcd12b",
+        "external_provider_id": null,
+        "name": "expanded for future loads (copy)",
+        "created_at": "2023-05-31 15:53:53 UTC",
+        "system_size_stc": 6400,
+        "system_size_ptc": null,
+        "system_size_ac": 5584,
+        "milestone": null
+      },
+      {
+        "id": "64242cbf-a1dd-4bd0-8778-4ed6bb4f2e2e",
+        "external_provider_id": null,
+        "name": "expanded for future loads",
+        "created_at": "2023-05-24 13:45:51 UTC",
+        "system_size_stc": 6400,
+        "system_size_ptc": null,
+        "system_size_ac": 5584,
+        "milestone": null
+      },
+      {
+        "id": "a60b25f6-5fbb-4c39-a495-42ca53d279ab",
+        "external_provider_id": null,
+        "name": "Prelim",
+        "created_at": "2023-04-20 21:02:20 UTC",
+        "system_size_stc": 3600,
+        "system_size_ptc": null,
+        "system_size_ac": 3141,
+        "milestone": null
+      }
+    ]
+  }

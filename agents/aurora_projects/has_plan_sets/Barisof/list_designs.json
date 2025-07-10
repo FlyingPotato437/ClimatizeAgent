@@ -1,0 +1,14 @@
+{
+    "designs": [
+      {
+        "id": "8ef76a75-c1e1-4c43-92d5-027c05c6f7bc",
+        "external_provider_id": null,
+        "name": "As-built + 2kW expansion",
+        "created_at": "2024-02-12 19:00:22 UTC",
+        "system_size_stc": 5430,
+        "system_size_ptc": null,
+        "system_size_ac": 4537,
+        "milestone": null
+      }
+    ]
+  }

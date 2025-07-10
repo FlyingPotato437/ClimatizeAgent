@@ -1,0 +1,88 @@
+{
+    "racking_arrays": [
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 5,
+        "array_layout": [
+          "PPPPP"
+        ],
+        "module": {
+          "id": "433a0ef8-555a-4d69-a951-4e71a8b656db",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 410,
+          "name": "SIL-410 HC+",
+          "count": 5
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 15,
+        "azimuth": 289.18,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 3,
+        "array_layout": [
+          "PPP"
+        ],
+        "module": {
+          "id": "433a0ef8-555a-4d69-a951-4e71a8b656db",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 410,
+          "name": "SIL-410 HC+",
+          "count": 3
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 20,
+        "azimuth": 288.57,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 2,
+        "array_layout": [
+          "LL"
+        ],
+        "module": {
+          "id": "b36b3046-c03e-40a5-9e9b-e3a9cd75523c",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 430,
+          "name": "SIL-430 QD",
+          "count": 2
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 19.67,
+        "azimuth": 109.18,
+        "rotation": 0,
+        "tilt": 0
+      },
+      {
+        "units_of_measurement": "Imperial",
+        "rows": 1,
+        "columns": 3,
+        "array_layout": [
+          "LLL"
+        ],
+        "module": {
+          "id": "b36b3046-c03e-40a5-9e9b-e3a9cd75523c",
+          "manufacturer": "Silfab Solar",
+          "rating_stc": 430,
+          "name": "SIL-430 QD",
+          "count": 3
+        },
+        "adjacent_arrays": [],
+        "ground_mounted": false,
+        "pitch": 20,
+        "azimuth": 199.18,
+        "rotation": 0,
+        "tilt": 0
+      }
+    ]
+  }
