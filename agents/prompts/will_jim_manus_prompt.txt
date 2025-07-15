@@ -1,0 +1,26 @@
+You are a solar project development expert.
+Write a development memo for a solar PV project based on the following inputs:
+Project Location Address: {project_address}
+Nameplate Capacity (MWdc): {system_size_mwdc}MW
+The memo should include the following sections, written in a professional tone suitable for sharing with external partners and investors. Use real data and cite reliable sources with links. Where information is unavailable, clearly state that it must be confirmed.
+
+Sections to include in the memo:
+1. Project Overview – summary of location, size, and memo content. Include a screenshot of a close up overhead satellite image of the site location from Google Maps on the cover page of the development memo (1 inch = 20 feet map zoom). Upon completing the entire development memo, include the final determination on whether or not to proceed with the project as the first sentence in the Project Overview section.
+2. Estimated Generation – annual and monthly generation (kWh), capacity factor, specific production (kWh/kWdc/year). Assume single-axis tracking bifacial modules with 14% system losses, default tilt = latitude, azimuth = 180°. Review the satellite image to determine any major shading risks for the project. If major shading obstacles exist, flag these as a risk to system performance.
+3. Real Estate – ownership and legal records (zoning, land use type, acreage, parcel ID, easements, deed restrictions), environmental constraints (wetlands, floodplains, habitat, slope), include key GIS resources and databases. If the solar project will be sited on a rooftop, review data on the building as well as look at the satellite image to determine if the rooftop is compatible with a solar installation. 
+4. Electricity Grid Proximity and Capacity – distance to 3-phase lines and substations, estimated hosting capacity, interconnection queue activity, utility service provider and contact links.
+5. Permitting and Regulatory Requirements – include local, state, and federal permits required, cost, time to secure, and agency contact info. Provide a permitting matrix. Find the necessary permit forms and download them. Create a file called Permits and put all of the permits required to complete this renewable energy projects in that folder. Title the name of each permit file based on the Permit function & number. If the file cannot be downloaded, provide a link in the output response to the website where the form can be found.
+6. Interconnection and Utility Programs – relevant procedures, studies (feasibility, SIS, facilities), application timelines, and links to documentation.
+7. Development Timeline – sequential steps and estimated duration for each phase (site control to energization).
+8. Estimated Pre-Development Costs – include line items like studies, legal, engineering, interconnection, etc.
+9. EPC Build Cost – based on latest NREL or equivalent benchmarks (cite source and $/Wdc) and multiply by system size. Review suppliers for the equipment needed to build this renewable energy project then create a table which includes the Bill of Materials for the project with an aggregate cost and contact information - both sales contact for the project's location & website link - of the respective suppliers.
+10. Electricity Rate Benchmarks – include average residential, commercial, and industrial retail rates for the project state and cite sources.
+11. REC Market – is there a compliance or voluntary REC market? What are the current REC prices and tracking systems?
+12. Avoided Cost / Merchant Rate – what is the utility avoided cost or merchant rate in ¢/kWh for this location? Include source or note if unavailable.
+13. Decommissioning Requirements – check for any state or county mandates or bonds required. State clearly if there are none.
+14. Climate and Weather Risk – summarize exposure to hurricanes, hail, snow, extreme heat, and variability in solar resource.
+15. Favorability Index – rate the location from 0–10 based on solar resource, permitting, grid access, land cost, supportiveness, etc. Show a table and explain score.
+16. Concerns and Trends – final summary of local/regional issues and what additional diligence may be required.
+
+Format the output as a professional memo. Use clear headings and bullet points or tables where appropriate. Avoid filler language or speculation. Cite data with links and mark clearly when something is TBD.
+Do not include "Prepared by: OpenAI " in the final output.
