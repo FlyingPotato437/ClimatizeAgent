@@ -4,7 +4,9 @@ from openai import OpenAI
 from datetime import datetime
 
 # Configuration
-YOUR_API_KEY = "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"
+YOUR_API_KEY = os.getenv("PERPLEXITY_API_KEY")
+if not YOUR_API_KEY:
+    raise ValueError("PERPLEXITY_API_KEY environment variable is required")
 PROMPT_FILE = "prompts/perplexity_prompt1"
 CONTEXT_FILE_1 = "560_Hester_Creek_Rd/project.json"
 CONTEXT_FILE_2 = "560_Hester_Creek_Rd/systems.json"
