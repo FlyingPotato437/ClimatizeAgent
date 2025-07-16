@@ -1,10 +1,17 @@
 #!/bin/bash
 
 # Set variables
-TOKEN="s_TVRDFYU3KJDINUZ3JA3LNY42GATICWPX"
+TOKEN="${OPENSOLAR_TOKEN}"
 ORG_ID="183989"
 PROJECT_ID="7481941"
 BASE_URL="https://api.opensolar.com"
+
+# Check if token is provided
+if [ -z "$TOKEN" ]; then
+    echo "Error: OPENSOLAR_TOKEN environment variable is required"
+    echo "Please set it with: export OPENSOLAR_TOKEN='your_token_here'"
+    exit 1
+fi
 
 # 1. Get project info first to extract the project name
 echo "1. Getting project info..."
