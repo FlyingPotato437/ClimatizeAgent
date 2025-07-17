@@ -2,15 +2,25 @@ import json
 import os
 from openai import OpenAI
 from datetime import datetime
+import re
 
 # Configuration
 YOUR_API_KEY = os.getenv("PERPLEXITY_API_KEY")
 if not YOUR_API_KEY:
     raise ValueError("PERPLEXITY_API_KEY environment variable is required")
-PROMPT_FILE = "prompts/perplexity_prompt1"
-CONTEXT_FILE_1 = "560_Hester_Creek_Rd/project.json"
-CONTEXT_FILE_2 = "560_Hester_Creek_Rd/systems.json"
-OUTPUT_FILE = f"perplexity_response_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+PROJECT_NAME = "560_Hester_Creek_Rd"
+PROMPT_FILE = "prompts/perplexity/perplexity_prompt16"
+CONTEXT_FILE_1 = f"{PROJECT_NAME}/project.json"
+CONTEXT_FILE_2 = f"{PROJECT_NAME}/systems.json"
+
+# Extract the number from the prompt file name for output file naming
+prompt_number_match = re.search(r"perplexity_prompt(\d+)", PROMPT_FILE)
+if prompt_number_match:
+    prompt_number = prompt_number_match.group(1)
+else:
+    prompt_number = "unknown"
+OUTPUT_DIR = os.path.join("research_output/perplexity", PROJECT_NAME)
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, f"perplexity_response_{prompt_number}.json")
 
 def extract_primary_info(project_json, systems_json):
     """Extract primary information from project and systems JSON files"""
@@ -104,6 +114,8 @@ def load_json_context(filename):
 
 def save_response_to_json(response_data, output_filename):
     """Save the response to a JSON file"""
+    # Ensure output directory exists
+    os.makedirs(os.path.dirname(output_filename), exist_ok=True)
     response_dict = {
         "timestamp": datetime.now().isoformat(),
         "model": response_data.model,
@@ -212,14 +224,22 @@ def main():
     if not prompt_content:
         print(f"Error: Could not load prompt from {PROMPT_FILE}")
         return
-    
+
     # Load context JSON files
     project_json = load_json_context(CONTEXT_FILE_1)
     systems_json = load_json_context(CONTEXT_FILE_2)
-    
+
     # Extract primary information instead of using full JSON
     primary_info = extract_primary_info(project_json, systems_json)
-    
+
+    # Extract address and nameplate capacity for prompt injection
+    address = primary_info['project'].get('address', 'Unknown')
+    nameplate_capacity = primary_info['system'].get('nameplate_capacity_kw', 'Unknown')
+
+    # Replace placeholders in prompt (if present)
+    prompt_content = prompt_content.replace('{address}', address)
+    prompt_content = prompt_content.replace('{nameplate_capacity}', str(nameplate_capacity))
+
     # Prepare context string from extracted primary information
     context_string = f"Project Information: {json.dumps(primary_info, indent=2)}\n\n"
     
@@ -258,6 +278,19 @@ def main():
         
         # Save response to JSON
         save_response_to_json(response, OUTPUT_FILE)
+        
+        # Call extract_markdown.py to convert JSON to markdown
+        markdown_output_file = OUTPUT_FILE.replace('.json', '.md')
+        import subprocess
+        try:
+            subprocess.run([
+                'python',
+                'extract_markdown.py',
+                OUTPUT_FILE,
+                markdown_output_file
+            ], check=True)
+        except Exception as e:
+            print(f"Error running extract_markdown.py: {e}")
         
         # Print first part of response
         if response.choices:
