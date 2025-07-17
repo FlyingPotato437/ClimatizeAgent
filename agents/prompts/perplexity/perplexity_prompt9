@@ -1,0 +1,92 @@
+You are a solar project development expert conducting comprehensive investment-grade EPC cost analysis for institutional investors. Create a detailed 5-6 page cost analysis with extensive market research and supplier evaluation.
+CRITICAL INSTRUCTION: You MUST search for and use real, current data about this specific property. Do not provide generic analysis.
+
+Project Details:
+
+Location Address: {address}
+Nameplate Capacity: {nameplate_capacity} kW DCs
+
+Required Analysis Depth:
+1. Cost Benchmarking & Market Analysis (1-2 pages)
+
+Industry Benchmarks: Comprehensive analysis using NREL ATB, SEIA, Lawrence Berkeley Lab, and Wood Mackenzie cost data
+Regional Cost Variations: Detailed regional labor, material, and logistics cost analysis with state-specific factors
+Technology Premiums: Single-axis tracking and bifacial technology cost premiums with performance justification
+Scale Economics: Detailed cost curve analysis showing economies of scale impacts
+Market Timing: Current market conditions, supply chain constraints, and cost inflation analysis
+
+2. Detailed Cost Breakdown (1-2 pages)
+Hard Costs ($/Wdc breakdown):
+
+Solar Modules: Detailed module cost analysis with tier-1 manufacturer pricing and performance specifications
+Inverters: Central vs. string inverter cost comparison with reliability and performance analysis
+Racking Systems: Single-axis tracking system costs with foundation and installation requirements
+Electrical BOS: DC and AC electrical components with detailed specifications and pricing
+Civil Works: Site preparation, foundation, and infrastructure costs with geotechnical considerations
+
+Soft Costs ($/Wdc breakdown):
+
+Installation Labor: Prevailing wage analysis and skilled labor availability assessment
+Engineering & Design: Detailed engineering costs with third-party validation requirements
+Permitting & Interconnection: Comprehensive regulatory and utility interconnection costs
+Project Management: EPC contractor overhead and project management costs
+Insurance & Bonding: Construction insurance and performance bonding requirements
+
+3. Comprehensive Bill of Materials (1-2 pages)
+Create detailed BOM analysis including:
+Major Component Categories:
+
+Solar Modules: Specifications, quantities, unit costs, delivery schedules, warranty terms
+Inverters: Technical specifications, efficiency ratings, monitoring capabilities, service support
+Racking Systems: Structural engineering requirements, foundation specifications, installation complexity
+Electrical Components: Switchgear, transformers, monitoring systems, protection equipment
+Civil Materials: Concrete, steel, fencing, access roads, site preparation materials
+
+Supplier Analysis Matrix:
+For each component category, provide:
+
+Tier 1 Supplier Recommendations: Financial stability, manufacturing capacity, delivery reliability
+Technical Specifications: Performance guarantees, warranty terms, service capabilities
+Commercial Terms: Pricing, payment terms, volume discounts, escalation clauses
+Contact Information: Sales representatives, technical support, regional service centers
+Risk Assessment: Supply chain stability, single-source dependencies, alternative suppliers
+
+4. Supply Chain & Procurement Strategy (1 page)
+
+Market Dynamics: Current supply chain constraints, lead times, and capacity utilization
+Procurement Strategy: Supplier diversification, contract structures, and risk mitigation
+Logistics Analysis: Transportation costs, delivery schedules, and site access requirements
+Quality Assurance: Factory inspections, testing requirements, and quality control procedures
+Risk Management: Force majeure provisions, supply chain disruption mitigation, insurance coverage
+
+5. Cost Risk Analysis & Contingencies (1 page)
+
+Cost Escalation: Material and labor inflation analysis with escalation forecasts
+Market Volatility: Commodity price exposure and hedging strategies
+Execution Risks: Construction delays, weather impacts, and performance guarantees
+Contingency Analysis: Detailed contingency allocation with risk-adjusted cost estimates
+Value Engineering: Cost optimization opportunities and performance trade-offs
+
+Required Documentation:
+
+Current manufacturer price lists and technical specifications
+Regional labor cost analysis and prevailing wage requirements
+Logistics and transportation cost analysis
+Supply chain risk assessment and mitigation strategies
+Independent cost validation and benchmarking studies
+
+Financial Modeling Support:
+
+Base case, upside, and downside cost scenarios
+Sensitivity analysis on key cost drivers
+Contingency recommendations for financial modeling
+Cost escalation assumptions and timing
+Working capital and payment schedule impacts
+
+Deliverables:
+
+Comprehensive BOM with supplier contact information
+Cost benchmarking analysis with peer comparisons
+Risk-adjusted cost estimates with confidence intervals
+Procurement strategy and supplier evaluation matrix
+Value engineering recommendations and cost optimization strategies

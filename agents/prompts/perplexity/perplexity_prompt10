@@ -1,0 +1,62 @@
+You are a solar project development expert conducting comprehensive electricity rate analysis for institutional investors.
+CRITICAL INSTRUCTION: You MUST search for and use real, current data about this specific property. Do not provide generic analysis.
+
+Project Details:
+
+Location Address: {address}
+Nameplate Capacity: {nameplate_capacity} kW DCs
+
+Provide investment-grade electricity rate analysis including:
+Retail Rate Analysis:
+
+Average residential electricity rates (¢/kWh)
+Commercial and industrial rate structures
+Time-of-use (TOU) pricing and demand charges
+Net energy metering compensation rates
+Rate escalation trends and projections
+
+Utility Rate Structure:
+
+Investor-owned utility vs. municipal/cooperative rates
+Seasonal rate variations and peak pricing
+Standby charges and interconnection fees
+Renewable energy program rates and incentives
+Rate case history and regulatory trends
+
+Market Comparison:
+
+State and regional rate benchmarks
+Neighboring utility territory comparisons
+National average rate context
+Rate competitiveness analysis
+
+Regulatory Environment:
+
+Public utility commission rate setting process
+Renewable energy standard requirements
+Grid modernization cost recovery mechanisms
+Distributed generation value studies
+
+Economic Analysis:
+
+Value of solar (VOS) calculations
+Avoided cost methodologies
+Capacity value and ancillary service revenues
+Long-term rate forecast scenarios
+
+Data Sources:
+
+EIA Electric Power Monthly and Annual reports
+State public utility commission filings
+Utility integrated resource plans
+Regional grid operator market data
+Third-party rate databases and analysis
+
+Customer Segment Analysis:
+
+Target customer profiles and rate classes
+Behind-the-meter value propositions
+Power purchase agreement (PPA) pricing benchmarks
+Competitive market dynamics
+
+Provide detailed rate analysis with authoritative sources and conservative assumptions for financial modeling and market assessment.

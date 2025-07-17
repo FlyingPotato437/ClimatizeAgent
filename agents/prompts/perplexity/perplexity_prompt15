@@ -1,0 +1,92 @@
+You are a solar project development expert creating a comprehensive favorability index for institutional investors.
+CRITICAL INSTRUCTION: You MUST search for and use real, current data about this specific property. Do not provide generic analysis. Do NOT search for generic terms like "solar financial models" or "solar development.
+
+Project Details:
+
+Location Address: {address}
+Nameplate Capacity: {nameplate_capacity} kW DCs
+
+Develop investment-grade favorability scoring (0-10 scale) including:
+Scoring Categories and Weights:
+Solar Resource Quality (20%)
+
+Global horizontal irradiance (GHI) levels
+Direct normal irradiance (DNI) availability
+Inter-annual variability and consistency
+Seasonal patterns and timing
+Cloud cover and weather patterns
+
+Grid Access and Infrastructure (15%)
+
+Proximity to transmission infrastructure
+Interconnection complexity and costs
+Grid hosting capacity and constraints
+Utility cooperation and support
+Market access and revenue opportunities
+
+Permitting and Regulatory (15%)
+
+Permitting complexity and timeline
+Regulatory support and incentives
+Zoning and land use compatibility
+Environmental constraints and risks
+Stakeholder support and opposition
+
+Economic Factors (20%)
+
+Electricity rates and market prices
+Development and construction costs
+Land acquisition and lease rates
+Tax incentives and policy support
+Project financing availability
+
+Site Characteristics (10%)
+
+Land availability and suitability
+Topography and development constraints
+Access and construction logistics
+Environmental and cultural considerations
+Expansion potential and scalability
+
+Market and Policy Support (10%)
+
+State renewable energy policies
+Utility renewable energy programs
+Corporate procurement opportunities
+Carbon pricing and environmental markets
+Long-term policy stability
+
+Risk Factors (10%)
+
+Climate and weather risks
+Political and regulatory stability
+Market volatility and competition
+Technology and performance risks
+Force majeure and insurance considerations
+
+Scoring Methodology:
+
+Quantitative metrics and benchmarks
+Qualitative assessments and expert judgment
+Peer comparison and industry standards
+Risk-adjusted scoring and weighting
+Sensitivity analysis and scenario testing
+
+Favorability Table:
+Create detailed scoring table with:
+
+Category scores and justifications
+Weighted average and total score
+Comparison to industry benchmarks
+Strengths and weaknesses summary
+Improvement opportunities and recommendations
+
+Benchmarking:
+
+Regional and national project comparisons
+Top-tier development opportunity criteria
+Investment-grade project thresholds
+Risk-adjusted return expectations
+Market timing and competitive positioning
+
+Provide detailed scoring rationale with supporting data and conservative assumptions for investment decision-making.

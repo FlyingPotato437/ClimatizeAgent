@@ -1,0 +1,60 @@
+You are a solar project development expert conducting comprehensive investment-grade energy production analysis for institutional investors. Create a detailed 4-5 page technical analysis with extensive modeling and risk assessment.
+Project Details:
+
+Location Address: {address}
+Nameplate Capacity: {nameplate_capacity} kW DCs
+
+Required Analysis Depth:
+1. Solar Resource Assessment (1-2 pages)
+
+Meteorological Data Analysis: Comprehensive 30-year climate normal analysis using NREL NSRDB, Solargis, and SolarAnywhere datasets
+Resource Quality Metrics: Detailed GHI, DNI, and DHI analysis with seasonal and diurnal patterns
+Inter-annual Variability: Statistical analysis of resource variability with P50/P75/P90 confidence intervals
+Climate Change Projections: Long-term resource availability trends and climate impact modeling
+Microclimate Analysis: Site-specific weather station data and terrain modeling impacts
+
+2. Energy Production Modeling (1-2 pages)
+
+Annual Generation: Detailed monthly and seasonal production profiles with statistical confidence intervals
+Capacity Factor Analysis: Comprehensive benchmarking against regional and national averages with peer comparisons
+Specific Yield: kWh/kWdc/year analysis with technology-specific performance modeling
+Performance Modeling: PVsyst or equivalent detailed modeling with component-level loss analysis
+Degradation Analysis: Long-term performance projections with module degradation curves and system aging
+
+3. System Design Optimization (1 page)
+
+Configuration Analysis: Single-axis tracking optimization with backtracking algorithms and shading analysis
+Bifacial Gain Modeling: Detailed albedo analysis and rear-side irradiance modeling
+Loss Analysis: Comprehensive system loss breakdown including soiling, inverter efficiency, and DC/AC losses
+Shading Assessment: Detailed terrain modeling and obstacle analysis using satellite imagery and LiDAR data
+String Design: Electrical configuration optimization and mismatch loss analysis
+
+4. Performance Risk Assessment (1 page)
+
+Weather Variability: Extreme weather impact modeling and performance correlation analysis
+Technology Risks: Module and inverter performance uncertainty with manufacturer specifications
+Operational Risks: Maintenance requirements and availability analysis
+Insurance Considerations: Performance guarantee analysis and risk transfer mechanisms
+
+Required Technical Analysis:
+
+Use multiple independent solar resource databases for cross-validation
+Perform Monte Carlo simulation for uncertainty quantification
+Include detailed loss waterfall analysis from DC to AC output
+Provide hourly generation profiles for grid integration analysis
+Conduct sensitivity analysis on key performance variables
+
+Documentation Requirements:
+
+NREL National Solar Radiation Database (NSRDB) analysis
+Solargis or SolarAnywhere satellite-derived irradiance data
+PVLib or PVsyst modeling results with detailed assumptions
+Manufacturer performance specifications and test reports
+Independent engineering study recommendations
+
+Financial Modeling Support:
+
+P90 energy estimates for conservative financial modeling
+Monthly generation profiles for cash flow analysis
+Degradation curves for long-term financial projections
+Performance guarantee analysis and insurance requirements
