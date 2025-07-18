@@ -1,0 +1,18 @@
+Bill of Materials
+Company Name:,Climatize Earth Inc.,,Notes:
+Project Address:,"560 Hester Creek Rd, Los Gatos, CA 95033"
+Order Reference #:
+Order Date:,07/18/25
+""
+Row,Part Number,Part Name,Manufacturer,Category,Qty,Cost/Unit,Total Cost,Notes
+1,BHW-SQ-03-A1,"Square Bolt, Bonding Hardware",IronRidge,Attachments,76,$$3.58,$272.08,
+2,FF2-02-M2,"FlashFoot2, Mill",IronRidge,Attachments,76,$$23.88,"$1,814.88",
+3,XR-LUG-04-A1,"End Grounding Lug, Low Profile",IronRidge,Clamps & Grounding,6,$$12.26,$73.56,
+4,UFO-END-01-A1,"End Fastening Object (End Clamp, 30-40mm), Mill",IronRidge,Clamps & Grounding,24,$$7.94,$190.56,
+5,UFO-CL-01-A1,"Universal Module Clamp, Clear",IronRidge,Clamps & Grounding,68,$$5.89,$400.52,
+6,XR100-BOSS-01-M1,"Bonded Splice, XR100",IronRidge,Rails & Splices,8,$$13.59,$108.72,
+7,XR-100-168A,"XR-100, 168"" (14') Clear",IronRidge,Rails & Splices,12,$$99.62,"$1,195.44",
+8,XR-100-204A,"XR-100, 204"" (17') Clear",IronRidge,Rails & Splices,8,$$120.97,$967.76,
+9,Q.PEAK DUO BLK ML-G10 400,,Qcells,Module,40,[Empty],[Empty],
+10,IQ8A-72-2-US,,Enphase Energy Inc.,Inverter,40,[Empty],[Empty],
+Total,,,,,358,,"$5,023.52",
