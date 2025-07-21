@@ -1,0 +1,106 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page 
+   /Parent 2 0 R 
+   /MediaBox [0 0 612 792] 
+   /Contents 4 0 R
+   /Resources << 
+     /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+              /F2 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >> >>
+   >>
+>>
+endobj
+4 0 obj
+<< /Length 2000 >>
+stream
+BT
+/F2 16 Tf
+50 750 Td
+(IronRidge XR-100 Solar Mounting Rail) Tj
+0 -30 Td
+/F1 12 Tf
+(TECHNICAL SPECIFICATION SHEET) Tj
+0 -40 Td
+(Model: XR-100-168A) Tj
+0 -20 Td
+(Manufacturer: IronRidge) Tj
+0 -20 Td
+(Category: Mounting Rail) Tj
+0 -30 Td
+/F2 14 Tf
+(ELECTRICAL SPECIFICATIONS:) Tj
+0 -25 Td
+/F1 11 Tf
+0 -18 Td
+(Grounding: Integrated WEEB grounding) Tj
+0 -18 Td
+(Bonding: UL 2703 listed) Tj
+0 -18 Td
+(Conductivity: Meets NEC 250.118(6)) Tj
+0 -30 Td
+/F2 14 Tf
+(MECHANICAL SPECIFICATIONS:) Tj
+0 -25 Td
+/F1 11 Tf
+0 -18 Td
+(Length: 168 inches (14 feet)) Tj
+0 -18 Td
+(Material: 6005-T5 aluminum) Tj
+0 -18 Td
+(Finish: Clear anodized) Tj
+0 -18 Td
+(Weight: 12.6 lbs) Tj
+0 -18 Td
+(Moment of Inertia: 1.49 in⁴) Tj
+0 -18 Td
+(Section Modulus: 0.95 in³) Tj
+0 -30 Td
+/F2 14 Tf
+(CERTIFICATIONS & COMPLIANCE:) Tj
+0 -25 Td
+/F1 11 Tf
+0 -18 Td
+(• ICC-ES AC 428) Tj
+0 -18 Td
+(• UL 2703 Listed) Tj
+0 -18 Td
+(• Florida Building Code Approved) Tj
+0 -30 Td
+/F2 14 Tf
+(INSTALLATION NOTES:) Tj
+0 -25 Td
+/F1 11 Tf
+0 -18 Td
+(• Compatible with all IronRidge attachments) Tj
+0 -18 Td
+(• Supports up to 8 modules per span) Tj
+0 -18 Td
+(• Pre-drilled mounting holes every 12 inches) Tj
+0 -18 Td
+(• Splice with XR-SPLICE-01-A1) Tj
+0 -40 Td
+/F1 10 Tf
+(This specification sheet is for permit approval purposes.) Tj
+0 -15 Td
+(For complete installation instructions, refer to manufacturer documentation.) Tj
+ET
+endstream
+endobj
+xref
+0 5
+0000000000 65535 f 
+0000000010 00000 n 
+0000000053 00000 n 
+0000000125 00000 n 
+0000000400 00000 n 
+trailer
+<< /Size 5 /Root 1 0 R >>
+startxref
+2500
+%%EOF

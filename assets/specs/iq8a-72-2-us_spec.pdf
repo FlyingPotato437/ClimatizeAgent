@@ -1,0 +1,116 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page 
+   /Parent 2 0 R 
+   /MediaBox [0 0 612 792] 
+   /Contents 4 0 R
+   /Resources << 
+     /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+              /F2 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >> >>
+   >>
+>>
+endobj
+4 0 obj
+<< /Length 2000 >>
+stream
+BT
+/F2 16 Tf
+50 750 Td
+(Enphase IQ8A-72-2-US Microinverter) Tj
+0 -30 Td
+/F1 12 Tf
+(TECHNICAL SPECIFICATION SHEET) Tj
+0 -40 Td
+(Model: IQ8A-72-2-US) Tj
+0 -20 Td
+(Manufacturer: Enphase Energy) Tj
+0 -20 Td
+(Category: Microinverter) Tj
+0 -30 Td
+/F2 14 Tf
+(ELECTRICAL SPECIFICATIONS:) Tj
+0 -25 Td
+/F1 11 Tf
+0 -18 Td
+(Max AC Power: 366 VA) Tj
+0 -18 Td
+(Peak AC Power: 366 W) Tj
+0 -18 Td
+(Max DC Input Power: 440 W) Tj
+0 -18 Td
+(MPPT Voltage Range: 27-54.7 V) Tj
+0 -18 Td
+(Max DC Input Current: 13 A) Tj
+0 -18 Td
+(AC Output Voltage: 240 V) Tj
+0 -18 Td
+(AC Output Frequency: 60 Hz) Tj
+0 -18 Td
+(Efficiency: 97.0%) Tj
+0 -30 Td
+/F2 14 Tf
+(MECHANICAL SPECIFICATIONS:) Tj
+0 -25 Td
+/F1 11 Tf
+0 -18 Td
+(Dimensions: 210 x 175 x 33 mm) Tj
+0 -18 Td
+(Weight: 1.25 kg) Tj
+0 -18 Td
+(Enclosure: NEMA 6P) Tj
+0 -18 Td
+(Operating Temperature: -40°C to +65°C) Tj
+0 -18 Td
+(Cooling: Natural convection) Tj
+0 -30 Td
+/F2 14 Tf
+(CERTIFICATIONS & COMPLIANCE:) Tj
+0 -25 Td
+/F1 11 Tf
+0 -18 Td
+(• UL 1741-SA) Tj
+0 -18 Td
+(• IEEE 1547-2018) Tj
+0 -18 Td
+(• FCC Part 15 Class B) Tj
+0 -18 Td
+(• NEMA TS-4 Seismic) Tj
+0 -30 Td
+/F2 14 Tf
+(INSTALLATION NOTES:) Tj
+0 -25 Td
+/F1 11 Tf
+0 -18 Td
+(• Install one per solar module) Tj
+0 -18 Td
+(• Use Enphase Q-Cables for interconnection) Tj
+0 -18 Td
+(• Grounding integrated with mounting rail) Tj
+0 -18 Td
+(• Built-in rapid shutdown capability) Tj
+0 -40 Td
+/F1 10 Tf
+(This specification sheet is for permit approval purposes.) Tj
+0 -15 Td
+(For complete installation instructions, refer to manufacturer documentation.) Tj
+ET
+endstream
+endobj
+xref
+0 5
+0000000000 65535 f 
+0000000010 00000 n 
+0000000053 00000 n 
+0000000125 00000 n 
+0000000400 00000 n 
+trailer
+<< /Size 5 /Root 1 0 R >>
+startxref
+2500
+%%EOF

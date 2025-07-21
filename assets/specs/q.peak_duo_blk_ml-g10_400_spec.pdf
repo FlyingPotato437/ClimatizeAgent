@@ -1,0 +1,120 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page 
+   /Parent 2 0 R 
+   /MediaBox [0 0 612 792] 
+   /Contents 4 0 R
+   /Resources << 
+     /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+              /F2 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >> >>
+   >>
+>>
+endobj
+4 0 obj
+<< /Length 2000 >>
+stream
+BT
+/F2 16 Tf
+50 750 Td
+(Q.PEAK DUO BLK ML-G10+ 400W Solar Module) Tj
+0 -30 Td
+/F1 12 Tf
+(TECHNICAL SPECIFICATION SHEET) Tj
+0 -40 Td
+(Model: Q.PEAK DUO BLK ML-G10+ 400W) Tj
+0 -20 Td
+(Manufacturer: Q CELLS) Tj
+0 -20 Td
+(Category: Solar Module) Tj
+0 -30 Td
+/F2 14 Tf
+(ELECTRICAL SPECIFICATIONS:) Tj
+0 -25 Td
+/F1 11 Tf
+0 -18 Td
+(Max Power (Pmax): 400 W) Tj
+0 -18 Td
+(Module Efficiency: 20.4%) Tj
+0 -18 Td
+(Voltage at Pmax (Vmpp): 41.8 V) Tj
+0 -18 Td
+(Current at Pmax (Impp): 9.58 A) Tj
+0 -18 Td
+(Open Circuit Voltage (Voc): 49.8 V) Tj
+0 -18 Td
+(Short Circuit Current (Isc): 10.17 A) Tj
+0 -18 Td
+(Max System Voltage: 1500 V DC) Tj
+0 -18 Td
+(Max Fuse Rating: 20 A) Tj
+0 -30 Td
+/F2 14 Tf
+(MECHANICAL SPECIFICATIONS:) Tj
+0 -25 Td
+/F1 11 Tf
+0 -18 Td
+(Dimensions: 2024 x 1024 x 32 mm) Tj
+0 -18 Td
+(Weight: 22.5 kg) Tj
+0 -18 Td
+(Cell Type: Monocrystalline PERC) Tj
+0 -18 Td
+(Number of Cells: 120 (6 x 20)) Tj
+0 -18 Td
+(Frame: Anodized aluminum) Tj
+0 -18 Td
+(Glass: 3.2 mm tempered glass) Tj
+0 -30 Td
+/F2 14 Tf
+(CERTIFICATIONS & COMPLIANCE:) Tj
+0 -25 Td
+/F1 11 Tf
+0 -18 Td
+(• IEC 61215, IEC 61730) Tj
+0 -18 Td
+(• UL 1703 (UL Listed)) Tj
+0 -18 Td
+(• CEC Listed) Tj
+0 -18 Td
+(• ISO 9001:2015) Tj
+0 -30 Td
+/F2 14 Tf
+(INSTALLATION NOTES:) Tj
+0 -25 Td
+/F1 11 Tf
+0 -18 Td
+(• Portrait or landscape installation) Tj
+0 -18 Td
+(• Use only listed mounting systems) Tj
+0 -18 Td
+(• Grounding per NEC requirements) Tj
+0 -18 Td
+(• Maximum wind load: 2400 Pa) Tj
+0 -18 Td
+(• Maximum snow load: 5400 Pa) Tj
+0 -40 Td
+/F1 10 Tf
+(This specification sheet is for permit approval purposes.) Tj
+0 -15 Td
+(For complete installation instructions, refer to manufacturer documentation.) Tj
+ET
+endstream
+endobj
+xref
+0 5
+0000000000 65535 f 
+0000000010 00000 n 
+0000000053 00000 n 
+0000000125 00000 n 
+0000000400 00000 n 
+trailer
+<< /Size 5 /Root 1 0 R >>
+startxref
+2500
+%%EOF

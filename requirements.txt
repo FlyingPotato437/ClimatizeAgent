@@ -23,4 +23,8 @@ langgraph==0.2.14
 # Additional dependencies for agent collaboration
 redis==5.0.4
 celery==5.3.6
--e /Users/radhamunver/Downloads/permit-ml-generator
+# Permit generation dependencies
+exa-py==1.0.11
+pypdf==4.0.1
+tenacity==8.2.3
+firecrawl-py==0.0.16
