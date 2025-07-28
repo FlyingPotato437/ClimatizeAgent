@@ -1,0 +1,11 @@
+Row,Part Number,Part Name,Manufacturer,Qty,Category
+1,Q.PEAK DUO BLK-G10+ 385,Q.PEAK DUO BLK-G10+ 385W Solar Panel,Qcells,24,Solar Panel
+2,IQ8A-72-2-US,IQ8A Microinverter,Enphase Energy Inc.,24,Inverter
+3,XR-1000-168A,XR Rails 168 inch,IronRidge,12,Mounting
+4,29-7000-BLK,End Cap Black,IronRidge,24,Mounting
+5,PV-MC4-15A,MC4 Connector 15A,Various,48,Electrical
+6,GTFPV-15A,15A Ground Fault Protection,SolarEdge,2,Electrical
+7,DCS-240-20A,DC Safety Switch 240V 20A,Square D,1,Electrical
+8,SPLICE-MC4,MC4 Splicing Connector,Amphenol,12,Electrical
+9,CONDUIT-1IN,1 inch PVC Conduit,Schedule 40,50,Electrical
+10,ROOF-COMP,Roof Composition,Flashing,6,Mounting

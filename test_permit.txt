@@ -1,0 +1,8 @@
+Test Permit Application Document
+Project: Test Solar Installation
+Address: 123 Solar St, Sunnyville, CA 94000
+System Size: 8.5 kW
+Panel Count: 24
+Inverter Type: Enphase IQ8A
+
+This is a test permit document for the ClimatizeAI system.
