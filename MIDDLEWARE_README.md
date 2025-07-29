@@ -20,11 +20,13 @@ The ClimatizeAI Permit Generation Middleware is a sophisticated AI-powered syste
 ```
 
 ### **Core Components:**
-- **Step 2**: `handle-project-submission` - AI feasibility analysis
-- **Step 3**: `generate-permit-packet` - Smart permit generation
-- **ResearchAgent**: OpenSolar integration & Perplexity analysis
-- **PermitGenerator**: Smart spec finder with Exa.ai + OpenAI
-- **Storage**: Supabase for permit packages and project data
+- **Research Button**: `research-button` Edge Function - 16 AI research files generation
+- **Planset Button**: `planset-button` Edge Function - Complete permit package assembly
+- **OpenSolar Integration**: Real project data retrieval (Token: `s_PZAFD3MP5BYXAZ7NP4UDCKCXEE6EQ4NT`)
+- **Perplexity AI**: Sequential 16-prompt research generation
+- **Smart Spec Finder**: Exa.ai + OpenAI manufacturer specification retrieval
+- **Storage Layer**: Supabase Storage for research files and permit packages
+- **Database Layer**: PostgreSQL for metadata and workflow tracking
 
 ---
 
